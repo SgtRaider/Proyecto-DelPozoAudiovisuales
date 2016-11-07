@@ -67,7 +67,7 @@ public class GUIPedido {
         frame = new JFrame("Nuevo Presupuesto");
         frame.setContentPane(GUIPedido.this.panel1);
         frame.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
-        frame.setMinimumSize(new Dimension(800, 600));
+        frame.setMinimumSize(new Dimension(1100, 800));
         frame.pack();
         frame.setVisible(true);
     }

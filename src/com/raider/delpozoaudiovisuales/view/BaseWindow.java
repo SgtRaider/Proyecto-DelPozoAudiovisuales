@@ -47,7 +47,7 @@ public class BaseWindow {
         frame.setContentPane(new BaseWindow().basePanel);
         frame.setDefaultCloseOperation(3);
         frame.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
-        frame.setMinimumSize(new Dimension(1100, 750));
+        frame.setMinimumSize(new Dimension(1100, 800));
         //frame.setResizable(false);
         frame.pack();
         //frame.setState(Frame.NORMAL);
