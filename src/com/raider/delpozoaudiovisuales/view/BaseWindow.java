@@ -76,7 +76,6 @@ public class BaseWindow {
         miconsultarpresupuesto = new JMenuItem("Presupuesto");
         miconsultarpedido = new JMenuItem("Pedido");
         miconsultarfactura = new JMenuItem("Factura");
-        miconsultarcliente = new JMenuItem("Cliente");
         miconsultarmaterial = new JMenuItem("Material");
 
         mbventana.add(mmenu);
@@ -95,7 +94,6 @@ public class BaseWindow {
         mconsultar.add(miconsultarpresupuesto);
         mconsultar.add(miconsultarpedido);
         mconsultar.add(miconsultarfactura);
-        mconsultar.add(miconsultarcliente);
         mconsultar.add(miconsultarmaterial);
     }
 

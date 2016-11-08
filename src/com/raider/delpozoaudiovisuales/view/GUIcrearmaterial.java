@@ -1,16 +1,40 @@
 package com.raider.delpozoaudiovisuales.view;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class GUIcrearmaterial extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JTextField nombreTF;
+    private JComboBox subcategoriaCB;
+    private JTextField modeloTF;
+    private JTextField fabricanteTF;
+    private JTextArea descripcionTA;
+    private JTextField preciodiaTF;
+    private JTextField precioferiaTF;
+    private JTextField serialTF;
+    private JTextField cantidadTF;
+    private JTextField posicionTF;
+    private JButton crearButton;
+    private JButton eliminarButton;
+    private JList materialList;
+    private JTextField buscarTF;
+    private JCheckBox comprobadoCB;
 
     public GUIcrearmaterial() {
+
+        setTitle("Alta cliente");
         setContentPane(contentPane);
+        getRootPane().setDefaultButton(buttonOK);
+        setPreferredSize(new Dimension(600, 470));
+        setMinimumSize(new Dimension(600, 470));
+        setResizable(false);
         setModal(true);
+        pack();
+        setLocationRelativeTo(null);
         getRootPane().setDefaultButton(buttonOK);
 
         buttonOK.addActionListener(new ActionListener() {

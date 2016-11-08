@@ -29,7 +29,6 @@ public class ProjectController implements ActionListener{
 
     private void addListeners() {
 
-        mw.getMiconsultarcliente().addActionListener(this);
         mw.getMiconsultarmaterial().addActionListener(this);
         mw.getMiconsultarpedido().addActionListener(this);
         mw.getMiconsultarpresupuesto().addActionListener(this);
