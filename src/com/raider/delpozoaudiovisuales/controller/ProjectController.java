@@ -108,7 +108,7 @@ public class ProjectController implements ActionListener{
                 case "Material":
 
                     if(source == mw.getMicrearmaterial()) {
-
+                        new GUIcrearmaterial(dbm).setVisible(true);
                     } else {
 
                         if(source == mw.getMiconsultarmaterial()) {

@@ -19,7 +19,7 @@ public class Material {
     private String nombre;
 
     @Column(name="categoria")
-    private String categoria;
+    private String categoria = "";
 
     @Column(name="sub_categoria")
     private String sub_categoria;
@@ -153,5 +153,10 @@ public class Material {
 
     public void setComprobado(boolean comprobado) {
         this.comprobado = comprobado;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " - " + modelo + " - " + sub_categoria;
     }
 }
