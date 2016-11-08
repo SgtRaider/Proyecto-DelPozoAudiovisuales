@@ -5,7 +5,9 @@ import com.raider.delpozoaudiovisuales.util.HibernateUtil;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Raider on 05/11/2016.
@@ -26,7 +28,7 @@ public class DbMethods {
 
         session.beginTransaction();
 
-        session.save(entity);
+        session.saveOrUpdate(entity);
 
         session.getTransaction().commit();
 
@@ -58,48 +60,136 @@ public class DbMethods {
         session.getTransaction().commit();
     }
 
-    public List list(String object) {
+    public List list(String object, HashMap<String,String> camposString) {
 
         Session session = db.getCurrentSession();
 
         String sql;
         Query query;
         StringBuffer sb = new StringBuffer();
+        List<Cliente> clienteList;
+        List<Factura> facturaList;
+        List<Pedido> pedidoList;
+        List<Material> materialList;
+        List<Presupuesto> presupuestoList;
 
         switch (object) {
 
             case "cliente":
-                sql = "SELECT Cliente FROM Cliente ";
-                query = session.createQuery(sql);
-                List<Cliente> clienteList = query.list();
+
+                if (camposString.isEmpty()) {
+
+                    clienteList = session.createQuery("FROM Cliente WHERE 1=1").list();
+                } else {
+
+                    sql = "FROM Cliente as c WHERE 1=1";
+                    sb.append(sql);
+                    sb.append(addLikeSearch(object, camposString));
+                    query = session.createQuery(sb.toString());
+                    clienteList = query.list();
+                }
+
                 return clienteList;
 
             case "factura":
-                sql = "SELECT Factura FROM Factura ";
-                query = session.createQuery(sql);
-                List<Factura> facturaList = query.list();
-                return facturaList;
+
+                if (camposString.isEmpty()) {
+                    sql = "FROM Factura as f WHERE 1=1";
+                    query = session.createQuery(sql);
+                    facturaList = query.list();
+                    return facturaList;
+
+                } else {
+
+                    sql = "FROM Factura as f WHERE 1=1";
+                    sb.append(sql);
+                    sb.append(addLikeSearch(object, camposString));
+                    query = session.createQuery(sb.toString());
+                    facturaList = query.list();
+                    return facturaList;
+                }
 
             case "material":
-                sql = "SELECT Material FROM Material ";
-                query = session.createQuery(sql);
-                List<Material> materialList = query.list();
-                return materialList;
+
+                if (camposString.isEmpty()) {
+                    sql = "FROM Material as m WHERE 1=1";
+                    query = session.createQuery(sql);
+                    materialList = query.list();
+                    return materialList;
+
+                } else {
+
+                    sql = "FROM Material as m WHERE 1=1";
+                    sb.append(sql);
+                    sb.append(addLikeSearch(object, camposString));
+                    query = session.createQuery(sb.toString());
+                    materialList = query.list();
+                    return materialList;
+                }
 
             case "pedido":
-                sql = "SELECT Pedido FROM Pedido ";
-                query = session.createQuery(sql);
-                List<Pedido> pedidoList = query.list();
-                return pedidoList;
+
+                if (camposString.isEmpty()) {
+                    sql = "FROM Pedido as p WHERE 1=1";
+                    query = session.createQuery(sql);
+                    pedidoList = query.list();
+                    return pedidoList;
+
+                } else {
+
+                    sql = "FROM Pedido as p WHERE 1=1";
+                    sb.append(sql);
+                    sb.append(addLikeSearch(object, camposString));
+                    query = session.createQuery(sb.toString());
+                    pedidoList = query.list();
+                    return pedidoList;
+                }
 
             case "presupuesto":
-                sql = "SELECT Presupuesto FROM Presupuesto ";
-                query = session.createQuery(sql);
-                List<Presupuesto> presupuestoList = query.list();
-                return presupuestoList;
+
+                if (camposString.isEmpty()) {
+                    sql = "FROM Presupuesto as p WHERE 1=1";
+                    query = session.createQuery(sql);
+                    presupuestoList = query.list();
+                    return presupuestoList;
+
+                } else {
+
+                    sql = "FROM Presupuesto as p WHERE 1=1";
+                    sb.append(sql);
+                    sb.append(addLikeSearch(object, camposString));
+                    query = session.createQuery(sb.toString());
+                    presupuestoList = query.list();
+                    return presupuestoList;
+                }
 
             default:
                 return null;
         }
+    }
+
+    private String addLikeSearch(String tabla, HashMap<String,String> camposString) {
+
+        StringBuffer sb = new StringBuffer();
+
+        tabla = tabla.substring(0, 1);
+
+        int count = 0;
+
+        for(Map.Entry<String,String> entry :camposString.entrySet()) {
+
+            String key = entry.getKey();
+            String value = entry.getValue();
+
+            if (count == 0) sb.append(" and (" + tabla  + "." + key + " LIKE " + "\'" + "%" + value + "%" + "\'");
+            else
+            sb.append(" or " + tabla  + "." + key + " LIKE " + "\'" + "%" + value + "%" + "\'");
+
+            count++;
+        }
+
+        sb.append(")");
+
+        return sb.toString();
     }
 }

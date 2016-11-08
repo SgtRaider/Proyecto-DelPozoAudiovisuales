@@ -66,6 +66,11 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente")
     private List<Presupuesto> presupuestoList;
 
+    @Override
+    public String toString() {
+        return empresa + " - " + provincia + "    contacto: " + nombre_contacto;
+    }
+
     public int getId() {
         return id;
     }

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Material.java" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6b04a87-22c5-4878-abeb-7d42e3c2954b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIFactura.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIFactura.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPedido.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPedido.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.class" />
+    <list default="true" id="c6b04a87-22c5-4878-abeb-7d42e3c2954b" name="Default" comment="Añadir cliente remodelado.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/logic/DbMethods.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/logic/DbMethods.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Cliente.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Cliente.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/BaseWindow.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/BaseWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$1.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$2.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$3.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$4.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIFactura.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIFactura.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Cliente.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Cliente.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.form" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java" />
     </list>
     <ignored path="Proyecto-DelPozoAudiovisuales.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,6 +34,165 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="Material.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Material.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="170">
+                    <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+                    <folding>
+                      <element signature="e#1048#1049#0" expanded="false" />
+                      <element signature="e#1073#1074#0" expanded="false" />
+                      <element signature="e#1106#1107#0" expanded="false" />
+                      <element signature="e#1134#1135#0" expanded="false" />
+                      <element signature="e#1167#1168#0" expanded="false" />
+                      <element signature="e#1196#1197#0" expanded="false" />
+                      <element signature="e#1240#1241#0" expanded="false" />
+                      <element signature="e#1276#1277#0" expanded="false" />
+                      <element signature="e#1312#1313#0" expanded="false" />
+                      <element signature="e#1344#1345#0" expanded="false" />
+                      <element signature="e#1394#1395#0" expanded="false" />
+                      <element signature="e#1436#1437#0" expanded="false" />
+                      <element signature="e#1476#1477#0" expanded="false" />
+                      <element signature="e#1512#1513#0" expanded="false" />
+                      <element signature="e#1570#1571#0" expanded="false" />
+                      <element signature="e#1620#1621#0" expanded="false" />
+                      <element signature="e#1653#1654#0" expanded="false" />
+                      <element signature="e#1682#1683#0" expanded="false" />
+                      <element signature="e#1726#1727#0" expanded="false" />
+                      <element signature="e#1762#1763#0" expanded="false" />
+                      <element signature="e#1799#1800#0" expanded="false" />
+                      <element signature="e#1832#1833#0" expanded="false" />
+                      <element signature="e#1884#1885#0" expanded="false" />
+                      <element signature="e#1928#1929#0" expanded="false" />
+                      <element signature="e#1966#1967#0" expanded="false" />
+                      <element signature="e#2000#2001#0" expanded="false" />
+                      <element signature="e#2054#2055#0" expanded="false" />
+                      <element signature="e#2100#2101#0" expanded="false" />
+                      <element signature="e#2136#2137#0" expanded="false" />
+                      <element signature="e#2169#2170#0" expanded="false" />
+                      <element signature="e#2220#2221#0" expanded="false" />
+                      <element signature="e#2264#2265#0" expanded="false" />
+                      <element signature="e#2302#2303#0" expanded="false" />
+                      <element signature="e#2337#2338#0" expanded="false" />
+                      <element signature="e#2392#2393#0" expanded="false" />
+                      <element signature="e#2440#2441#0" expanded="false" />
+                      <element signature="e#2473#2474#0" expanded="false" />
+                      <element signature="e#2502#2503#0" expanded="false" />
+                      <element signature="e#2546#2547#0" expanded="false" />
+                      <element signature="e#2582#2583#0" expanded="false" />
+                      <element signature="e#2614#2615#0" expanded="false" />
+                      <element signature="e#2645#2646#0" expanded="false" />
+                      <element signature="e#2690#2691#0" expanded="false" />
+                      <element signature="e#2730#2731#0" expanded="false" />
+                      <element signature="e#2765#2766#0" expanded="false" />
+                      <element signature="e#2796#2797#0" expanded="false" />
+                      <element signature="e#2844#2845#0" expanded="false" />
+                      <element signature="e#2884#2885#0" expanded="false" />
+                      <element signature="e#2921#2922#0" expanded="false" />
+                      <element signature="e#2954#2955#0" expanded="false" />
+                      <element signature="e#3007#3008#0" expanded="false" />
+                      <element signature="e#3051#3052#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="Cliente.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Cliente.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="0">
+                    <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+                    <folding>
+                      <element signature="imports" expanded="false" />
+                      <element signature="e#1465#1466#0" expanded="false" />
+                      <element signature="e#1552#1553#0" expanded="false" />
+                      <element signature="e#1578#1579#0" expanded="false" />
+                      <element signature="e#1603#1604#0" expanded="false" />
+                      <element signature="e#1636#1637#0" expanded="false" />
+                      <element signature="e#1664#1665#0" expanded="false" />
+                      <element signature="e#1698#1699#0" expanded="false" />
+                      <element signature="e#1728#1729#0" expanded="false" />
+                      <element signature="e#1774#1775#0" expanded="false" />
+                      <element signature="e#1812#1813#0" expanded="false" />
+                      <element signature="e#1842#1843#0" expanded="false" />
+                      <element signature="e#1868#1869#0" expanded="false" />
+                      <element signature="e#1906#1907#0" expanded="false" />
+                      <element signature="e#1936#1937#0" expanded="false" />
+                      <element signature="e#1972#1973#0" expanded="false" />
+                      <element signature="e#2004#2005#0" expanded="false" />
+                      <element signature="e#2054#2055#0" expanded="false" />
+                      <element signature="e#2096#2097#0" expanded="false" />
+                      <element signature="e#2125#2126#0" expanded="false" />
+                      <element signature="e#2150#2151#0" expanded="false" />
+                      <element signature="e#2186#2187#0" expanded="false" />
+                      <element signature="e#2214#2215#0" expanded="false" />
+                      <element signature="e#2247#2248#0" expanded="false" />
+                      <element signature="e#2276#2277#0" expanded="false" />
+                      <element signature="e#2320#2321#0" expanded="false" />
+                      <element signature="e#2356#2357#0" expanded="false" />
+                      <element signature="e#2392#2393#0" expanded="false" />
+                      <element signature="e#2424#2425#0" expanded="false" />
+                      <element signature="e#2474#2475#0" expanded="false" />
+                      <element signature="e#2516#2517#0" expanded="false" />
+                      <element signature="e#2547#2548#0" expanded="false" />
+                      <element signature="e#2574#2575#0" expanded="false" />
+                      <element signature="e#2614#2615#0" expanded="false" />
+                      <element signature="e#2646#2647#0" expanded="false" />
+                      <element signature="e#2681#2682#0" expanded="false" />
+                      <element signature="e#2712#2713#0" expanded="false" />
+                      <element signature="e#2760#2761#0" expanded="false" />
+                      <element signature="e#2800#2801#0" expanded="false" />
+                      <element signature="e#2830#2831#0" expanded="false" />
+                      <element signature="e#2856#2857#0" expanded="false" />
+                      <element signature="e#2894#2895#0" expanded="false" />
+                      <element signature="e#2924#2925#0" expanded="false" />
+                      <element signature="e#2956#2957#0" expanded="false" />
+                      <element signature="e#2984#2985#0" expanded="false" />
+                      <element signature="e#3026#3027#0" expanded="false" />
+                      <element signature="e#3060#3061#0" expanded="false" />
+                      <element signature="e#3102#3103#0" expanded="false" />
+                      <element signature="e#3140#3141#0" expanded="false" />
+                      <element signature="e#3202#3203#0" expanded="false" />
+                      <element signature="e#3256#3257#0" expanded="false" />
+                      <element signature="e#3301#3302#0" expanded="false" />
+                      <element signature="e#3342#3343#0" expanded="false" />
+                      <element signature="e#3410#3411#0" expanded="false" />
+                      <element signature="e#3470#3471#0" expanded="false" />
+                      <element signature="e#3514#3515#0" expanded="false" />
+                      <element signature="e#3554#3555#0" expanded="false" />
+                      <element signature="e#3620#3621#0" expanded="false" />
+                      <element signature="e#3678#3679#0" expanded="false" />
+                      <element signature="e#3719#3720#0" expanded="false" />
+                      <element signature="e#3756#3757#0" expanded="false" />
+                      <element signature="e#3816#3817#0" expanded="false" />
+                      <element signature="e#3868#3869#0" expanded="false" />
+                      <element signature="e#3913#3914#0" expanded="false" />
+                      <element signature="e#3947#3948#0" expanded="false" />
+                      <element signature="e#4008#4009#0" expanded="false" />
+                      <element signature="e#4054#4055#0" expanded="false" />
+                      <element signature="e#4097#4098#0" expanded="false" />
+                      <element signature="e#4130#4131#0" expanded="false" />
+                      <element signature="e#4188#4189#0" expanded="false" />
+                      <element signature="e#4232#4233#0" expanded="false" />
+                      <element signature="e#4285#4286#0" expanded="false" />
+                      <element signature="e#4323#4324#0" expanded="false" />
+                      <element signature="e#4396#4397#0" expanded="false" />
+                      <element signature="e#4450#4451#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Proyecto-DelPozoAudiovisuales" />
@@ -35,20 +202,177 @@
       <file leaf-file-name="BaseWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="782">
+              <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3024#3025#0" expanded="false" />
+                <element signature="e#3056#3057#0" expanded="false" />
+                <element signature="e#3092#3093#0" expanded="false" />
+                <element signature="e#3124#3125#0" expanded="false" />
+                <element signature="e#3174#3175#0" expanded="false" />
+                <element signature="e#3216#3217#0" expanded="false" />
+                <element signature="e#3261#3262#0" expanded="false" />
+                <element signature="e#3293#3294#0" expanded="false" />
+                <element signature="e#3352#3353#0" expanded="false" />
+                <element signature="e#3400#3401#0" expanded="false" />
+                <element signature="e#3431#3432#0" expanded="false" />
+                <element signature="e#3459#3460#0" expanded="false" />
+                <element signature="e#3500#3501#0" expanded="false" />
+                <element signature="e#3534#3535#0" expanded="false" />
+                <element signature="e#3566#3567#0" expanded="false" />
+                <element signature="e#3595#3596#0" expanded="false" />
+                <element signature="e#3638#3639#0" expanded="false" />
+                <element signature="e#3674#3675#0" expanded="false" />
+                <element signature="e#3710#3711#0" expanded="false" />
+                <element signature="e#3743#3744#0" expanded="false" />
+                <element signature="e#3794#3795#0" expanded="false" />
+                <element signature="e#3838#3839#0" expanded="false" />
+                <element signature="e#3875#3876#0" expanded="false" />
+                <element signature="e#3905#3906#0" expanded="false" />
+                <element signature="e#3954#3955#0" expanded="false" />
+                <element signature="e#3992#3993#0" expanded="false" />
+                <element signature="e#4036#4037#0" expanded="false" />
+                <element signature="e#4073#4074#0" expanded="false" />
+                <element signature="e#4136#4137#0" expanded="false" />
+                <element signature="e#4188#4189#0" expanded="false" />
+                <element signature="e#4236#4237#0" expanded="false" />
+                <element signature="e#4277#4278#0" expanded="false" />
+                <element signature="e#4348#4349#0" expanded="false" />
+                <element signature="e#4408#4409#0" expanded="false" />
+                <element signature="e#4451#4452#0" expanded="false" />
+                <element signature="e#4487#4488#0" expanded="false" />
+                <element signature="e#4548#4549#0" expanded="false" />
+                <element signature="e#4598#4599#0" expanded="false" />
+                <element signature="e#4642#4643#0" expanded="false" />
+                <element signature="e#4679#4680#0" expanded="false" />
+                <element signature="e#4742#4743#0" expanded="false" />
+                <element signature="e#4794#4795#0" expanded="false" />
+                <element signature="e#4838#4839#0" expanded="false" />
+                <element signature="e#4875#4876#0" expanded="false" />
+                <element signature="e#4938#4939#0" expanded="false" />
+                <element signature="e#4990#4991#0" expanded="false" />
+                <element signature="e#5035#5036#0" expanded="false" />
+                <element signature="e#5073#5074#0" expanded="false" />
+                <element signature="e#5138#5139#0" expanded="false" />
+                <element signature="e#5192#5193#0" expanded="false" />
+                <element signature="e#5244#5245#0" expanded="false" />
+                <element signature="e#5289#5290#0" expanded="false" />
+                <element signature="e#5483#5484#0" expanded="false" />
+                <element signature="e#5523#5524#0" expanded="false" />
+                <element signature="e#5592#5593#0" expanded="false" />
+                <element signature="e#5650#5651#0" expanded="false" />
+                <element signature="e#5698#5699#0" expanded="false" />
+                <element signature="e#5739#5740#0" expanded="false" />
+                <element signature="e#5810#5811#0" expanded="false" />
+                <element signature="e#5870#5871#0" expanded="false" />
+                <element signature="e#5918#5919#0" expanded="false" />
+                <element signature="e#5959#5960#0" expanded="false" />
+                <element signature="e#6030#6031#0" expanded="false" />
+                <element signature="e#6090#6091#0" expanded="false" />
+                <element signature="e#6139#6140#0" expanded="false" />
+                <element signature="e#6181#6182#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUIcrearmaterial.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.form">
+      <file leaf-file-name="GUIcrearcliente.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.form">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUIcrearcliente.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="285" column="5" selection-start-line="285" selection-start-column="5" selection-end-line="285" selection-end-column="5" />
+              <folding>
+                <element signature="e#2529#2545#0" expanded="false" />
+                <element signature="e#2859#2860#0" expanded="false" />
+                <element signature="e#2897#2898#0" expanded="false" />
+                <element signature="e#3029#3030#0" expanded="false" />
+                <element signature="e#3071#3072#0" expanded="false" />
+                <element signature="e#3205#3206#0" expanded="false" />
+                <element signature="e#3256#3257#0" expanded="false" />
+                <element signature="e#3387#3388#0" expanded="false" />
+                <element signature="e#3435#3436#0" expanded="false" />
+                <element signature="e#3655#3656#0" expanded="false" />
+                <element signature="e#3697#3698#0" expanded="false" />
+                <element signature="e#3870#3871#0" expanded="false" />
+                <element signature="e#3912#3913#0" expanded="false" />
+                <element signature="e#8539#8540#0" expanded="false" />
+                <element signature="e#8567#8568#0" expanded="false" />
+                <element signature="e#8613#8614#0" expanded="false" />
+                <element signature="e#8647#8648#0" expanded="false" />
+                <element signature="e#8682#8683#0" expanded="false" />
+                <element signature="e#8712#8713#0" expanded="false" />
+                <element signature="e#8759#8760#0" expanded="false" />
+                <element signature="e#8797#8798#0" expanded="false" />
+                <element signature="e#8837#8838#0" expanded="false" />
+                <element signature="e#8869#8870#0" expanded="false" />
+                <element signature="e#8923#8924#0" expanded="false" />
+                <element signature="e#8965#8966#0" expanded="false" />
+                <element signature="e#9001#9002#0" expanded="false" />
+                <element signature="e#9029#9030#0" expanded="false" />
+                <element signature="e#9075#9076#0" expanded="false" />
+                <element signature="e#9109#9110#0" expanded="false" />
+                <element signature="e#9156#9157#0" expanded="false" />
+                <element signature="e#9195#9196#0" expanded="false" />
+                <element signature="e#9263#9264#0" expanded="false" />
+                <element signature="e#9319#9320#0" expanded="false" />
+                <element signature="e#9369#9370#0" expanded="false" />
+                <element signature="e#9411#9412#0" expanded="false" />
+                <element signature="e#9596#9597#0" expanded="false" />
+                <element signature="e#9637#9638#0" expanded="false" />
+                <element signature="e#9709#9710#0" expanded="false" />
+                <element signature="e#9769#9770#0" expanded="false" />
+                <element signature="e#9815#9816#0" expanded="false" />
+                <element signature="e#9853#9854#0" expanded="false" />
+                <element signature="e#9919#9920#0" expanded="false" />
+                <element signature="e#9973#9974#0" expanded="false" />
+                <element signature="e#10015#10016#0" expanded="false" />
+                <element signature="e#10049#10050#0" expanded="false" />
+                <element signature="e#10107#10108#0" expanded="false" />
+                <element signature="e#10153#10154#0" expanded="false" />
+                <element signature="e#10192#10193#0" expanded="false" />
+                <element signature="e#10223#10224#0" expanded="false" />
+                <element signature="e#10275#10276#0" expanded="false" />
+                <element signature="e#10315#10316#0" expanded="false" />
+                <element signature="e#10356#10357#0" expanded="false" />
+                <element signature="e#10389#10390#0" expanded="false" />
+                <element signature="e#10445#10446#0" expanded="false" />
+                <element signature="e#10489#10490#0" expanded="false" />
+                <element signature="e#10526#10527#0" expanded="false" />
+                <element signature="e#10555#10556#0" expanded="false" />
+                <element signature="e#10603#10604#0" expanded="false" />
+                <element signature="e#10639#10640#0" expanded="false" />
+                <element signature="e#10680#10681#0" expanded="false" />
+                <element signature="e#10713#10714#0" expanded="false" />
+                <element signature="e#10769#10770#0" expanded="false" />
+                <element signature="e#10813#10814#0" expanded="false" />
+                <element signature="e#10851#10852#0" expanded="false" />
+                <element signature="e#10881#10882#0" expanded="false" />
+                <element signature="e#10931#10932#0" expanded="false" />
+                <element signature="e#10969#10970#0" expanded="false" />
+                <element signature="e#11004#11005#0" expanded="false" />
+                <element signature="e#11031#11032#0" expanded="false" />
+                <element signature="e#11075#11076#0" expanded="false" />
+                <element signature="e#11107#11108#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbMethods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3128">
+              <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,7 +382,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2040">
-              <caret line="125" column="64" selection-start-line="125" selection-start-column="64" selection-end-line="125" selection-end-column="64" />
+              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -376,34 +700,149 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUIPedido.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUIPedido.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="1088">
               <caret line="69" column="53" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacturaController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/FacturaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#794#795#0" expanded="false" />
-                <element signature="e#853#854#0" expanded="false" />
+                <element signature="e#2351#2352#0" expanded="false" />
+                <element signature="e#2376#2377#0" expanded="false" />
+                <element signature="e#2422#2423#0" expanded="false" />
+                <element signature="e#2450#2451#0" expanded="false" />
+                <element signature="e#2483#2484#0" expanded="false" />
+                <element signature="e#2508#2509#0" expanded="false" />
+                <element signature="e#2548#2549#0" expanded="false" />
+                <element signature="e#2576#2577#0" expanded="false" />
+                <element signature="e#2608#2609#0" expanded="false" />
+                <element signature="e#2636#2637#0" expanded="false" />
+                <element signature="e#2678#2679#0" expanded="false" />
+                <element signature="e#2712#2713#0" expanded="false" />
+                <element signature="e#2745#2746#0" expanded="false" />
+                <element signature="e#2774#2775#0" expanded="false" />
+                <element signature="e#2818#2819#0" expanded="false" />
+                <element signature="e#2854#2855#0" expanded="false" />
+                <element signature="e#2895#2896#0" expanded="false" />
+                <element signature="e#2931#2932#0" expanded="false" />
+                <element signature="e#2990#2991#0" expanded="false" />
+                <element signature="e#3040#3041#0" expanded="false" />
+                <element signature="e#3077#3078#0" expanded="false" />
+                <element signature="e#3109#3110#0" expanded="false" />
+                <element signature="e#3160#3161#0" expanded="false" />
+                <element signature="e#3202#3203#0" expanded="false" />
+                <element signature="e#3243#3244#0" expanded="false" />
+                <element signature="e#3279#3280#0" expanded="false" />
+                <element signature="e#3338#3339#0" expanded="false" />
+                <element signature="e#3388#3389#0" expanded="false" />
+                <element signature="e#3431#3432#0" expanded="false" />
+                <element signature="e#3469#3470#0" expanded="false" />
+                <element signature="e#3532#3533#0" expanded="false" />
+                <element signature="e#3586#3587#0" expanded="false" />
+                <element signature="e#3624#3625#0" expanded="false" />
+                <element signature="e#3657#3658#0" expanded="false" />
+                <element signature="e#3710#3711#0" expanded="false" />
+                <element signature="e#3754#3755#0" expanded="false" />
+                <element signature="e#3794#3795#0" expanded="false" />
+                <element signature="e#3827#3828#0" expanded="false" />
+                <element signature="e#3882#3883#0" expanded="false" />
+                <element signature="e#3926#3927#0" expanded="false" />
+                <element signature="e#3964#3965#0" expanded="false" />
+                <element signature="e#3995#3996#0" expanded="false" />
+                <element signature="e#4046#4047#0" expanded="false" />
+                <element signature="e#4086#4087#0" expanded="false" />
+                <element signature="e#4123#4124#0" expanded="false" />
+                <element signature="e#4155#4156#0" expanded="false" />
+                <element signature="e#4206#4207#0" expanded="false" />
+                <element signature="e#4248#4249#0" expanded="false" />
+                <element signature="e#4277#4278#0" expanded="false" />
+                <element signature="e#4302#4303#0" expanded="false" />
+                <element signature="e#4338#4339#0" expanded="false" />
+                <element signature="e#4366#4367#0" expanded="false" />
+                <element signature="e#4411#4412#0" expanded="false" />
+                <element signature="e#4449#4450#0" expanded="false" />
+                <element signature="e#4514#4515#0" expanded="false" />
+                <element signature="e#4568#4569#0" expanded="false" />
+                <element signature="e#4609#4610#0" expanded="false" />
+                <element signature="e#4643#4644#0" expanded="false" />
+                <element signature="e#4700#4701#0" expanded="false" />
+                <element signature="e#4746#4747#0" expanded="false" />
+                <element signature="e#4785#4786#0" expanded="false" />
+                <element signature="e#4817#4818#0" expanded="false" />
+                <element signature="e#4870#4871#0" expanded="false" />
+                <element signature="e#4912#4913#0" expanded="false" />
+                <element signature="e#4948#4949#0" expanded="false" />
+                <element signature="e#4977#4978#0" expanded="false" />
+                <element signature="e#5024#5025#0" expanded="false" />
+                <element signature="e#5060#5061#0" expanded="false" />
+                <element signature="e#5102#5103#0" expanded="false" />
+                <element signature="e#5136#5137#0" expanded="false" />
+                <element signature="e#5194#5195#0" expanded="false" />
+                <element signature="e#5240#5241#0" expanded="false" />
+                <element signature="e#5271#5272#0" expanded="false" />
+                <element signature="e#5298#5299#0" expanded="false" />
+                <element signature="e#5338#5339#0" expanded="false" />
+                <element signature="e#5370#5371#0" expanded="false" />
+                <element signature="e#5411#5412#0" expanded="false" />
+                <element signature="e#5442#5443#0" expanded="false" />
+                <element signature="e#5496#5497#0" expanded="false" />
+                <element signature="e#5536#5537#0" expanded="false" />
+                <element signature="e#5574#5575#0" expanded="false" />
+                <element signature="e#5602#5603#0" expanded="false" />
+                <element signature="e#5650#5651#0" expanded="false" />
+                <element signature="e#5684#5685#0" expanded="false" />
+                <element signature="e#5720#5721#0" expanded="false" />
+                <element signature="e#5752#5753#0" expanded="false" />
+                <element signature="e#5802#5803#0" expanded="false" />
+                <element signature="e#5844#5845#0" expanded="false" />
+                <element signature="e#5888#5889#0" expanded="false" />
+                <element signature="e#5928#5929#0" expanded="false" />
+                <element signature="e#5994#5995#0" expanded="false" />
+                <element signature="e#6052#6053#0" expanded="false" />
+                <element signature="e#6099#6100#0" expanded="false" />
+                <element signature="e#6142#6143#0" expanded="false" />
+                <element signature="e#6315#6316#0" expanded="false" />
+                <element signature="e#6348#6349#0" expanded="false" />
+                <element signature="e#6400#6401#0" expanded="false" />
+                <element signature="e#6444#6445#0" expanded="false" />
+                <element signature="e#6476#6477#0" expanded="false" />
+                <element signature="e#6504#6505#0" expanded="false" />
+                <element signature="e#6546#6547#0" expanded="false" />
+                <element signature="e#6580#6581#0" expanded="false" />
+                <element signature="e#6613#6614#0" expanded="false" />
+                <element signature="e#6642#6643#0" expanded="false" />
+                <element signature="e#6686#6687#0" expanded="false" />
+                <element signature="e#6722#6723#0" expanded="false" />
+                <element signature="e#6760#6761#0" expanded="false" />
+                <element signature="e#6794#6795#0" expanded="false" />
+                <element signature="e#6848#6849#0" expanded="false" />
+                <element signature="e#6894#6895#0" expanded="false" />
+                <element signature="e#6925#6926#0" expanded="false" />
+                <element signature="e#6952#6953#0" expanded="false" />
+                <element signature="e#6992#6993#0" expanded="false" />
+                <element signature="e#7024#7025#0" expanded="false" />
+                <element signature="e#7062#7063#0" expanded="false" />
+                <element signature="e#7096#7097#0" expanded="false" />
+                <element signature="e#7150#7151#0" expanded="false" />
+                <element signature="e#7196#7197#0" expanded="false" />
+                <element signature="e#7233#7234#0" expanded="false" />
+                <element signature="e#7266#7267#0" expanded="false" />
+                <element signature="e#7318#7319#0" expanded="false" />
+                <element signature="e#7362#7363#0" expanded="false" />
+                <element signature="e#7394#7395#0" expanded="false" />
+                <element signature="e#7422#7423#0" expanded="false" />
+                <element signature="e#7464#7465#0" expanded="false" />
+                <element signature="e#7498#7499#0" expanded="false" />
+                <element signature="e#7532#7533#0" expanded="false" />
+                <element signature="e#7562#7563#0" expanded="false" />
+                <element signature="e#7608#7609#0" expanded="false" />
+                <element signature="e#7646#7647#0" expanded="false" />
+                <element signature="e#7684#7685#0" expanded="false" />
+                <element signature="e#7717#7718#0" expanded="false" />
+                <element signature="e#7770#7771#0" expanded="false" />
+                <element signature="e#7814#7815#0" expanded="false" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUIPedido.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -418,6 +857,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Raider" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -446,27 +890,27 @@
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/database/Prueba.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Prueba.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Presupuesto.java" />
-        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Cliente.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/AltaPresupuesto.form" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Factura.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIseleccioncliente.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIloguin.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/database/DbMethods.java" />
-        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIFactura.form" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.form" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PedidoController.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/FacturaController.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.form" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.java" />
-        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.form" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIFactura.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Cliente.java" />
+        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java" />
+        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.form" />
+        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java" />
       </list>
     </option>
   </component>
@@ -508,6 +952,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -581,7 +1026,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GUIcrearmaterial" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delpozoaudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="delpozoaudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="objects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,7 +1124,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -836,10 +1332,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34249473" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
@@ -848,7 +1345,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -860,7 +1357,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34249473" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -877,20 +1373,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cambios en tamaño de interfaz." />
+    <MESSAGE value="Añadir cliente remodelado." />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir cliente remodelado." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/nio/HeapCharBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -967,13 +1461,13 @@
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/GUIPresupuesto.java" />
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/GUIPresupuesto.form" />
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
@@ -1029,13 +1523,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/CrearClienteController.java" />
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/CrearMaterialController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIlogin.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -1070,14 +1557,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.java">
@@ -1108,24 +1594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/src/libs/Util.jar!/raider/Util/Utilities.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1143,52 +1615,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Material.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="125" column="64" selection-start-line="125" selection-start-column="64" selection-end-line="125" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1488,21 +1922,493 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        <state relative-caret-position="1088">
+          <caret line="69" column="53" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2351#2352#0" expanded="false" />
+            <element signature="e#2376#2377#0" expanded="false" />
+            <element signature="e#2422#2423#0" expanded="false" />
+            <element signature="e#2450#2451#0" expanded="false" />
+            <element signature="e#2483#2484#0" expanded="false" />
+            <element signature="e#2508#2509#0" expanded="false" />
+            <element signature="e#2548#2549#0" expanded="false" />
+            <element signature="e#2576#2577#0" expanded="false" />
+            <element signature="e#2608#2609#0" expanded="false" />
+            <element signature="e#2636#2637#0" expanded="false" />
+            <element signature="e#2678#2679#0" expanded="false" />
+            <element signature="e#2712#2713#0" expanded="false" />
+            <element signature="e#2745#2746#0" expanded="false" />
+            <element signature="e#2774#2775#0" expanded="false" />
+            <element signature="e#2818#2819#0" expanded="false" />
+            <element signature="e#2854#2855#0" expanded="false" />
+            <element signature="e#2895#2896#0" expanded="false" />
+            <element signature="e#2931#2932#0" expanded="false" />
+            <element signature="e#2990#2991#0" expanded="false" />
+            <element signature="e#3040#3041#0" expanded="false" />
+            <element signature="e#3077#3078#0" expanded="false" />
+            <element signature="e#3109#3110#0" expanded="false" />
+            <element signature="e#3160#3161#0" expanded="false" />
+            <element signature="e#3202#3203#0" expanded="false" />
+            <element signature="e#3243#3244#0" expanded="false" />
+            <element signature="e#3279#3280#0" expanded="false" />
+            <element signature="e#3338#3339#0" expanded="false" />
+            <element signature="e#3388#3389#0" expanded="false" />
+            <element signature="e#3431#3432#0" expanded="false" />
+            <element signature="e#3469#3470#0" expanded="false" />
+            <element signature="e#3532#3533#0" expanded="false" />
+            <element signature="e#3586#3587#0" expanded="false" />
+            <element signature="e#3624#3625#0" expanded="false" />
+            <element signature="e#3657#3658#0" expanded="false" />
+            <element signature="e#3710#3711#0" expanded="false" />
+            <element signature="e#3754#3755#0" expanded="false" />
+            <element signature="e#3794#3795#0" expanded="false" />
+            <element signature="e#3827#3828#0" expanded="false" />
+            <element signature="e#3882#3883#0" expanded="false" />
+            <element signature="e#3926#3927#0" expanded="false" />
+            <element signature="e#3964#3965#0" expanded="false" />
+            <element signature="e#3995#3996#0" expanded="false" />
+            <element signature="e#4046#4047#0" expanded="false" />
+            <element signature="e#4086#4087#0" expanded="false" />
+            <element signature="e#4123#4124#0" expanded="false" />
+            <element signature="e#4155#4156#0" expanded="false" />
+            <element signature="e#4206#4207#0" expanded="false" />
+            <element signature="e#4248#4249#0" expanded="false" />
+            <element signature="e#4277#4278#0" expanded="false" />
+            <element signature="e#4302#4303#0" expanded="false" />
+            <element signature="e#4338#4339#0" expanded="false" />
+            <element signature="e#4366#4367#0" expanded="false" />
+            <element signature="e#4411#4412#0" expanded="false" />
+            <element signature="e#4449#4450#0" expanded="false" />
+            <element signature="e#4514#4515#0" expanded="false" />
+            <element signature="e#4568#4569#0" expanded="false" />
+            <element signature="e#4609#4610#0" expanded="false" />
+            <element signature="e#4643#4644#0" expanded="false" />
+            <element signature="e#4700#4701#0" expanded="false" />
+            <element signature="e#4746#4747#0" expanded="false" />
+            <element signature="e#4785#4786#0" expanded="false" />
+            <element signature="e#4817#4818#0" expanded="false" />
+            <element signature="e#4870#4871#0" expanded="false" />
+            <element signature="e#4912#4913#0" expanded="false" />
+            <element signature="e#4948#4949#0" expanded="false" />
+            <element signature="e#4977#4978#0" expanded="false" />
+            <element signature="e#5024#5025#0" expanded="false" />
+            <element signature="e#5060#5061#0" expanded="false" />
+            <element signature="e#5102#5103#0" expanded="false" />
+            <element signature="e#5136#5137#0" expanded="false" />
+            <element signature="e#5194#5195#0" expanded="false" />
+            <element signature="e#5240#5241#0" expanded="false" />
+            <element signature="e#5271#5272#0" expanded="false" />
+            <element signature="e#5298#5299#0" expanded="false" />
+            <element signature="e#5338#5339#0" expanded="false" />
+            <element signature="e#5370#5371#0" expanded="false" />
+            <element signature="e#5411#5412#0" expanded="false" />
+            <element signature="e#5442#5443#0" expanded="false" />
+            <element signature="e#5496#5497#0" expanded="false" />
+            <element signature="e#5536#5537#0" expanded="false" />
+            <element signature="e#5574#5575#0" expanded="false" />
+            <element signature="e#5602#5603#0" expanded="false" />
+            <element signature="e#5650#5651#0" expanded="false" />
+            <element signature="e#5684#5685#0" expanded="false" />
+            <element signature="e#5720#5721#0" expanded="false" />
+            <element signature="e#5752#5753#0" expanded="false" />
+            <element signature="e#5802#5803#0" expanded="false" />
+            <element signature="e#5844#5845#0" expanded="false" />
+            <element signature="e#5888#5889#0" expanded="false" />
+            <element signature="e#5928#5929#0" expanded="false" />
+            <element signature="e#5994#5995#0" expanded="false" />
+            <element signature="e#6052#6053#0" expanded="false" />
+            <element signature="e#6099#6100#0" expanded="false" />
+            <element signature="e#6142#6143#0" expanded="false" />
+            <element signature="e#6315#6316#0" expanded="false" />
+            <element signature="e#6348#6349#0" expanded="false" />
+            <element signature="e#6400#6401#0" expanded="false" />
+            <element signature="e#6444#6445#0" expanded="false" />
+            <element signature="e#6476#6477#0" expanded="false" />
+            <element signature="e#6504#6505#0" expanded="false" />
+            <element signature="e#6546#6547#0" expanded="false" />
+            <element signature="e#6580#6581#0" expanded="false" />
+            <element signature="e#6613#6614#0" expanded="false" />
+            <element signature="e#6642#6643#0" expanded="false" />
+            <element signature="e#6686#6687#0" expanded="false" />
+            <element signature="e#6722#6723#0" expanded="false" />
+            <element signature="e#6760#6761#0" expanded="false" />
+            <element signature="e#6794#6795#0" expanded="false" />
+            <element signature="e#6848#6849#0" expanded="false" />
+            <element signature="e#6894#6895#0" expanded="false" />
+            <element signature="e#6925#6926#0" expanded="false" />
+            <element signature="e#6952#6953#0" expanded="false" />
+            <element signature="e#6992#6993#0" expanded="false" />
+            <element signature="e#7024#7025#0" expanded="false" />
+            <element signature="e#7062#7063#0" expanded="false" />
+            <element signature="e#7096#7097#0" expanded="false" />
+            <element signature="e#7150#7151#0" expanded="false" />
+            <element signature="e#7196#7197#0" expanded="false" />
+            <element signature="e#7233#7234#0" expanded="false" />
+            <element signature="e#7266#7267#0" expanded="false" />
+            <element signature="e#7318#7319#0" expanded="false" />
+            <element signature="e#7362#7363#0" expanded="false" />
+            <element signature="e#7394#7395#0" expanded="false" />
+            <element signature="e#7422#7423#0" expanded="false" />
+            <element signature="e#7464#7465#0" expanded="false" />
+            <element signature="e#7498#7499#0" expanded="false" />
+            <element signature="e#7532#7533#0" expanded="false" />
+            <element signature="e#7562#7563#0" expanded="false" />
+            <element signature="e#7608#7609#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
+            <element signature="e#7717#7718#0" expanded="false" />
+            <element signature="e#7770#7771#0" expanded="false" />
+            <element signature="e#7814#7815#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.java">
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Material.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="69" column="53" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="53" />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#1048#1049#0" expanded="false" />
+            <element signature="e#1073#1074#0" expanded="false" />
+            <element signature="e#1106#1107#0" expanded="false" />
+            <element signature="e#1134#1135#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
+            <element signature="e#1196#1197#0" expanded="false" />
+            <element signature="e#1240#1241#0" expanded="false" />
+            <element signature="e#1276#1277#0" expanded="false" />
+            <element signature="e#1312#1313#0" expanded="false" />
+            <element signature="e#1344#1345#0" expanded="false" />
+            <element signature="e#1394#1395#0" expanded="false" />
+            <element signature="e#1436#1437#0" expanded="false" />
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1512#1513#0" expanded="false" />
+            <element signature="e#1570#1571#0" expanded="false" />
+            <element signature="e#1620#1621#0" expanded="false" />
+            <element signature="e#1653#1654#0" expanded="false" />
+            <element signature="e#1682#1683#0" expanded="false" />
+            <element signature="e#1726#1727#0" expanded="false" />
+            <element signature="e#1762#1763#0" expanded="false" />
+            <element signature="e#1799#1800#0" expanded="false" />
+            <element signature="e#1832#1833#0" expanded="false" />
+            <element signature="e#1884#1885#0" expanded="false" />
+            <element signature="e#1928#1929#0" expanded="false" />
+            <element signature="e#1966#1967#0" expanded="false" />
+            <element signature="e#2000#2001#0" expanded="false" />
+            <element signature="e#2054#2055#0" expanded="false" />
+            <element signature="e#2100#2101#0" expanded="false" />
+            <element signature="e#2136#2137#0" expanded="false" />
+            <element signature="e#2169#2170#0" expanded="false" />
+            <element signature="e#2220#2221#0" expanded="false" />
+            <element signature="e#2264#2265#0" expanded="false" />
+            <element signature="e#2302#2303#0" expanded="false" />
+            <element signature="e#2337#2338#0" expanded="false" />
+            <element signature="e#2392#2393#0" expanded="false" />
+            <element signature="e#2440#2441#0" expanded="false" />
+            <element signature="e#2473#2474#0" expanded="false" />
+            <element signature="e#2502#2503#0" expanded="false" />
+            <element signature="e#2546#2547#0" expanded="false" />
+            <element signature="e#2582#2583#0" expanded="false" />
+            <element signature="e#2614#2615#0" expanded="false" />
+            <element signature="e#2645#2646#0" expanded="false" />
+            <element signature="e#2690#2691#0" expanded="false" />
+            <element signature="e#2730#2731#0" expanded="false" />
+            <element signature="e#2765#2766#0" expanded="false" />
+            <element signature="e#2796#2797#0" expanded="false" />
+            <element signature="e#2844#2845#0" expanded="false" />
+            <element signature="e#2884#2885#0" expanded="false" />
+            <element signature="e#2921#2922#0" expanded="false" />
+            <element signature="e#2954#2955#0" expanded="false" />
+            <element signature="e#3007#3008#0" expanded="false" />
+            <element signature="e#3051#3052#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/hibernate-core-4.1.4.Final.jar!/org/hibernate/Query.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+          <folding>
+            <element signature="e#3024#3025#0" expanded="false" />
+            <element signature="e#3056#3057#0" expanded="false" />
+            <element signature="e#3092#3093#0" expanded="false" />
+            <element signature="e#3124#3125#0" expanded="false" />
+            <element signature="e#3174#3175#0" expanded="false" />
+            <element signature="e#3216#3217#0" expanded="false" />
+            <element signature="e#3261#3262#0" expanded="false" />
+            <element signature="e#3293#3294#0" expanded="false" />
+            <element signature="e#3352#3353#0" expanded="false" />
+            <element signature="e#3400#3401#0" expanded="false" />
+            <element signature="e#3431#3432#0" expanded="false" />
+            <element signature="e#3459#3460#0" expanded="false" />
+            <element signature="e#3500#3501#0" expanded="false" />
+            <element signature="e#3534#3535#0" expanded="false" />
+            <element signature="e#3566#3567#0" expanded="false" />
+            <element signature="e#3595#3596#0" expanded="false" />
+            <element signature="e#3638#3639#0" expanded="false" />
+            <element signature="e#3674#3675#0" expanded="false" />
+            <element signature="e#3710#3711#0" expanded="false" />
+            <element signature="e#3743#3744#0" expanded="false" />
+            <element signature="e#3794#3795#0" expanded="false" />
+            <element signature="e#3838#3839#0" expanded="false" />
+            <element signature="e#3875#3876#0" expanded="false" />
+            <element signature="e#3905#3906#0" expanded="false" />
+            <element signature="e#3954#3955#0" expanded="false" />
+            <element signature="e#3992#3993#0" expanded="false" />
+            <element signature="e#4036#4037#0" expanded="false" />
+            <element signature="e#4073#4074#0" expanded="false" />
+            <element signature="e#4136#4137#0" expanded="false" />
+            <element signature="e#4188#4189#0" expanded="false" />
+            <element signature="e#4236#4237#0" expanded="false" />
+            <element signature="e#4277#4278#0" expanded="false" />
+            <element signature="e#4348#4349#0" expanded="false" />
+            <element signature="e#4408#4409#0" expanded="false" />
+            <element signature="e#4451#4452#0" expanded="false" />
+            <element signature="e#4487#4488#0" expanded="false" />
+            <element signature="e#4548#4549#0" expanded="false" />
+            <element signature="e#4598#4599#0" expanded="false" />
+            <element signature="e#4642#4643#0" expanded="false" />
+            <element signature="e#4679#4680#0" expanded="false" />
+            <element signature="e#4742#4743#0" expanded="false" />
+            <element signature="e#4794#4795#0" expanded="false" />
+            <element signature="e#4838#4839#0" expanded="false" />
+            <element signature="e#4875#4876#0" expanded="false" />
+            <element signature="e#4938#4939#0" expanded="false" />
+            <element signature="e#4990#4991#0" expanded="false" />
+            <element signature="e#5035#5036#0" expanded="false" />
+            <element signature="e#5073#5074#0" expanded="false" />
+            <element signature="e#5138#5139#0" expanded="false" />
+            <element signature="e#5192#5193#0" expanded="false" />
+            <element signature="e#5244#5245#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
+            <element signature="e#5483#5484#0" expanded="false" />
+            <element signature="e#5523#5524#0" expanded="false" />
+            <element signature="e#5592#5593#0" expanded="false" />
+            <element signature="e#5650#5651#0" expanded="false" />
+            <element signature="e#5698#5699#0" expanded="false" />
+            <element signature="e#5739#5740#0" expanded="false" />
+            <element signature="e#5810#5811#0" expanded="false" />
+            <element signature="e#5870#5871#0" expanded="false" />
+            <element signature="e#5918#5919#0" expanded="false" />
+            <element signature="e#5959#5960#0" expanded="false" />
+            <element signature="e#6030#6031#0" expanded="false" />
+            <element signature="e#6090#6091#0" expanded="false" />
+            <element signature="e#6139#6140#0" expanded="false" />
+            <element signature="e#6181#6182#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3128">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1552#1553#0" expanded="false" />
+            <element signature="e#1578#1579#0" expanded="false" />
+            <element signature="e#1603#1604#0" expanded="false" />
+            <element signature="e#1636#1637#0" expanded="false" />
+            <element signature="e#1664#1665#0" expanded="false" />
+            <element signature="e#1698#1699#0" expanded="false" />
+            <element signature="e#1728#1729#0" expanded="false" />
+            <element signature="e#1774#1775#0" expanded="false" />
+            <element signature="e#1812#1813#0" expanded="false" />
+            <element signature="e#1842#1843#0" expanded="false" />
+            <element signature="e#1868#1869#0" expanded="false" />
+            <element signature="e#1906#1907#0" expanded="false" />
+            <element signature="e#1936#1937#0" expanded="false" />
+            <element signature="e#1972#1973#0" expanded="false" />
+            <element signature="e#2004#2005#0" expanded="false" />
+            <element signature="e#2054#2055#0" expanded="false" />
+            <element signature="e#2096#2097#0" expanded="false" />
+            <element signature="e#2125#2126#0" expanded="false" />
+            <element signature="e#2150#2151#0" expanded="false" />
+            <element signature="e#2186#2187#0" expanded="false" />
+            <element signature="e#2214#2215#0" expanded="false" />
+            <element signature="e#2247#2248#0" expanded="false" />
+            <element signature="e#2276#2277#0" expanded="false" />
+            <element signature="e#2320#2321#0" expanded="false" />
+            <element signature="e#2356#2357#0" expanded="false" />
+            <element signature="e#2392#2393#0" expanded="false" />
+            <element signature="e#2424#2425#0" expanded="false" />
+            <element signature="e#2474#2475#0" expanded="false" />
+            <element signature="e#2516#2517#0" expanded="false" />
+            <element signature="e#2547#2548#0" expanded="false" />
+            <element signature="e#2574#2575#0" expanded="false" />
+            <element signature="e#2614#2615#0" expanded="false" />
+            <element signature="e#2646#2647#0" expanded="false" />
+            <element signature="e#2681#2682#0" expanded="false" />
+            <element signature="e#2712#2713#0" expanded="false" />
+            <element signature="e#2760#2761#0" expanded="false" />
+            <element signature="e#2800#2801#0" expanded="false" />
+            <element signature="e#2830#2831#0" expanded="false" />
+            <element signature="e#2856#2857#0" expanded="false" />
+            <element signature="e#2894#2895#0" expanded="false" />
+            <element signature="e#2924#2925#0" expanded="false" />
+            <element signature="e#2956#2957#0" expanded="false" />
+            <element signature="e#2984#2985#0" expanded="false" />
+            <element signature="e#3026#3027#0" expanded="false" />
+            <element signature="e#3060#3061#0" expanded="false" />
+            <element signature="e#3102#3103#0" expanded="false" />
+            <element signature="e#3140#3141#0" expanded="false" />
+            <element signature="e#3202#3203#0" expanded="false" />
+            <element signature="e#3256#3257#0" expanded="false" />
+            <element signature="e#3301#3302#0" expanded="false" />
+            <element signature="e#3342#3343#0" expanded="false" />
+            <element signature="e#3410#3411#0" expanded="false" />
+            <element signature="e#3470#3471#0" expanded="false" />
+            <element signature="e#3514#3515#0" expanded="false" />
+            <element signature="e#3554#3555#0" expanded="false" />
+            <element signature="e#3620#3621#0" expanded="false" />
+            <element signature="e#3678#3679#0" expanded="false" />
+            <element signature="e#3719#3720#0" expanded="false" />
+            <element signature="e#3756#3757#0" expanded="false" />
+            <element signature="e#3816#3817#0" expanded="false" />
+            <element signature="e#3868#3869#0" expanded="false" />
+            <element signature="e#3913#3914#0" expanded="false" />
+            <element signature="e#3947#3948#0" expanded="false" />
+            <element signature="e#4008#4009#0" expanded="false" />
+            <element signature="e#4054#4055#0" expanded="false" />
+            <element signature="e#4097#4098#0" expanded="false" />
+            <element signature="e#4130#4131#0" expanded="false" />
+            <element signature="e#4188#4189#0" expanded="false" />
+            <element signature="e#4232#4233#0" expanded="false" />
+            <element signature="e#4285#4286#0" expanded="false" />
+            <element signature="e#4323#4324#0" expanded="false" />
+            <element signature="e#4396#4397#0" expanded="false" />
+            <element signature="e#4450#4451#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="285" column="5" selection-start-line="285" selection-start-column="5" selection-end-line="285" selection-end-column="5" />
+          <folding>
+            <element signature="e#2529#2545#0" expanded="false" />
+            <element signature="e#2859#2860#0" expanded="false" />
+            <element signature="e#2897#2898#0" expanded="false" />
+            <element signature="e#3029#3030#0" expanded="false" />
+            <element signature="e#3071#3072#0" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3256#3257#0" expanded="false" />
+            <element signature="e#3387#3388#0" expanded="false" />
+            <element signature="e#3435#3436#0" expanded="false" />
+            <element signature="e#3655#3656#0" expanded="false" />
+            <element signature="e#3697#3698#0" expanded="false" />
+            <element signature="e#3870#3871#0" expanded="false" />
+            <element signature="e#3912#3913#0" expanded="false" />
+            <element signature="e#8539#8540#0" expanded="false" />
+            <element signature="e#8567#8568#0" expanded="false" />
+            <element signature="e#8613#8614#0" expanded="false" />
+            <element signature="e#8647#8648#0" expanded="false" />
+            <element signature="e#8682#8683#0" expanded="false" />
+            <element signature="e#8712#8713#0" expanded="false" />
+            <element signature="e#8759#8760#0" expanded="false" />
+            <element signature="e#8797#8798#0" expanded="false" />
+            <element signature="e#8837#8838#0" expanded="false" />
+            <element signature="e#8869#8870#0" expanded="false" />
+            <element signature="e#8923#8924#0" expanded="false" />
+            <element signature="e#8965#8966#0" expanded="false" />
+            <element signature="e#9001#9002#0" expanded="false" />
+            <element signature="e#9029#9030#0" expanded="false" />
+            <element signature="e#9075#9076#0" expanded="false" />
+            <element signature="e#9109#9110#0" expanded="false" />
+            <element signature="e#9156#9157#0" expanded="false" />
+            <element signature="e#9195#9196#0" expanded="false" />
+            <element signature="e#9263#9264#0" expanded="false" />
+            <element signature="e#9319#9320#0" expanded="false" />
+            <element signature="e#9369#9370#0" expanded="false" />
+            <element signature="e#9411#9412#0" expanded="false" />
+            <element signature="e#9596#9597#0" expanded="false" />
+            <element signature="e#9637#9638#0" expanded="false" />
+            <element signature="e#9709#9710#0" expanded="false" />
+            <element signature="e#9769#9770#0" expanded="false" />
+            <element signature="e#9815#9816#0" expanded="false" />
+            <element signature="e#9853#9854#0" expanded="false" />
+            <element signature="e#9919#9920#0" expanded="false" />
+            <element signature="e#9973#9974#0" expanded="false" />
+            <element signature="e#10015#10016#0" expanded="false" />
+            <element signature="e#10049#10050#0" expanded="false" />
+            <element signature="e#10107#10108#0" expanded="false" />
+            <element signature="e#10153#10154#0" expanded="false" />
+            <element signature="e#10192#10193#0" expanded="false" />
+            <element signature="e#10223#10224#0" expanded="false" />
+            <element signature="e#10275#10276#0" expanded="false" />
+            <element signature="e#10315#10316#0" expanded="false" />
+            <element signature="e#10356#10357#0" expanded="false" />
+            <element signature="e#10389#10390#0" expanded="false" />
+            <element signature="e#10445#10446#0" expanded="false" />
+            <element signature="e#10489#10490#0" expanded="false" />
+            <element signature="e#10526#10527#0" expanded="false" />
+            <element signature="e#10555#10556#0" expanded="false" />
+            <element signature="e#10603#10604#0" expanded="false" />
+            <element signature="e#10639#10640#0" expanded="false" />
+            <element signature="e#10680#10681#0" expanded="false" />
+            <element signature="e#10713#10714#0" expanded="false" />
+            <element signature="e#10769#10770#0" expanded="false" />
+            <element signature="e#10813#10814#0" expanded="false" />
+            <element signature="e#10851#10852#0" expanded="false" />
+            <element signature="e#10881#10882#0" expanded="false" />
+            <element signature="e#10931#10932#0" expanded="false" />
+            <element signature="e#10969#10970#0" expanded="false" />
+            <element signature="e#11004#11005#0" expanded="false" />
+            <element signature="e#11031#11032#0" expanded="false" />
+            <element signature="e#11075#11076#0" expanded="false" />
+            <element signature="e#11107#11108#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
