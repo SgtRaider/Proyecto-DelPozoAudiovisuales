@@ -10,7 +10,6 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.*;
-import java.text.ParseException;
 import java.util.*;
 import java.util.List;
 
@@ -46,10 +45,14 @@ public class GUIcrearmaterial extends JDialog implements ListSelectionListener{
         defaultListModel = new DefaultListModel<>();
         materialList.setModel(defaultListModel);
         materialList.addListSelectionListener(this);
+        descripcionTA.setLineWrap(true);
+        preciodiaTF.setText(String.valueOf(0.0));
+        precioferiaTF.setText(String.valueOf(0.0));
+        cantidadTF.setText(String.valueOf(0));
 
         loadList();
 
-        setTitle("Alta cliente");
+        setTitle("Alta material");
         setContentPane(contentPane);
         getRootPane().setDefaultButton(buttonOK);
         setPreferredSize(new Dimension(700, 470));
@@ -224,7 +227,7 @@ public class GUIcrearmaterial extends JDialog implements ListSelectionListener{
 
     private void loadList() {
 
-        List<Material> materialList = dbm.list("material", new HashMap<>());
+        List<Material> materialList = dbm.list("material", new HashMap<String, String>());
 
         defaultListModel.clear();
 

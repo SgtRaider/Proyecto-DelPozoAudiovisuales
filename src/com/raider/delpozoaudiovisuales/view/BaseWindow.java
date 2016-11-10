@@ -14,6 +14,8 @@ public class BaseWindow {
 
     private static JMenuBar mbventana;
 
+    private static JFrame frame;
+
     private JMenu mmenu;
     private JMenu mcrear;
     private JMenu mconsultar;
@@ -43,7 +45,7 @@ public class BaseWindow {
 
         // Creacion de la Ventana o Frame con sus elementos
 
-        JFrame frame = new JFrame("Gestor DelPozoAudiovisuales");
+        frame = new JFrame("Gestor DelPozoAudiovisuales");
         frame.setContentPane(new BaseWindow().basePanel);
         frame.setDefaultCloseOperation(3);
         frame.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
@@ -51,6 +53,7 @@ public class BaseWindow {
         //frame.setResizable(false);
         frame.pack();
         //frame.setState(Frame.NORMAL);
+        frame.setExtendedState( frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
 
         frame.setJMenuBar(getMenuBar());
@@ -235,5 +238,9 @@ public class BaseWindow {
 
     public void setMiconsultarmaterial(JMenuItem miconsultarmaterial) {
         this.miconsultarmaterial = miconsultarmaterial;
+    }
+
+    public static JFrame getFrame() {
+        return frame;
     }
 }

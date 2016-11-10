@@ -2,9 +2,12 @@ package com.raider.delpozoaudiovisuales.view;
 
 import com.raider.delpozoaudiovisuales.controller.guiControllers.PresupuestoController;
 import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.objects.Material;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 import java.awt.*;
 
 /**
@@ -71,10 +74,12 @@ public class GUIPresupuesto {
         frame.setMinimumSize(new Dimension(1100, 800));
         frame.pack();
         frame.setVisible(true);
+        frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
     }
 
     private void addFrame(BaseWindow mw) {
 
+        mw.getFrame().setExtendedState( mw.getFrame().getExtendedState() | JFrame.MAXIMIZED_BOTH);
         mw.getBasePanel().add(GUIPresupuesto.this.panel1);
         GUIPresupuesto.this.panel1.setVisible(true);
         GUIPresupuesto.this.panel1.setPreferredSize(mw.getBasePanel().getPreferredSize());

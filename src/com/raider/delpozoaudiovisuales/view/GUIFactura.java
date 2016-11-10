@@ -72,6 +72,7 @@ public class GUIFactura {
         frame.setMinimumSize(new Dimension(1100, 800));
         frame.pack();
         frame.setVisible(true);
+        frame.setExtendedState( frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
     }
 
     private void addFrame(BaseWindow mw) {
@@ -80,6 +81,7 @@ public class GUIFactura {
         GUIFactura.this.panel1.setVisible(true);
         GUIFactura.this.panel1.setPreferredSize(mw.getBasePanel().getPreferredSize());
         mw.getBasePanel().updateUI();
+        mw.getFrame().setExtendedState( mw.getFrame().getExtendedState() | JFrame.MAXIMIZED_BOTH);
     }
 
     public FacturaController getFc() {

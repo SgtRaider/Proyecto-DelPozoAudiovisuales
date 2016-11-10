@@ -137,8 +137,8 @@
               </component>
               <component id="d1955" class="com.toedter.calendar.JDateChooser" binding="inicioDC">
                 <constraints>
-                  <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms/>
+                  <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-vert="false"/>
                 </constraints>
               </component>
               <component id="bbb3" class="javax.swing.JLabel">
@@ -152,8 +152,8 @@
               </component>
               <component id="b9cb4" class="com.toedter.calendar.JDateChooser" binding="finDC">
                 <constraints>
-                  <grid row="2" column="14" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms/>
+                  <grid row="2" column="14" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-vert="false"/>
                 </constraints>
               </component>
             </children>
@@ -178,7 +178,7 @@
                 <rowspec value="top:4dlu:noGrow"/>
                 <rowspec value="center:max(d;36dlu):noGrow"/>
                 <rowspec value="top:4dlu:noGrow"/>
-                <rowspec value="center:max(d;85dlu):grow(3.0)"/>
+                <rowspec value="center:max(d;35dlu):grow(3.0)"/>
                 <rowspec value="top:4dlu:noGrow"/>
                 <rowspec value="center:max(d;36dlu):noGrow"/>
                 <rowspec value="top:4dlu:noGrow"/>
@@ -377,43 +377,47 @@
                           <forms defaultalign-horz="false"/>
                         </constraints>
                         <properties>
-                          <text value="Teléfono:"/>
+                          <text value="Teléfono Contacto:"/>
                         </properties>
                       </component>
                       <component id="3a380" class="javax.swing.JLabel" binding="empresaLB">
                         <constraints>
-                          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="9c4f7" class="javax.swing.JLabel" binding="nombre_contactoLB">
                         <constraints>
-                          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="cc17e" class="javax.swing.JLabel" binding="apellidos_contactoLB">
                         <constraints>
-                          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="dbed2" class="javax.swing.JLabel" binding="telefonoLB">
                         <constraints>
-                          <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="e7264" class="javax.swing.JLabel">
@@ -427,11 +431,12 @@
                       </component>
                       <component id="52c2e" class="javax.swing.JLabel" binding="cifLB">
                         <constraints>
-                          <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="94d17" class="javax.swing.JLabel">
@@ -472,37 +477,41 @@
                       </component>
                       <component id="41a43" class="javax.swing.JLabel" binding="paisLB">
                         <constraints>
-                          <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="968f8" class="javax.swing.JLabel" binding="provinciaLB">
                         <constraints>
-                          <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="61a98" class="javax.swing.JLabel" binding="cpLB">
                         <constraints>
-                          <grid row="8" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="8" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
-                          <text value="x"/>
+                          <horizontalTextPosition value="2"/>
+                          <text value=""/>
                         </properties>
                       </component>
                       <component id="b4e82" class="javax.swing.JLabel" binding="direccionLB">
                         <constraints>
-                          <grid row="2" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                          <forms/>
+                          <grid row="2" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
                         </constraints>
                         <properties>
+                          <horizontalTextPosition value="2"/>
                           <text value=""/>
                         </properties>
                       </component>

@@ -182,8 +182,7 @@ public class DbMethods {
             String value = entry.getValue();
 
             if (count == 0) sb.append(" and (" + tabla  + "." + key + " LIKE " + "\'" + "%" + value + "%" + "\'");
-            else
-            sb.append(" or " + tabla  + "." + key + " LIKE " + "\'" + "%" + value + "%" + "\'");
+            else sb.append(" or " + tabla  + "." + key + " LIKE " + "\'" + "%" + value + "%" + "\'");
 
             count++;
         }
@@ -191,5 +190,14 @@ public class DbMethods {
         sb.append(")");
 
         return sb.toString();
+    }
+
+    private void loadObject(String object) {
+
+        //TODO
+
+        switch (object) {
+
+        }
     }
 }

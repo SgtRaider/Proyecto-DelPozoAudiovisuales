@@ -131,7 +131,7 @@ public class GUIcrearcliente extends JDialog implements ListSelectionListener {
 
     private void loadList() {
 
-        List<Cliente> clienteList = dbm.list("cliente", new HashMap<>());
+        List<Cliente> clienteList = dbm.list("cliente", new HashMap<String, String>());
 
         defaultListModel.clear();
 
