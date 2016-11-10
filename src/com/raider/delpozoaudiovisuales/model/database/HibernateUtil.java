@@ -13,8 +13,6 @@ public class HibernateUtil {
 
     private static SessionFactory sessionFactory;
     private static Session session;
-    private static String dbUsername = "root";
-    private static String dbPassword = "root";
 
     /**
      * Crea la factoria de sesiones

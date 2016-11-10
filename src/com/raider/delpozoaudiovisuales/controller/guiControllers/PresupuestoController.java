@@ -27,6 +27,8 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
     private DbMethods dbm;
     private GUIPresupuesto gui;
     private Presupuesto presupuesto;
+    private int id;
+    private int selectedRow;
 
     private DefaultTableModel defaultTableModel;
 
@@ -44,6 +46,7 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
     private void createTable() {
 
+        gui.getTB().getSelectionModel().addListSelectionListener(this);
         defaultTableModel = new DefaultTableModel();
         gui.getTB().setModel(defaultTableModel);
 
@@ -61,6 +64,9 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment( JLabel.CENTER );
         gui.getTB().setDefaultRenderer(Object.class, centerRenderer);
+        gui.getTB().setCellSelectionEnabled(false);
+        gui.getTB().setRowSelectionAllowed(true);
+        gui.getTB().setColumnSelectionAllowed(false);
     }
 
     public void addRowMaterial(Presupuesto_Material presupuesto_material) {
@@ -93,8 +99,11 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
             switch (actionCommand) {
 
+                case "Eliminar Material":
+                    removeMaterial();
+                    break;
+
                 case "Eliminar Materiales":
-                    System.out.println("funciona");
                     removeMateriales();
                     break;
 
@@ -161,12 +170,31 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
         loadMaterial();
     }
 
-    private void removeMaterial(int id) {
+    private void removeMaterial() {
 
+        if(gui.getTB().isRowSelected(selectedRow)) {
+
+            defaultTableModel.removeRow(selectedRow);
+
+            for (Presupuesto_Material presupuesto_material : presupuesto.getPresupuestoMaterial()) {
+
+                if (presupuesto_material.getMaterial().getId() == id) {
+
+                    presupuesto.getPresupuestoMaterial().remove(presupuesto_material);
+                    break;
+                }
+            }
+
+            loadMaterial();
+        }
     }
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
 
+        if(gui.getTB().isRowSelected(gui.getTB().getSelectedRow())) {
+            id = Integer.parseInt((String) gui.getTB().getValueAt(gui.getTB().getSelectedRow(),0));
+            selectedRow = gui.getTB().getSelectedRow();
+        }
     }
 }
