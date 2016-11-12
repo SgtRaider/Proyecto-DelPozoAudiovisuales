@@ -39,6 +39,9 @@ public class Factura {
     @Column(name="total")
     private float total;
 
+    @Column(name = "observaciones")
+    private String observaciones;
+
     @Column(name="fecha_inicio")
     private Date fecha_inicio;
 

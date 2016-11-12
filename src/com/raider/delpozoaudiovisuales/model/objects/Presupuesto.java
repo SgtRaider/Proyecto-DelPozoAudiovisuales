@@ -18,10 +18,10 @@ public class Presupuesto {
     private int id;
 
     @Column(name="no_presupuesto")
-    private int no_presupuesto; //
+    private int no_presupuesto;
 
     @Column(name="fecha_validez")
-    private Date fecha_validez; //
+    private Date fecha_validez;
 
     @Column(name="fecha_emision")
     private Date fecha_emision;
@@ -46,6 +46,9 @@ public class Presupuesto {
 
     @Column(name="mostrar_descuento")
     private boolean mostrar_descuento;
+
+    @Column(name = "observaciones")
+    private String observaciones;
 
     @Column(name="mostrar_precios")
     private boolean mostrar_precios;
@@ -191,5 +194,13 @@ public class Presupuesto {
 
     public void setPresupuestoMaterial(List<Presupuesto_Material> presupuestoMaterial) {
         this.presupuestoMaterial = presupuestoMaterial;
+    }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
     }
 }

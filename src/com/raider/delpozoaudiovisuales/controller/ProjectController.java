@@ -1,7 +1,9 @@
 package com.raider.delpozoaudiovisuales.controller;
 
 import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.objects.Usuario;
 import com.raider.delpozoaudiovisuales.view.*;
+import raider.Util.Utilities;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -21,9 +23,24 @@ public class ProjectController implements ActionListener{
         this.mw = mainWindow;
         this.dbm = new DbMethods();
 
-        login = new GUIlogin();
+        login = new GUIlogin(mainWindow);
         login.setVisible(true);
-        //TODO Comprobar login
+
+        Usuario user;
+
+        do {
+
+            user = dbm.login(login.getUsuario(), login.getContrasena());
+
+            if(user != null) {
+                login.visible(false);
+            } else {
+                Utilities.mensajeError("Introduzca un usuario y contraseña correctos.");
+                login.visible(true);
+            }
+
+        } while (user == null);
+
         addListeners();
     }
 
@@ -109,11 +126,6 @@ public class ProjectController implements ActionListener{
 
                     if(source == mw.getMicrearmaterial()) {
                         new GUIcrearmaterial(dbm).setVisible(true);
-                    } else {
-
-                        if(source == mw.getMiconsultarmaterial()) {
-
-                        }
                     }
 
                     break;
@@ -123,11 +135,6 @@ public class ProjectController implements ActionListener{
                     if(source == mw.getMicrearcliente()) {
 
                         new GUIcrearcliente(dbm).setVisible(true);
-                    } else {
-
-                        if(source == mw.getMiconsultarcliente()) {
-
-                        }
                     }
 
                     break;

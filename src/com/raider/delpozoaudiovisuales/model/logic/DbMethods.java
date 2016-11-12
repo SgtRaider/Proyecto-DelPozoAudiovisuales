@@ -200,4 +200,53 @@ public class DbMethods {
 
         }
     }
+
+    public Usuario login(String user, String pass) {
+
+        Session session = db.getCurrentSession();
+
+        String sql;
+        Query query;
+
+        sql = "FROM Usuario WHERE username = '" + user + "' and pass = md5('" + pass + "')";
+        query = session.createQuery(sql);
+        Usuario usuario = (Usuario) query.uniqueResult();
+
+        return usuario;
+    }
+
+    public int lastID(int op) {
+
+        Session session = db.getCurrentSession();
+
+        String sql = "";
+        Query query;
+        int id = 1;
+
+        switch (op) {
+
+            case 1:
+
+                sql = "SELECT id FROM Presupuesto ORDER BY id ASC";
+                break;
+
+            case 2:
+
+                sql = "SELECT id FROM Pedido ORDER BY id ASC";
+                break;
+
+            case 3:
+
+                sql = "SELECT id FROM Factura ORDER BY id ASC";
+                break;
+        }
+
+        if (sql != ""){
+
+            query = session.createQuery(sql);
+            id = (query.uniqueResult() == null) ? 1 : (int) query.uniqueResult();
+        }
+
+        return id;
+    }
 }

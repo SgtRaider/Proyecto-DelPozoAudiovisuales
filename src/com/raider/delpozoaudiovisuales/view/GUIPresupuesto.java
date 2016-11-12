@@ -80,7 +80,7 @@ public class GUIPresupuesto {
     private void addFrame(BaseWindow mw) {
 
         mw.getFrame().setExtendedState( mw.getFrame().getExtendedState() | JFrame.MAXIMIZED_BOTH);
-        mw.getBasePanel().add(GUIPresupuesto.this.panel1);
+        mw.getFrame().add(GUIPresupuesto.this.panel1);
         GUIPresupuesto.this.panel1.setVisible(true);
         GUIPresupuesto.this.panel1.setPreferredSize(mw.getBasePanel().getPreferredSize());
         mw.getBasePanel().updateUI();

@@ -1,10 +1,7 @@
 package com.raider.delpozoaudiovisuales.controller.guiControllers;
 
 import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
-import com.raider.delpozoaudiovisuales.model.objects.Cliente;
-import com.raider.delpozoaudiovisuales.model.objects.Material;
-import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
-import com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material;
+import com.raider.delpozoaudiovisuales.model.objects.*;
 import com.raider.delpozoaudiovisuales.view.GUIPresupuesto;
 import com.raider.delpozoaudiovisuales.view.GUIseleccioncliente;
 import com.raider.delpozoaudiovisuales.view.GUIseleccionmaterial;
@@ -17,7 +14,9 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.Arc2D;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by Raider on 06/11/2016.
@@ -38,6 +37,22 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
         this.gui = guip;
 
         presupuesto = new Presupuesto();
+
+        gui.getNoLB().setText(String.valueOf(dbm.lastID(1)));
+
+        createTable();
+        loadMaterial();
+        addListeners();
+    }
+
+    public PresupuestoController(DbMethods dbm, GUIPresupuesto guip, Presupuesto presupuesto) {
+
+        this.dbm = dbm;
+        this.gui = guip;
+
+        this.presupuesto = presupuesto;
+
+        loadPresupuesto(presupuesto);
 
         createTable();
         loadMaterial();
@@ -99,27 +114,48 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
             switch (actionCommand) {
 
+                case "Calcular":
+
+                    calcular();
+                    break;
+
                 case "Eliminar Material":
+
                     removeMaterial();
                     break;
 
                 case "Eliminar Materiales":
+
                     removeMateriales();
                     break;
 
                 case "Añadir Material":
+
                     new GUIseleccionmaterial(dbm, 1, presupuesto, PresupuestoController.this).setVisible(true);
                     break;
 
                 case "Cliente":
+
                     new GUIseleccioncliente(dbm, 1, presupuesto, PresupuestoController.this).setVisible(true);
                     break;
 
                 case "Guardar":
-                    if(!presupuesto.getPresupuestoMaterial().isEmpty()) {
 
-                        System.out.println(presupuesto.getPresupuestoMaterial().get(0).getMaterial().getNombre());
-                        System.out.println(presupuesto.getPresupuestoMaterial().get(0).getCantidad());
+                    if(Utilities.mensajeConfirmacion("¿Ha terminado de guardar el presupuesto?\n" +
+                            " Recuerde presionar el botón calcular\n" +
+                            " para recalcular y actualizar lso valores\n" +
+                            " del presupuesto")==0) {
+
+                        guardar();
+
+                        if (gui.getFrame() == null) {
+
+                            gui.getMw().getBasePanel().removeAll();
+                            gui.getMw().getBasePanel().updateUI();
+                        } else {
+
+                            gui.getFrame().dispose();
+                        }
                     }
                     break;
 
@@ -149,6 +185,22 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
         gui.getProvinciaLB().setText(cliente.getProvincia());
         gui.getCpLB().setText(cliente.getCp());
         gui.getDireccionLB().setText(cliente.getDireccion());
+    }
+
+    public void loadPresupuesto(Presupuesto presupuesto) {
+
+        gui.getNoLB().setText(String.valueOf(presupuesto.getNo_presupuesto()));
+        gui.getValidezDC().setDate(presupuesto.getFecha_validez());
+        gui.getInicioDC().setDate(presupuesto.getFecha_inicio());
+        gui.getFinDC().setDate(presupuesto.getFecha_fin());
+        gui.getDescuentoCB().setSelected(presupuesto.isMostrar_descuento());
+        gui.getPreciosCB().setSelected(presupuesto.isMostrar_precios());
+        gui.getBoolCB().setSelected(presupuesto.isAprovado());
+        gui.getDescuentoTF().setText(String.valueOf(presupuesto.getDescuento()));
+        gui.getSubtotalLB().setText(String.valueOf(presupuesto.getSub_total()));
+        gui.getIvaLB().setText(String.valueOf(presupuesto.getIva()));
+        gui.getTotalLB().setText(String.valueOf(presupuesto.getTotal()));
+        gui.getObservacionesTA().setText(presupuesto.getObservaciones());
     }
 
     public void loadMaterial() {
@@ -187,6 +239,56 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
             loadMaterial();
         }
+    }
+
+    public void calcular() {
+
+        //TODO coger IVA de preferencias
+        float iva = (float) 0.21;
+        float subtotal = 0;
+        float total = 0;
+        float descuento = Float.parseFloat(gui.getDescuentoTF().getText().toString().isEmpty() ? "0" : gui.getDescuentoTF().getText().toString()) / 100;
+
+        for (Presupuesto_Material presupuesto_material : presupuesto.getPresupuestoMaterial()) {
+
+            subtotal += (presupuesto_material.getCantidad() * presupuesto_material.getDias_uso() * presupuesto_material.getMaterial().getPrecio_dia());
+        }
+
+        subtotal = subtotal - (descuento * subtotal);
+
+        iva = subtotal * iva;
+
+        total = subtotal + iva;
+
+        presupuesto.setDescuento(descuento);
+        presupuesto.setSub_total(subtotal);
+        presupuesto.setIva(iva);
+        presupuesto.setTotal(total);
+        gui.getTotalLB().setText(String.valueOf(Math.round(total*100.0)/100.0) + " €");
+        gui.getIvaLB().setText(String.valueOf(Math.round(iva*100.0)/100.0) + " €");
+        gui.getSubtotalLB().setText(String.valueOf(Math.round(subtotal*100.0)/100.0) + " €");
+    }
+
+    public void presupuestoAprovado(Presupuesto presupuesto) {
+
+        Pedido pedido = new Pedido();
+
+
+    }
+
+    public void guardar() {
+
+        presupuesto.setNo_presupuesto(Integer.parseInt(gui.getNoLB().getText()));
+        presupuesto.setFecha_emision(new Date());
+        presupuesto.setFecha_validez(gui.getValidezDC().getDate());
+        presupuesto.setFecha_inicio(gui.getInicioDC().getDate());
+        presupuesto.setFecha_fin(gui.getFinDC().getDate());
+        presupuesto.setMostrar_descuento(gui.getDescuentoCB().isSelected());
+        presupuesto.setMostrar_precios(gui.getPreciosCB().isSelected());
+        presupuesto.setAprovado(gui.getBoolCB().isSelected());
+        presupuesto.setObservaciones(gui.getObservacionesTA().getText());
+
+        dbm.save(presupuesto);
     }
 
     @Override

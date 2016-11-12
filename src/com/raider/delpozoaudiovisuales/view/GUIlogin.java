@@ -16,8 +16,53 @@ public class GUIlogin extends JDialog implements ActionListener {
     private String usuario;
     private String contrasena;
 
-    public GUIlogin() {
+    private BaseWindow mw;
+
+    public GUIlogin(BaseWindow mw) {
         super();
+
+        this.mw = mw;
+
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        addWindowListener(new WindowListener() {
+            @Override
+            public void windowOpened(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+
+                System.exit(0);
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+
+            }
+        });
+
         setTitle("Login");
         getContentPane().add(contentPane);
         getRootPane().setDefaultButton(btOk);
@@ -50,8 +95,11 @@ public class GUIlogin extends JDialog implements ActionListener {
 
         usuario = txtUsuario.getText();
         contrasena = String.valueOf(txtPassword.getPassword());
-        setVisible(false);
+
+        visible(false);
     }
+
+    public void visible(boolean bool) { setVisible(bool);}
 
     private void cancelar() {
         setVisible(false);
