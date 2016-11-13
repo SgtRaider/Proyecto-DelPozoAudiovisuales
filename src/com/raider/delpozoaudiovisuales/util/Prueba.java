@@ -4,7 +4,32 @@ import com.raider.delpozoaudiovisuales.model.objects.Cliente;
 import com.raider.delpozoaudiovisuales.model.objects.Material;
 import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
 import com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material;
-import org.hibernate.Session;
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
+
+import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.util.Properties;
 
 
 /**
@@ -14,9 +39,9 @@ public class Prueba {
 
     public static HibernateUtil db = new HibernateUtil();
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws NoSuchPaddingException, NoSuchAlgorithmException {
 
-        db.buildSessionFactory();
+        /*db.buildSessionFactory();
         db.openSession();
 
         Cliente cliente = new Cliente();
@@ -40,10 +65,43 @@ public class Prueba {
         prepMat.setDias_uso(2);
 
         prep.getPresupuestoMaterial().add(prepMat);
-        save(prep);
+        save(prep);*/
+
+        JFileChooser fr = new JFileChooser();
+        FileSystemView fw = fr.getFileSystemView();
+
+        /*String binaryKey = "01100001 00101110 10110111 11000101 10110100 01101001" +
+                " 00010011 00100010 11001011 00100000 01001101 11100101 11101111 10111100" +
+                " 01101101 00001110 00000100 11011110 00000000 11000000 10101011 01100001" +
+                " 01010101 01101000 00000000 10001011 01110010 10011110 01111100 00100010" +
+                " 11100101 11111111 00101110 01111111 00001010 00001110 11000001 00011001" +
+                " 11100111 10110000 00110001 10001011 11100101 00101110 00011110 10010001" +
+                " 00010110 11010101 01110111 01111100 00001111 10111111 00110010 11111001" +
+                " 01111101 00010000 01101000 01001110 11000011 01110100 00000111 11010101" +
+                " 01010011 01100010 11001011 10010010 10011100 01100001 11101011 10100101" +
+                " 01001111 10101101 00111010 10001010 10001001 01110010 10111011 10111101" +
+                " 10010110 01011000 10100011 01010011 00011111 10010000 10111101 11101100" +
+                " 00110001 01110001 10010001 10101100 00110100 11100000 11010011 11101111" +
+                " 01001110 10101000 00001101 01110111 01101100 00011011 01011100 00101111" +
+                " 00111101 11100110 01001101 10110111 11010110 11111011 01010101 00110000" +
+                " 10100010 10110000 01011001 10010000 10101001 01100110 00010000 10011111" +
+                " 10001000 11010010 01101000 11011101 10111011 01111101 00100100 01011011" +
+                " 00100100 11000011";
+
+        StringBuffer sb = new StringBuffer();
+
+        for (String key:binaryKey.split(" ")) {
+            int charCode = Integer.parseInt(key, 2);
+            sb.append(new Character((char)charCode).toString());
+        }
+
+        System.out.println(sb.toString());*/
+
+
+        email();
     }
 
-    public static <T> Object save(T entity) {
+   /* public static <T> Object save(T entity) {
 
         Session session = db.getCurrentSession();
 
@@ -77,6 +135,90 @@ public class Prueba {
         session.delete(entity);
 
         session.getTransaction().commit();
+    }*/
 
+    private static final String SMTP_HOST_NAME = "127.0.0.1";
+    private static final String SMTP_AUTH_USER = "pruebas@delpozoaudiovisuales.com";
+    private static final String SMTP_AUTH_PWD  = "riu.2016";
+
+    public static void email() {
+
+        // Recipient's email ID needs to be mentioned.
+        String to = "asraelus@gmail.com";
+
+        // Sender's email ID needs to be mentioned
+        String from = "pruebas@delpozoaudiovisuales.com";
+
+        // Assuming you are sending email from localhost
+        String host = "localhost";
+
+        // Get system properties
+        Properties properties = new Properties();
+
+        // Setup mail server
+        properties.setProperty("mail.smtp.host", SMTP_HOST_NAME);
+        properties.setProperty("mail.smtp.port", "2525");
+        properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.smtp.auth", "true");
+
+        Authenticator auth = new SMTPAuthenticator();
+
+        // Get the default Session object.
+        Session session = Session.getDefaultInstance(properties, auth);
+        session.setDebug(true);
+
+
+        try {
+            // Create a default MimeMessage object.
+            MimeMessage message = new MimeMessage(session);
+
+            // Set From: header field of the header.
+            message.setFrom(new InternetAddress(from));
+
+            // Set To: header field of the header.
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+            // Set Subject: header field
+            message.setSubject("This is the Subject Line!");
+
+            // Create the message part
+            BodyPart messageBodyPart = new MimeBodyPart();
+
+            // Send the actual HTML message, as big as you like
+            messageBodyPart.setContent("<h1>This is actual message</h1>", "text/html");
+
+            // Create a multipar message
+            Multipart multipart = new MimeMultipart();
+
+            // Set text message part
+            multipart.addBodyPart(messageBodyPart);
+
+            messageBodyPart = new MimeBodyPart();
+            String filename = "C:\\Users\\asrae\\Downloads\\5009_COE.pdf";
+            DataSource source = new FileDataSource(filename);
+            messageBodyPart.setDataHandler(new DataHandler(source));
+            messageBodyPart.setFileName("5009_COE.pdf");
+            multipart.addBodyPart(messageBodyPart);
+
+            // Send the complete message parts
+            message.setContent(multipart);
+
+            // Send message
+            Transport.send(message);
+            System.out.println("Sent message successfully....");
+        }catch (MessagingException mex) {
+            mex.printStackTrace();
+        }
     }
+
+    private static class SMTPAuthenticator extends javax.mail.Authenticator
+    {
+        public PasswordAuthentication getPasswordAuthentication()
+        {
+            String username = SMTP_AUTH_USER;
+            String password = SMTP_AUTH_PWD;
+            return new PasswordAuthentication(username, password);
+        }
+    }
+
 }

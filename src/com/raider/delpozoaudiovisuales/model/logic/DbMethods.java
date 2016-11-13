@@ -192,15 +192,6 @@ public class DbMethods {
         return sb.toString();
     }
 
-    private void loadObject(String object) {
-
-        //TODO
-
-        switch (object) {
-
-        }
-    }
-
     public Usuario login(String user, String pass) {
 
         Session session = db.getCurrentSession();
@@ -227,24 +218,30 @@ public class DbMethods {
 
             case 1:
 
-                sql = "SELECT id FROM Presupuesto ORDER BY id ASC";
+                sql = "SELECT p.id FROM Presupuesto as p ORDER BY p.id DESC LIMIT 1";
                 break;
 
             case 2:
 
-                sql = "SELECT id FROM Pedido ORDER BY id ASC";
+                sql = "SELECT p.id FROM Pedido as p ORDER BY p.id DESC LIMIT 1";
                 break;
 
             case 3:
 
-                sql = "SELECT id FROM Factura ORDER BY id ASC";
+                sql = "SELECT f.id FROM Factura as f ORDER BY f.id DESC LIMIT 1";
                 break;
         }
 
         if (sql != ""){
 
             query = session.createQuery(sql);
-            id = (query.uniqueResult() == null) ? 1 : (int) query.uniqueResult();
+            Object result = query.setMaxResults(1).uniqueResult();
+
+            if(result == null){
+                id = 1;
+            } else {
+                id = (((int) result) + 1);
+            }
         }
 
         return id;

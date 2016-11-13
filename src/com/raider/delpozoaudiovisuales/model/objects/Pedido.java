@@ -197,4 +197,12 @@ public class Pedido {
     public void setPedidoMaterial(List<Pedido_Material> pedidoMaterial) {
         this.pedidoMaterial = pedidoMaterial;
     }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
 }

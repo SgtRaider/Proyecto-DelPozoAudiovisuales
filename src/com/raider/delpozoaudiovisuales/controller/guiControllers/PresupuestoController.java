@@ -2,6 +2,7 @@ package com.raider.delpozoaudiovisuales.controller.guiControllers;
 
 import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.*;
+import com.raider.delpozoaudiovisuales.util.Preferences;
 import com.raider.delpozoaudiovisuales.view.GUIPresupuesto;
 import com.raider.delpozoaudiovisuales.view.GUIseleccioncliente;
 import com.raider.delpozoaudiovisuales.view.GUIseleccionmaterial;
@@ -35,6 +36,7 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
         this.dbm = dbm;
         this.gui = guip;
+        gui.getObservacionesTA().setLineWrap(true);
 
         presupuesto = new Presupuesto();
 
@@ -243,8 +245,7 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
     public void calcular() {
 
-        //TODO coger IVA de preferencias
-        float iva = (float) 0.21;
+        float iva = Float.valueOf(Preferences.getPropertiesUnprotected().get("util.iva"));
         float subtotal = 0;
         float total = 0;
         float descuento = Float.parseFloat(gui.getDescuentoTF().getText().toString().isEmpty() ? "0" : gui.getDescuentoTF().getText().toString()) / 100;
@@ -271,9 +272,44 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
     public void presupuestoAprovado(Presupuesto presupuesto) {
 
+        presupuesto.setAprovado(true);
+        dbm.save(presupuesto);
+
         Pedido pedido = new Pedido();
 
+        pedido.setPresupuesto(presupuesto);
+        pedido.setCliente(presupuesto.getCliente());
+        pedido.setDescuento(presupuesto.getDescuento());
+        pedido.setFecha_emision(new Date());
+        pedido.setFecha_inicio(presupuesto.getFecha_inicio());
+        pedido.setFecha_fin(presupuesto.getFecha_fin());
+        pedido.setIva(presupuesto.getIva());
+        pedido.setTotal(presupuesto.getTotal());
+        pedido.setSub_total(presupuesto.getSub_total());
+        pedido.setMostrar_descuento(presupuesto.isMostrar_descuento());
+        pedido.setMostrar_precios(presupuesto.isMostrar_precios());
+        pedido.setNo_pedido(dbm.lastID(2));
+        pedido.setObservaciones(presupuesto.getObservaciones());
 
+        for (Presupuesto_Material presupuesto_material : presupuesto.getPresupuestoMaterial()) {
+
+            Pedido_Material pedido_material = new Pedido_Material();
+            pedido_material.setPedido(pedido);
+            pedido_material.setMaterial(presupuesto_material.getMaterial());
+            pedido_material.setCantidad(presupuesto_material.getCantidad());
+            pedido_material.setDias_uso(presupuesto_material.getDias_uso());
+
+            pedido.getPedidoMaterial().add(pedido_material);
+        }
+
+        dbm.save(pedido);
+
+        //TODO crear report.
+
+        //if(Utilities.mensajeConfirmacion("Pedido generado correctamente.\n ¿Desea enviar el pedido por correo?")==0) {
+
+            //TODO enviar correo.
+        //}
     }
 
     public void guardar() {
@@ -285,10 +321,21 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
         presupuesto.setFecha_fin(gui.getFinDC().getDate());
         presupuesto.setMostrar_descuento(gui.getDescuentoCB().isSelected());
         presupuesto.setMostrar_precios(gui.getPreciosCB().isSelected());
-        presupuesto.setAprovado(gui.getBoolCB().isSelected());
         presupuesto.setObservaciones(gui.getObservacionesTA().getText());
 
         dbm.save(presupuesto);
+
+        //TODO crear report.
+
+        //if(Utilities.mensajeConfirmacion("Pedido generado correctamente.\n ¿Desea enviar el presupesto por correo?")==0) {
+
+            //TODO enviar correo.
+
+        //}
+
+        if (gui.getBoolCB().isSelected()) {
+            presupuestoAprovado(presupuesto);
+        }
     }
 
     @Override

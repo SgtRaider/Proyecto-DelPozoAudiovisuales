@@ -17,6 +17,7 @@ public class ProjectController implements ActionListener{
     private BaseWindow mw;
     private DbMethods dbm;
     private GUIlogin login;
+    private Usuario user;
 
     public ProjectController(BaseWindow mainWindow) {
 
@@ -25,8 +26,6 @@ public class ProjectController implements ActionListener{
 
         login = new GUIlogin(mainWindow);
         login.setVisible(true);
-
-        Usuario user;
 
         do {
 
@@ -77,7 +76,7 @@ public class ProjectController implements ActionListener{
                     break;
 
                 case "Preferencias":
-
+                    new GUIPreferencias().setVisible(true);
                     break;
 
                 case "Pedido":
