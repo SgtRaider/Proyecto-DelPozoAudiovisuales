@@ -4,6 +4,7 @@ import com.raider.delpozoaudiovisuales.model.objects.Cliente;
 import com.raider.delpozoaudiovisuales.model.objects.Material;
 import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
 import com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material;
+import org.apache.commons.io.FileUtils;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
@@ -67,9 +68,6 @@ public class Prueba {
         prep.getPresupuestoMaterial().add(prepMat);
         save(prep);*/
 
-        JFileChooser fr = new JFileChooser();
-        FileSystemView fw = fr.getFileSystemView();
-
         /*String binaryKey = "01100001 00101110 10110111 11000101 10110100 01101001" +
                 " 00010011 00100010 11001011 00100000 01001101 11100101 11101111 10111100" +
                 " 01101101 00001110 00000100 11011110 00000000 11000000 10101011 01100001" +
@@ -97,8 +95,12 @@ public class Prueba {
 
         System.out.println(sb.toString());*/
 
-
-        email();
+        email("Esto es una prueba,\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus vulputate nunc quis blandit. Vivamus lacinia nisi tortor, in viverra orci blandit quis. Phasellus viverra velit eu laoreet scelerisque. Vestibulum vel ligula nec nisl maximus ultrices. Nullam scelerisque orci dolor, sed euismod nisl euismod in. Donec rhoncus auctor ligula, nec luctus eros auctor congue. Praesent vehicula libero at felis sollicitudin efficitur. Ut eget mauris euismod, gravida mauris at, semper nibh. Nulla et nunc nisl. Morbi eget est rutrum, porta purus ac, suscipit turpis." +
+                "\n" +
+                "Aenean vel lacinia mauris. Sed libero tortor, pellentesque a augue ut, congue egestas dui. Vestibulum posuere enim eget velit condimentum, vitae lobortis neque tincidunt. Quisque lobortis faucibus lorem ut lacinia. Ut suscipit ante a urna finibus, quis finibus ex pharetra. Aliquam eget pellentesque ex, nec molestie mauris. Nulla et nisl semper, ultricies arcu at, tempor quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eu rhoncus tortor." +
+                "\n" +
+                "Integer vel ante et nisl bibendum pulvinar et nec mi. Vivamus ac purus purus. Aenean tincidunt nibh risus, vitae sodales quam viverra vitae. Vivamus ullamcorper mi vitae mauris congue suscipit. Nam tristique mi elit, tincidunt hendrerit lectus congue eu. Duis eleifend neque in neque finibus, nec efficitur est porta. Aliquam non rutrum lacus, condimentum aliquet mi. Duis vel massa vel massa posuere luctus eget sit amet diam. Duis pellentesque vestibulum mi, vitae facilisis nisl volutpat at. Etiam in vulputate mi, at posuere metus.\n" +
+                "Fin de la prueba");
     }
 
    /* public static <T> Object save(T entity) {
@@ -141,10 +143,10 @@ public class Prueba {
     private static final String SMTP_AUTH_USER = "pruebas@delpozoaudiovisuales.com";
     private static final String SMTP_AUTH_PWD  = "riu.2016";
 
-    public static void email() {
+    public static void email(String bodyText) {
 
         // Recipient's email ID needs to be mentioned.
-        String to = "asraelus@gmail.com";
+        String to = "panopliaespartana@gmail.com";
 
         // Sender's email ID needs to be mentioned
         String from = "pruebas@delpozoaudiovisuales.com";
@@ -185,7 +187,15 @@ public class Prueba {
             BodyPart messageBodyPart = new MimeBodyPart();
 
             // Send the actual HTML message, as big as you like
-            messageBodyPart.setContent("<h1>This is actual message</h1>", "text/html");
+            String str = null;
+            JFileChooser fr = new JFileChooser();
+            FileSystemView fw = fr.getFileSystemView();
+            File file = new File(fw.getDefaultDirectory() + File.separator + "email.html");
+            str = FileUtils.readFileToString(file, "UTF-8");
+
+            str = str.replace("[texto]", transformContent(bodyText));
+
+            messageBodyPart.setContent(str , "text/html; charset=utf-8");
 
             // Create a multipar message
             Multipart multipart = new MimeMultipart();
@@ -200,6 +210,14 @@ public class Prueba {
             messageBodyPart.setFileName("5009_COE.pdf");
             multipart.addBodyPart(messageBodyPart);
 
+            messageBodyPart = new MimeBodyPart();
+            DataSource fds = new FileDataSource("C:\\Users\\asrae\\Documents\\logo-delpozo.png");
+            messageBodyPart.setDataHandler(new DataHandler(fds));
+            messageBodyPart.setHeader("Content-ID","<image>");
+
+            // add it
+            multipart.addBodyPart(messageBodyPart);
+
             // Send the complete message parts
             message.setContent(multipart);
 
@@ -208,6 +226,8 @@ public class Prueba {
             System.out.println("Sent message successfully....");
         }catch (MessagingException mex) {
             mex.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -221,4 +241,14 @@ public class Prueba {
         }
     }
 
+    private static String transformContent(String content) {
+
+        StringBuffer sb = new StringBuffer();
+
+        for (String part:content.split("\n")) {
+            if (!part.isEmpty()) sb.append("<p>" + part + "</p>");
+        }
+
+        return sb.toString();
+    }
 }

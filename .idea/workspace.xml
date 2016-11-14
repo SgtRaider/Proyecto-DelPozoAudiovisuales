@@ -4,34 +4,28 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Material.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6b04a87-22c5-4878-abeb-7d42e3c2954b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/libs/activation.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/libs/javax.mail.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Email.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Preferences.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/PrintReport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/util/Properties.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Properties.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/controller/ProjectController.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/controller/ProjectController.class" />
+    <list default="true" id="c6b04a87-22c5-4878-abeb-7d42e3c2954b" name="Default" comment="Maquetado .">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/libs/commons-io-2.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logo-delpozo-recortado-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/email.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/intellij/uiDesigner/core/GridLayoutManager.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/intellij/uiDesigner/core/GridLayoutManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/logic/DbMethods.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/logic/DbMethods.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Factura.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Factura.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Pedido.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Pedido.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Presupuesto.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/model/objects/Presupuesto.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/util/Prueba.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/util/Prueba.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIFactura.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIFactura.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPedido.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPedido.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIlogin.class" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/com/raider/delpozoaudiovisuales/view/GUIlogin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/out/production/Proyecto-DelPozoAudiovisuales/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Pedido.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Pedido.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Email.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Email.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/PrintReport.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/PrintReport.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Prueba.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Prueba.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.form" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.java" afterPath="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
     </list>
     <ignored path="Proyecto-DelPozoAudiovisuales.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,9 +50,11 @@
             <file leaf-file-name="ProjectController.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="289">
-                    <caret line="78" column="57" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
-                    <folding />
+                  <state relative-caret-position="1496">
+                    <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+                    <folding>
+                      <element signature="imports" expanded="false" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -223,10 +219,10 @@
             <file leaf-file-name="Preferences.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Preferences.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="600">
-                    <caret line="117" column="98" selection-start-line="117" selection-start-column="78" selection-end-line="117" selection-end-column="98" />
+                  <state relative-caret-position="0">
+                    <caret line="110" column="85" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="85" />
                     <folding>
-                      <element signature="imports" expanded="true" />
+                      <element signature="imports" expanded="false" />
                     </folding>
                   </state>
                 </provider>
@@ -246,7 +242,7 @@
       <file leaf-file-name="GUIcrearcliente.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="425">
               <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -328,9 +324,29 @@
       <file leaf-file-name="PresupuestoController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="346" column="9" selection-start-line="346" selection-start-column="9" selection-end-line="346" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="5083">
+              <caret line="319" column="49" selection-start-line="319" selection-start-column="49" selection-end-line="319" selection-end-column="49" />
+              <folding>
+                <marker date="1479127632000" expanded="false" signature="75:826" ph="..." />
+                <marker date="1479127632000" expanded="true" signature="828:871" ph="/**...*/" />
+                <marker date="1479127632000" expanded="true" signature="1223:1509" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="1605:1814" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="1847:2893" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="2969:3470" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="3504:3892" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="3955:5934" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="5981:6544" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="6603:7479" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="7512:7804" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="7842:7978" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="8014:8491" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="8520:9631" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="9694:11275" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="11080:11269" ph="//..." />
+                <marker date="1479127632000" expanded="true" signature="11303:12293" ph="{...}" />
+                <marker date="1479127632000" expanded="true" signature="11992:12186" ph="//..." />
+                <marker date="1479127632000" expanded="true" signature="12360:12604" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -338,10 +354,21 @@
       <file leaf-file-name="Prueba.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Prueba.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="187" column="27" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+            <state relative-caret-position="183">
+              <caret line="148" column="48" selection-start-line="148" selection-start-column="48" selection-end-line="148" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1479127682000" expanded="true" signature="221:1420" ph="..." />
+                <marker date="1479127682000" expanded="true" signature="241:1393" ph="..." />
               </folding>
             </state>
           </provider>
@@ -350,36 +377,78 @@
       <file leaf-file-name="Pedido.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Pedido.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
+            <state relative-caret-position="2329">
+              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
-                <element signature="e#4310#4311#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUIPreferencias.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUIPreferencias.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="112" column="9" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-              <folding>
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-                <element signature="e#1200#1201#0" expanded="true" />
-                <element signature="e#3784#3785#0" expanded="true" />
-                <element signature="e#3809#3810#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1637#1638#0" expanded="false" />
+                <element signature="e#1662#1663#0" expanded="false" />
+                <element signature="e#1695#1696#0" expanded="false" />
+                <element signature="e#1723#1724#0" expanded="false" />
+                <element signature="e#1756#1757#0" expanded="false" />
+                <element signature="e#1788#1789#0" expanded="false" />
+                <element signature="e#1835#1836#0" expanded="false" />
+                <element signature="e#1877#1878#0" expanded="false" />
+                <element signature="e#1915#1916#0" expanded="false" />
+                <element signature="e#1951#1952#0" expanded="false" />
+                <element signature="e#2007#2008#0" expanded="false" />
+                <element signature="e#2057#2058#0" expanded="false" />
+                <element signature="e#2092#2093#0" expanded="false" />
+                <element signature="e#2124#2125#0" expanded="false" />
+                <element signature="e#2173#2174#0" expanded="false" />
+                <element signature="e#2215#2216#0" expanded="false" />
+                <element signature="e#2250#2251#0" expanded="false" />
+                <element signature="e#2282#2283#0" expanded="false" />
+                <element signature="e#2331#2332#0" expanded="false" />
+                <element signature="e#2373#2374#0" expanded="false" />
+                <element signature="e#2402#2403#0" expanded="false" />
+                <element signature="e#2428#2429#0" expanded="false" />
+                <element signature="e#2465#2466#0" expanded="false" />
+                <element signature="e#2495#2496#0" expanded="false" />
+                <element signature="e#2526#2527#0" expanded="false" />
+                <element signature="e#2554#2555#0" expanded="false" />
+                <element signature="e#2595#2596#0" expanded="false" />
+                <element signature="e#2629#2630#0" expanded="false" />
+                <element signature="e#2666#2667#0" expanded="false" />
+                <element signature="e#2701#2702#0" expanded="false" />
+                <element signature="e#2755#2756#0" expanded="false" />
+                <element signature="e#2803#2804#0" expanded="false" />
+                <element signature="e#2837#2838#0" expanded="false" />
+                <element signature="e#2869#2870#0" expanded="false" />
+                <element signature="e#2917#2918#0" expanded="false" />
+                <element signature="e#2959#2960#0" expanded="false" />
+                <element signature="e#3003#3004#0" expanded="false" />
+                <element signature="e#3043#3044#0" expanded="false" />
+                <element signature="e#3110#3111#0" expanded="false" />
+                <element signature="e#3168#3169#0" expanded="false" />
+                <element signature="e#3210#3211#0" expanded="false" />
+                <element signature="e#3248#3249#0" expanded="false" />
+                <element signature="e#3311#3312#0" expanded="false" />
+                <element signature="e#3365#3366#0" expanded="false" />
+                <element signature="e#3402#3403#0" expanded="false" />
+                <element signature="e#3435#3436#0" expanded="false" />
+                <element signature="e#3488#3489#0" expanded="false" />
+                <element signature="e#3532#3533#0" expanded="false" />
+                <element signature="e#3575#3576#0" expanded="false" />
+                <element signature="e#3609#3610#0" expanded="false" />
+                <element signature="e#3668#3669#0" expanded="false" />
+                <element signature="e#3714#3715#0" expanded="false" />
+                <element signature="e#3749#3750#0" expanded="false" />
+                <element signature="e#3779#3780#0" expanded="false" />
+                <element signature="e#3826#3827#0" expanded="false" />
+                <element signature="e#3864#3865#0" expanded="false" />
+                <element signature="e#3899#3900#0" expanded="false" />
+                <element signature="e#3929#3930#0" expanded="false" />
+                <element signature="e#3976#3977#0" expanded="false" />
+                <element signature="e#4014#4015#0" expanded="false" />
+                <element signature="e#4070#4071#0" expanded="false" />
+                <element signature="e#4107#4108#0" expanded="false" />
+                <element signature="e#4182#4183#0" expanded="false" />
+                <element signature="e#4234#4235#0" expanded="false" />
+                <element signature="e#4274#4275#0" expanded="false" />
+                <element signature="e#4310#4311#0" expanded="false" />
+                <element signature="e#4368#4369#0" expanded="false" />
+                <element signature="e#4418#4419#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -388,9 +457,15 @@
       <file leaf-file-name="GUIlogin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIlogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="73" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="1802">
+              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2313#2314#0" expanded="false" />
+                <element signature="e#2346#2347#0" expanded="false" />
+                <element signature="e#2380#2381#0" expanded="false" />
+                <element signature="e#2410#2411#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -398,9 +473,11 @@
       <file leaf-file-name="DbMethods.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3145">
-              <caret line="192" column="5" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="3689">
+              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -412,6 +489,7 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -467,7 +545,6 @@
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.java" />
         <option value="$PROJECT_DIR$/src/libs/Util.jar!/raider/Util/Utilities.class" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.form" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Factura.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Presupuesto.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIlogin.java" />
@@ -478,9 +555,11 @@
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Properties.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.form" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Preferences.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.java" />
+        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/email.html" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.java" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Preferences.java" />
         <option value="$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Prueba.java" />
       </list>
     </option>
@@ -494,7 +573,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -522,8 +601,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -615,111 +692,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GUIPreferencias" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="delpozoaudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GUIlogin" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="delpozoaudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="delpozoaudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="delpozoaudiovisuales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -767,8 +740,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto-DelPozoAudiovisuales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -797,10 +794,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="978" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\asrae\Desktop\Proyecto-DelPozoAudiovisuales\src\libs" />
+      <recent name="C:\Users\asrae\Desktop\Proyecto-DelPozoAudiovisuales\src" />
+      <recent name="C:\Users\asrae\Desktop\Proyecto-DelPozoAudiovisuales\src\com\raider\delpozoaudiovisuales" />
+      <recent name="C:\Users\pmata_ext\Desktop\Proyecto-DelPozoAudiovisuales-master\src\com\raider\delpozoaudiovisuales" />
+      <recent name="C:\Users\pmata_ext\Desktop\Proyecto-DelPozoAudiovisuales-master\src" />
+      <recent name="C:\Users\pmata_ext\Desktop\Proyecto-DelPozoAudiovisuales-master\src\libs" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.raider.delpozoaudiovisuales.model" />
@@ -1000,22 +1002,22 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32506528" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34203655" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21987315" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3128964" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1081,24 +1083,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.java</url>
-          <line>89</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIseleccioncliente.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPedido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1232,6 +1221,324 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/Util.jar!/raider/Util/Utilities.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Factura.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.raider.delpozoaudiovisuales.view.GUIlogin">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.raider.delpozoaudiovisuales.view.GUIlogin</OriginalElement>
+          <nodes>
+            <node x="" y="">java.awt.event.ActionListener</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIlogin</node>
+            <node x="" y="">javax.swing.JDialog</node>
+            <node x="" y="">java.awt.Window</node>
+            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
+            <node x="" y="">javax.swing.RootPaneContainer</node>
+            <node x="" y="">java.awt.MenuContainer</node>
+            <node x="" y="">javax.accessibility.Accessible</node>
+            <node x="" y="">java.awt.Component</node>
+            <node x="" y="">java.awt.image.ImageObserver</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">java.util.EventListener</node>
+            <node x="" y="">java.awt.Container</node>
+            <node x="" y="">java.awt.Dialog</node>
+            <node x="" y="">javax.swing.WindowConstants</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="373.0" y="255.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MODULES/mdl-Proyecto-DelPozoAudiovisuales">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-Proyecto-DelPozoAudiovisuales</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-Proyecto-DelPozoAudiovisuales</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="126.0" y="15.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.raider.delpozoaudiovisuales">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.raider.delpozoaudiovisuales</OriginalElement>
+          <nodes>
+            <node x="" y="">com.raider.delpozoaudiovisuales.util.Prueba</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIPedido</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.controller.guiControllers.FacturaController</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Factura_Material</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.logic.DbMethods</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.BaseWindow</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.controller.guiControllers.PedidoController</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Cliente</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Material</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Pedido_Material_PK</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Usuario</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.util.HibernateUtil</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIFactura</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.util.Properties</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIenviaremail</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIPresupuesto</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.controller.guiControllers.PresupuestoController</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Factura_Material_PK</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Presupuesto</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIlogin</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.database.Prueba</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.database.HibernateUtil</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material_PK</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIseleccioncliente</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIcrearmaterial</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.AltaPresupuesto</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.controller.ProjectController</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Pedido</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Factura</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIcrearcliente</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.util.Email</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.util.PrintReport</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIseleccionmaterial</node>
+            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Pedido_Material</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.32050311063024084" x="3022.0" y="2982.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Inner Classes</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/database/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/hibernate-core-4.1.4.Final.jar!/org/hibernate/SharedSessionContract.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Presupuesto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="198" column="38" selection-start-line="198" selection-start-column="38" selection-end-line="198" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Email.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/PrintReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2859#2860#0" expanded="false" />
+            <element signature="e#2897#2898#0" expanded="false" />
+            <element signature="e#3029#3030#0" expanded="false" />
+            <element signature="e#3071#3072#0" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3256#3257#0" expanded="false" />
+            <element signature="e#3387#3388#0" expanded="false" />
+            <element signature="e#3435#3436#0" expanded="false" />
+            <element signature="e#3655#3656#0" expanded="false" />
+            <element signature="e#3697#3698#0" expanded="false" />
+            <element signature="e#3870#3871#0" expanded="false" />
+            <element signature="e#3912#3913#0" expanded="false" />
+            <element signature="e#8553#8554#0" expanded="false" />
+            <element signature="e#8581#8582#0" expanded="false" />
+            <element signature="e#8627#8628#0" expanded="false" />
+            <element signature="e#8661#8662#0" expanded="false" />
+            <element signature="e#8696#8697#0" expanded="false" />
+            <element signature="e#8726#8727#0" expanded="false" />
+            <element signature="e#8773#8774#0" expanded="false" />
+            <element signature="e#8811#8812#0" expanded="false" />
+            <element signature="e#8851#8852#0" expanded="false" />
+            <element signature="e#8883#8884#0" expanded="false" />
+            <element signature="e#8937#8938#0" expanded="false" />
+            <element signature="e#8979#8980#0" expanded="false" />
+            <element signature="e#9015#9016#0" expanded="false" />
+            <element signature="e#9043#9044#0" expanded="false" />
+            <element signature="e#9089#9090#0" expanded="false" />
+            <element signature="e#9123#9124#0" expanded="false" />
+            <element signature="e#9170#9171#0" expanded="false" />
+            <element signature="e#9209#9210#0" expanded="false" />
+            <element signature="e#9277#9278#0" expanded="false" />
+            <element signature="e#9333#9334#0" expanded="false" />
+            <element signature="e#9383#9384#0" expanded="false" />
+            <element signature="e#9425#9426#0" expanded="false" />
+            <element signature="e#9610#9611#0" expanded="false" />
+            <element signature="e#9651#9652#0" expanded="false" />
+            <element signature="e#9723#9724#0" expanded="false" />
+            <element signature="e#9783#9784#0" expanded="false" />
+            <element signature="e#9829#9830#0" expanded="false" />
+            <element signature="e#9867#9868#0" expanded="false" />
+            <element signature="e#9933#9934#0" expanded="false" />
+            <element signature="e#9987#9988#0" expanded="false" />
+            <element signature="e#10029#10030#0" expanded="false" />
+            <element signature="e#10063#10064#0" expanded="false" />
+            <element signature="e#10121#10122#0" expanded="false" />
+            <element signature="e#10167#10168#0" expanded="false" />
+            <element signature="e#10206#10207#0" expanded="false" />
+            <element signature="e#10237#10238#0" expanded="false" />
+            <element signature="e#10289#10290#0" expanded="false" />
+            <element signature="e#10329#10330#0" expanded="false" />
+            <element signature="e#10370#10371#0" expanded="false" />
+            <element signature="e#10403#10404#0" expanded="false" />
+            <element signature="e#10459#10460#0" expanded="false" />
+            <element signature="e#10503#10504#0" expanded="false" />
+            <element signature="e#10540#10541#0" expanded="false" />
+            <element signature="e#10569#10570#0" expanded="false" />
+            <element signature="e#10617#10618#0" expanded="false" />
+            <element signature="e#10653#10654#0" expanded="false" />
+            <element signature="e#10694#10695#0" expanded="false" />
+            <element signature="e#10727#10728#0" expanded="false" />
+            <element signature="e#10783#10784#0" expanded="false" />
+            <element signature="e#10827#10828#0" expanded="false" />
+            <element signature="e#10865#10866#0" expanded="false" />
+            <element signature="e#10895#10896#0" expanded="false" />
+            <element signature="e#10945#10946#0" expanded="false" />
+            <element signature="e#10983#10984#0" expanded="false" />
+            <element signature="e#11018#11019#0" expanded="false" />
+            <element signature="e#11045#11046#0" expanded="false" />
+            <element signature="e#11089#11090#0" expanded="false" />
+            <element signature="e#11121#11122#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3689">
+          <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/Properties.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIlogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2313#2314#0" expanded="false" />
+            <element signature="e#2346#2347#0" expanded="false" />
+            <element signature="e#2380#2381#0" expanded="false" />
+            <element signature="e#2410#2411#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/Service.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/com/sun/mail/smtp/SMTPTransport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="1420" column="0" selection-start-line="1420" selection-start-column="0" selection-end-line="1420" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/com/sun/mail/util/SocketFetcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/Part.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-235">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/BodyPart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/internet/MimeMultipart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-733">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1383,155 +1690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/BaseWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3035#3036#0" expanded="false" />
-            <element signature="e#3067#3068#0" expanded="false" />
-            <element signature="e#3103#3104#0" expanded="false" />
-            <element signature="e#3135#3136#0" expanded="false" />
-            <element signature="e#3185#3186#0" expanded="false" />
-            <element signature="e#3227#3228#0" expanded="false" />
-            <element signature="e#3272#3273#0" expanded="false" />
-            <element signature="e#3304#3305#0" expanded="false" />
-            <element signature="e#3363#3364#0" expanded="false" />
-            <element signature="e#3411#3412#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="false" />
-            <element signature="e#3470#3471#0" expanded="false" />
-            <element signature="e#3511#3512#0" expanded="false" />
-            <element signature="e#3545#3546#0" expanded="false" />
-            <element signature="e#3577#3578#0" expanded="false" />
-            <element signature="e#3606#3607#0" expanded="false" />
-            <element signature="e#3649#3650#0" expanded="false" />
-            <element signature="e#3685#3686#0" expanded="false" />
-            <element signature="e#3721#3722#0" expanded="false" />
-            <element signature="e#3754#3755#0" expanded="false" />
-            <element signature="e#3805#3806#0" expanded="false" />
-            <element signature="e#3849#3850#0" expanded="false" />
-            <element signature="e#3886#3887#0" expanded="false" />
-            <element signature="e#3916#3917#0" expanded="false" />
-            <element signature="e#3965#3966#0" expanded="false" />
-            <element signature="e#4003#4004#0" expanded="false" />
-            <element signature="e#4047#4048#0" expanded="false" />
-            <element signature="e#4084#4085#0" expanded="false" />
-            <element signature="e#4147#4148#0" expanded="false" />
-            <element signature="e#4199#4200#0" expanded="false" />
-            <element signature="e#4247#4248#0" expanded="false" />
-            <element signature="e#4288#4289#0" expanded="false" />
-            <element signature="e#4359#4360#0" expanded="false" />
-            <element signature="e#4419#4420#0" expanded="false" />
-            <element signature="e#4462#4463#0" expanded="false" />
-            <element signature="e#4498#4499#0" expanded="false" />
-            <element signature="e#4559#4560#0" expanded="false" />
-            <element signature="e#4609#4610#0" expanded="false" />
-            <element signature="e#4653#4654#0" expanded="false" />
-            <element signature="e#4690#4691#0" expanded="false" />
-            <element signature="e#4753#4754#0" expanded="false" />
-            <element signature="e#4805#4806#0" expanded="false" />
-            <element signature="e#4849#4850#0" expanded="false" />
-            <element signature="e#4886#4887#0" expanded="false" />
-            <element signature="e#4949#4950#0" expanded="false" />
-            <element signature="e#5001#5002#0" expanded="false" />
-            <element signature="e#5046#5047#0" expanded="false" />
-            <element signature="e#5084#5085#0" expanded="false" />
-            <element signature="e#5149#5150#0" expanded="false" />
-            <element signature="e#5203#5204#0" expanded="false" />
-            <element signature="e#5255#5256#0" expanded="false" />
-            <element signature="e#5300#5301#0" expanded="false" />
-            <element signature="e#5494#5495#0" expanded="false" />
-            <element signature="e#5534#5535#0" expanded="false" />
-            <element signature="e#5603#5604#0" expanded="false" />
-            <element signature="e#5661#5662#0" expanded="false" />
-            <element signature="e#5709#5710#0" expanded="false" />
-            <element signature="e#5750#5751#0" expanded="false" />
-            <element signature="e#5821#5822#0" expanded="false" />
-            <element signature="e#5881#5882#0" expanded="false" />
-            <element signature="e#5929#5930#0" expanded="false" />
-            <element signature="e#5970#5971#0" expanded="false" />
-            <element signature="e#6041#6042#0" expanded="false" />
-            <element signature="e#6101#6102#0" expanded="false" />
-            <element signature="e#6150#6151#0" expanded="false" />
-            <element signature="e#6192#6193#0" expanded="false" />
-            <element signature="e#6366#6367#0" expanded="false" />
-            <element signature="e#6394#6395#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="80" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/Util.jar!/raider/Util/Utilities.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Factura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.raider.delpozoaudiovisuales.view.GUIlogin">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.raider.delpozoaudiovisuales.view.GUIlogin</OriginalElement>
-          <nodes>
-            <node x="" y="">java.awt.event.ActionListener</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIlogin</node>
-            <node x="" y="">javax.swing.JDialog</node>
-            <node x="" y="">java.awt.Window</node>
-            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
-            <node x="" y="">javax.swing.RootPaneContainer</node>
-            <node x="" y="">java.awt.MenuContainer</node>
-            <node x="" y="">javax.accessibility.Accessible</node>
-            <node x="" y="">java.awt.Component</node>
-            <node x="" y="">java.awt.image.ImageObserver</node>
-            <node x="" y="">java.io.Serializable</node>
-            <node x="" y="">java.util.EventListener</node>
-            <node x="" y="">java.awt.Container</node>
-            <node x="" y="">java.awt.Dialog</node>
-            <node x="" y="">javax.swing.WindowConstants</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="373.0" y="255.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MODULES/mdl-Proyecto-DelPozoAudiovisuales">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MODULES</ID>
-          <OriginalElement>mdl-Proyecto-DelPozoAudiovisuales</OriginalElement>
-          <nodes>
-            <node x="" y="">mdl-Proyecto-DelPozoAudiovisuales</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="126.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPresupuesto.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -1539,352 +1697,177 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.raider.delpozoaudiovisuales">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.raider.delpozoaudiovisuales</OriginalElement>
-          <nodes>
-            <node x="" y="">com.raider.delpozoaudiovisuales.util.Prueba</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIPedido</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.controller.guiControllers.FacturaController</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Factura_Material</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.logic.DbMethods</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.BaseWindow</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.controller.guiControllers.PedidoController</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Cliente</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Material</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Pedido_Material_PK</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Usuario</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.util.HibernateUtil</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIFactura</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.util.Properties</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIenviaremail</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIPresupuesto</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.controller.guiControllers.PresupuestoController</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Factura_Material_PK</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Presupuesto</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIlogin</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.database.Prueba</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.database.HibernateUtil</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material_PK</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIseleccioncliente</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIcrearmaterial</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.AltaPresupuesto</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.controller.ProjectController</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Pedido</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Factura</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIcrearcliente</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.util.Email</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.util.PrintReport</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.view.GUIseleccionmaterial</node>
-            <node x="" y="">com.raider.delpozoaudiovisuales.model.objects.Pedido_Material</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.32050311063024084" x="3022.0" y="2982.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Inner Classes</Category>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/database/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/hibernate-core-4.1.4.Final.jar!/org/hibernate/SharedSessionContract.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Presupuesto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="198" column="38" selection-start-line="198" selection-start-column="38" selection-end-line="198" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Email.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/PrintReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearmaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2773#2789#0" expanded="false" />
-            <element signature="e#3232#3233#0" expanded="false" />
-            <element signature="e#3270#3271#0" expanded="false" />
-            <element signature="e#3402#3403#0" expanded="false" />
-            <element signature="e#3444#3445#0" expanded="false" />
-            <element signature="e#3575#3576#0" expanded="false" />
-            <element signature="e#3622#3623#0" expanded="false" />
-            <element signature="e#3756#3757#0" expanded="false" />
-            <element signature="e#3814#3815#0" expanded="false" />
-            <element signature="e#4026#4027#0" expanded="false" />
-            <element signature="e#4068#4069#0" expanded="false" />
-            <element signature="e#4233#4234#0" expanded="false" />
-            <element signature="e#4275#4276#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIcrearcliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2859#2860#0" expanded="false" />
-            <element signature="e#2897#2898#0" expanded="false" />
-            <element signature="e#3029#3030#0" expanded="false" />
-            <element signature="e#3071#3072#0" expanded="false" />
-            <element signature="e#3205#3206#0" expanded="false" />
-            <element signature="e#3256#3257#0" expanded="false" />
-            <element signature="e#3387#3388#0" expanded="false" />
-            <element signature="e#3435#3436#0" expanded="false" />
-            <element signature="e#3655#3656#0" expanded="false" />
-            <element signature="e#3697#3698#0" expanded="false" />
-            <element signature="e#3870#3871#0" expanded="false" />
-            <element signature="e#3912#3913#0" expanded="false" />
-            <element signature="e#8553#8554#0" expanded="false" />
-            <element signature="e#8581#8582#0" expanded="false" />
-            <element signature="e#8627#8628#0" expanded="false" />
-            <element signature="e#8661#8662#0" expanded="false" />
-            <element signature="e#8696#8697#0" expanded="false" />
-            <element signature="e#8726#8727#0" expanded="false" />
-            <element signature="e#8773#8774#0" expanded="false" />
-            <element signature="e#8811#8812#0" expanded="false" />
-            <element signature="e#8851#8852#0" expanded="false" />
-            <element signature="e#8883#8884#0" expanded="false" />
-            <element signature="e#8937#8938#0" expanded="false" />
-            <element signature="e#8979#8980#0" expanded="false" />
-            <element signature="e#9015#9016#0" expanded="false" />
-            <element signature="e#9043#9044#0" expanded="false" />
-            <element signature="e#9089#9090#0" expanded="false" />
-            <element signature="e#9123#9124#0" expanded="false" />
-            <element signature="e#9170#9171#0" expanded="false" />
-            <element signature="e#9209#9210#0" expanded="false" />
-            <element signature="e#9277#9278#0" expanded="false" />
-            <element signature="e#9333#9334#0" expanded="false" />
-            <element signature="e#9383#9384#0" expanded="false" />
-            <element signature="e#9425#9426#0" expanded="false" />
-            <element signature="e#9610#9611#0" expanded="false" />
-            <element signature="e#9651#9652#0" expanded="false" />
-            <element signature="e#9723#9724#0" expanded="false" />
-            <element signature="e#9783#9784#0" expanded="false" />
-            <element signature="e#9829#9830#0" expanded="false" />
-            <element signature="e#9867#9868#0" expanded="false" />
-            <element signature="e#9933#9934#0" expanded="false" />
-            <element signature="e#9987#9988#0" expanded="false" />
-            <element signature="e#10029#10030#0" expanded="false" />
-            <element signature="e#10063#10064#0" expanded="false" />
-            <element signature="e#10121#10122#0" expanded="false" />
-            <element signature="e#10167#10168#0" expanded="false" />
-            <element signature="e#10206#10207#0" expanded="false" />
-            <element signature="e#10237#10238#0" expanded="false" />
-            <element signature="e#10289#10290#0" expanded="false" />
-            <element signature="e#10329#10330#0" expanded="false" />
-            <element signature="e#10370#10371#0" expanded="false" />
-            <element signature="e#10403#10404#0" expanded="false" />
-            <element signature="e#10459#10460#0" expanded="false" />
-            <element signature="e#10503#10504#0" expanded="false" />
-            <element signature="e#10540#10541#0" expanded="false" />
-            <element signature="e#10569#10570#0" expanded="false" />
-            <element signature="e#10617#10618#0" expanded="false" />
-            <element signature="e#10653#10654#0" expanded="false" />
-            <element signature="e#10694#10695#0" expanded="false" />
-            <element signature="e#10727#10728#0" expanded="false" />
-            <element signature="e#10783#10784#0" expanded="false" />
-            <element signature="e#10827#10828#0" expanded="false" />
-            <element signature="e#10865#10866#0" expanded="false" />
-            <element signature="e#10895#10896#0" expanded="false" />
-            <element signature="e#10945#10946#0" expanded="false" />
-            <element signature="e#10983#10984#0" expanded="false" />
-            <element signature="e#11018#11019#0" expanded="false" />
-            <element signature="e#11045#11046#0" expanded="false" />
-            <element signature="e#11089#11090#0" expanded="false" />
-            <element signature="e#11121#11122#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/logic/DbMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="192" column="5" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
-          <folding>
-            <element signature="e#5711#5712#0" expanded="false" />
-            <element signature="e#5749#5750#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Pedido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
-          <folding>
-            <element signature="e#4310#4311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="78" column="57" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
+        <state relative-caret-position="1496">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="268" column="46" selection-start-line="268" selection-start-column="46" selection-end-line="268" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
+        <state relative-caret-position="337">
           <caret line="112" column="9" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-          <folding>
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#3784#3785#0" expanded="true" />
-            <element signature="e#3809#3810#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIlogin.java">
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/view/GUIPreferencias.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="73" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/model/objects/Pedido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1637#1638#0" expanded="false" />
+            <element signature="e#1662#1663#0" expanded="false" />
+            <element signature="e#1695#1696#0" expanded="false" />
+            <element signature="e#1723#1724#0" expanded="false" />
+            <element signature="e#1756#1757#0" expanded="false" />
+            <element signature="e#1788#1789#0" expanded="false" />
+            <element signature="e#1835#1836#0" expanded="false" />
+            <element signature="e#1877#1878#0" expanded="false" />
+            <element signature="e#1915#1916#0" expanded="false" />
+            <element signature="e#1951#1952#0" expanded="false" />
+            <element signature="e#2007#2008#0" expanded="false" />
+            <element signature="e#2057#2058#0" expanded="false" />
+            <element signature="e#2092#2093#0" expanded="false" />
+            <element signature="e#2124#2125#0" expanded="false" />
+            <element signature="e#2173#2174#0" expanded="false" />
+            <element signature="e#2215#2216#0" expanded="false" />
+            <element signature="e#2250#2251#0" expanded="false" />
+            <element signature="e#2282#2283#0" expanded="false" />
+            <element signature="e#2331#2332#0" expanded="false" />
+            <element signature="e#2373#2374#0" expanded="false" />
+            <element signature="e#2402#2403#0" expanded="false" />
+            <element signature="e#2428#2429#0" expanded="false" />
+            <element signature="e#2465#2466#0" expanded="false" />
+            <element signature="e#2495#2496#0" expanded="false" />
+            <element signature="e#2526#2527#0" expanded="false" />
+            <element signature="e#2554#2555#0" expanded="false" />
+            <element signature="e#2595#2596#0" expanded="false" />
+            <element signature="e#2629#2630#0" expanded="false" />
+            <element signature="e#2666#2667#0" expanded="false" />
+            <element signature="e#2701#2702#0" expanded="false" />
+            <element signature="e#2755#2756#0" expanded="false" />
+            <element signature="e#2803#2804#0" expanded="false" />
+            <element signature="e#2837#2838#0" expanded="false" />
+            <element signature="e#2869#2870#0" expanded="false" />
+            <element signature="e#2917#2918#0" expanded="false" />
+            <element signature="e#2959#2960#0" expanded="false" />
+            <element signature="e#3003#3004#0" expanded="false" />
+            <element signature="e#3043#3044#0" expanded="false" />
+            <element signature="e#3110#3111#0" expanded="false" />
+            <element signature="e#3168#3169#0" expanded="false" />
+            <element signature="e#3210#3211#0" expanded="false" />
+            <element signature="e#3248#3249#0" expanded="false" />
+            <element signature="e#3311#3312#0" expanded="false" />
+            <element signature="e#3365#3366#0" expanded="false" />
+            <element signature="e#3402#3403#0" expanded="false" />
+            <element signature="e#3435#3436#0" expanded="false" />
+            <element signature="e#3488#3489#0" expanded="false" />
+            <element signature="e#3532#3533#0" expanded="false" />
+            <element signature="e#3575#3576#0" expanded="false" />
+            <element signature="e#3609#3610#0" expanded="false" />
+            <element signature="e#3668#3669#0" expanded="false" />
+            <element signature="e#3714#3715#0" expanded="false" />
+            <element signature="e#3749#3750#0" expanded="false" />
+            <element signature="e#3779#3780#0" expanded="false" />
+            <element signature="e#3826#3827#0" expanded="false" />
+            <element signature="e#3864#3865#0" expanded="false" />
+            <element signature="e#3899#3900#0" expanded="false" />
+            <element signature="e#3929#3930#0" expanded="false" />
+            <element signature="e#3976#3977#0" expanded="false" />
+            <element signature="e#4014#4015#0" expanded="false" />
+            <element signature="e#4070#4071#0" expanded="false" />
+            <element signature="e#4107#4108#0" expanded="false" />
+            <element signature="e#4182#4183#0" expanded="false" />
+            <element signature="e#4234#4235#0" expanded="false" />
+            <element signature="e#4274#4275#0" expanded="false" />
+            <element signature="e#4310#4311#0" expanded="false" />
+            <element signature="e#4368#4369#0" expanded="false" />
+            <element signature="e#4418#4419#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/controller/guiControllers/PresupuestoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="346" column="9" selection-start-line="346" selection-start-column="9" selection-end-line="346" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/Service.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/com/sun/mail/smtp/SMTPTransport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="1420" column="0" selection-start-line="1420" selection-start-column="0" selection-end-line="1420" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Preferences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="117" column="98" selection-start-line="117" selection-start-column="78" selection-end-line="117" selection-end-column="98" />
+        <state relative-caret-position="5083">
+          <caret line="319" column="49" selection-start-line="319" selection-start-column="49" selection-end-line="319" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1479127632000" expanded="false" signature="75:826" ph="..." />
+            <marker date="1479127632000" expanded="true" signature="828:871" ph="/**...*/" />
+            <marker date="1479127632000" expanded="true" signature="1223:1509" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="1605:1814" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="1847:2893" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="2969:3470" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="3504:3892" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="3955:5934" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="5981:6544" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="6603:7479" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="7512:7804" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="7842:7978" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="8014:8491" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="8520:9631" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="9694:11275" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="11080:11269" ph="//..." />
+            <marker date="1479127632000" expanded="true" signature="11303:12293" ph="{...}" />
+            <marker date="1479127632000" expanded="true" signature="11992:12186" ph="//..." />
+            <marker date="1479127632000" expanded="true" signature="12360:12604" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/com/sun/mail/util/SocketFetcher.class">
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/Part.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/BodyPart.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/libs/javax.mail.jar!/javax/mail/internet/MimeMultipart.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-733">
-          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        <state relative-caret-position="136">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
           <folding>
-            <element signature="e#1398#1399#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
+            <marker date="1479127682000" expanded="true" signature="221:1420" ph="..." />
+            <marker date="1479127682000" expanded="true" signature="241:1393" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Prueba.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="187" column="27" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+        <state relative-caret-position="183">
+          <caret line="148" column="48" selection-start-line="148" selection-start-column="48" selection-end-line="148" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/raider/delpozoaudiovisuales/util/Preferences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="110" column="85" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="85" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>

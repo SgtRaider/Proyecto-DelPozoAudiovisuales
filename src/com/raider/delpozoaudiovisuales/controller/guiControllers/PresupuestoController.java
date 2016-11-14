@@ -314,6 +314,8 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
     public void guardar() {
 
+        System.out.println(gui.getObservacionesTA().getText().toString().replace("\n", "x"));
+
         presupuesto.setNo_presupuesto(Integer.parseInt(gui.getNoLB().getText()));
         presupuesto.setFecha_emision(new Date());
         presupuesto.setFecha_validez(gui.getValidezDC().getDate());
