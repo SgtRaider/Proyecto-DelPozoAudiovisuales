@@ -4,6 +4,9 @@ import com.raider.delpozoaudiovisuales.model.objects.Cliente;
 import com.raider.delpozoaudiovisuales.model.objects.Material;
 import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
 import com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material;
+import net.sf.jasperreports.engine.JRDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JRField;
 import org.apache.commons.io.FileUtils;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
@@ -95,12 +98,14 @@ public class Prueba {
 
         System.out.println(sb.toString());*/
 
-        email("Esto es una prueba,\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus vulputate nunc quis blandit. Vivamus lacinia nisi tortor, in viverra orci blandit quis. Phasellus viverra velit eu laoreet scelerisque. Vestibulum vel ligula nec nisl maximus ultrices. Nullam scelerisque orci dolor, sed euismod nisl euismod in. Donec rhoncus auctor ligula, nec luctus eros auctor congue. Praesent vehicula libero at felis sollicitudin efficitur. Ut eget mauris euismod, gravida mauris at, semper nibh. Nulla et nunc nisl. Morbi eget est rutrum, porta purus ac, suscipit turpis." +
+        /*email("Esto es una prueba,\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus vulputate nunc quis blandit. Vivamus lacinia nisi tortor, in viverra orci blandit quis. Phasellus viverra velit eu laoreet scelerisque. Vestibulum vel ligula nec nisl maximus ultrices. Nullam scelerisque orci dolor, sed euismod nisl euismod in. Donec rhoncus auctor ligula, nec luctus eros auctor congue. Praesent vehicula libero at felis sollicitudin efficitur. Ut eget mauris euismod, gravida mauris at, semper nibh. Nulla et nunc nisl. Morbi eget est rutrum, porta purus ac, suscipit turpis." +
                 "\n" +
                 "Aenean vel lacinia mauris. Sed libero tortor, pellentesque a augue ut, congue egestas dui. Vestibulum posuere enim eget velit condimentum, vitae lobortis neque tincidunt. Quisque lobortis faucibus lorem ut lacinia. Ut suscipit ante a urna finibus, quis finibus ex pharetra. Aliquam eget pellentesque ex, nec molestie mauris. Nulla et nisl semper, ultricies arcu at, tempor quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eu rhoncus tortor." +
                 "\n" +
                 "Integer vel ante et nisl bibendum pulvinar et nec mi. Vivamus ac purus purus. Aenean tincidunt nibh risus, vitae sodales quam viverra vitae. Vivamus ullamcorper mi vitae mauris congue suscipit. Nam tristique mi elit, tincidunt hendrerit lectus congue eu. Duis eleifend neque in neque finibus, nec efficitur est porta. Aliquam non rutrum lacus, condimentum aliquet mi. Duis vel massa vel massa posuere luctus eget sit amet diam. Duis pellentesque vestibulum mi, vitae facilisis nisl volutpat at. Etiam in vulputate mi, at posuere metus.\n" +
-                "Fin de la prueba");
+                "Fin de la prueba");*/
+
+
     }
 
    /* public static <T> Object save(T entity) {
@@ -138,6 +143,41 @@ public class Prueba {
 
         session.getTransaction().commit();
     }*/
+
+   public void report() {
+
+   }
+
+    public class materialPresupuestoDatasource implements JRDataSource{
+
+        private List<Presupuesto_Material> presupuestoMaterialList = new ArrayList<>();
+        private int indiceParticipanteActual = -1;
+
+        @Override
+        public boolean next() throws JRException {
+            return ++indiceParticipanteActual < presupuestoMaterialList.size();
+        }
+
+        @Override
+        public Object getFieldValue(JRField jrField) throws JRException {
+            Object valor = null;
+
+            if(jrField.getName().equals("dias")) {
+
+                valor = presupuestoMaterialList.get(indiceParticipanteActual).getDias_uso();
+            } else if(jrField.getName().equals("cantidad")){
+                valor = presupuestoMaterialList.get(indiceParticipanteActual).getCantidad();
+            } else if(jrField.getName().equals("modelo")){
+                valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getModelo();
+            } else if(jrField.getName().equals("nombre_material")){
+                valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getNombre();
+            } else if(jrField.getName().equals("precio_unidad")){
+                valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getPrecio_dia();
+            }
+
+            return valor;
+        }
+    }
 
     private static final String SMTP_HOST_NAME = "127.0.0.1";
     private static final String SMTP_AUTH_USER = "pruebas@delpozoaudiovisuales.com";
