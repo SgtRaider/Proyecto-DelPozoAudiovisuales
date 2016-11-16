@@ -1,12 +1,12 @@
 package com.raider.delpozoaudiovisuales.util;
 
-import com.raider.delpozoaudiovisuales.model.objects.Cliente;
-import com.raider.delpozoaudiovisuales.model.objects.Material;
-import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
-import com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material;
-import net.sf.jasperreports.engine.JRDataSource;
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JRField;
+import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.objects.*;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 import org.apache.commons.io.FileUtils;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
@@ -40,8 +40,6 @@ import java.util.Properties;
  * Created by Raider on 04/11/2016.
  */
 public class Prueba {
-
-    public static HibernateUtil db = new HibernateUtil();
 
     public static void main(String args[]) throws NoSuchPaddingException, NoSuchAlgorithmException {
 
@@ -105,7 +103,11 @@ public class Prueba {
                 "Integer vel ante et nisl bibendum pulvinar et nec mi. Vivamus ac purus purus. Aenean tincidunt nibh risus, vitae sodales quam viverra vitae. Vivamus ullamcorper mi vitae mauris congue suscipit. Nam tristique mi elit, tincidunt hendrerit lectus congue eu. Duis eleifend neque in neque finibus, nec efficitur est porta. Aliquam non rutrum lacus, condimentum aliquet mi. Duis vel massa vel massa posuere luctus eget sit amet diam. Duis pellentesque vestibulum mi, vitae facilisis nisl volutpat at. Etiam in vulputate mi, at posuere metus.\n" +
                 "Fin de la prueba");*/
 
-
+        try {
+            report();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
    /* public static <T> Object save(T entity) {
@@ -144,40 +146,39 @@ public class Prueba {
         session.getTransaction().commit();
     }*/
 
-   public void report() {
+   public static void report() throws JRException, Exception {
 
+
+       DbMethods dbMethods = new DbMethods();
+
+       MaterialPresupuestoDatasource materialPresupuestoDatasource = new MaterialPresupuestoDatasource();
+
+       Presupuesto presupuesto = ((List<Presupuesto>) dbMethods.list("presupuesto", new HashMap<>())).get(4);
+
+       for (Presupuesto_Material presupuesto_material : presupuesto.getPresupuestoMaterial()) {
+
+           materialPresupuestoDatasource.addPresupuestomaterial(presupuesto_material);
+       }
+
+       JRBeanCollectionDataSource.
+
+       JFileChooser fr = new JFileChooser();
+       FileSystemView fw = fr.getFileSystemView();
+       File file = new File(fw.getDefaultDirectory() + File.separator + "reportPrueba2.jasper");
+       JasperReport report = (JasperReport) JRLoader.loadObject(file);
+       Map<String, Object> parameters = new HashMap<>();
+       parameters.put("no_presupuesto", presupuesto.getNo_presupuesto());
+       parameters.put("fecha_validez", presupuesto.getFecha_validez());
+       parameters.put("fecha_emision", presupuesto.getFecha_emision());
+       parameters.put("fecha_inicio", presupuesto.getFecha_inicio());
+       parameters.put("fecha_fin", presupuesto.getFecha_fin());
+       parameters.put("iva", presupuesto.getId());
+       parameters.put("descuento", presupuesto.getDescuento());
+       parameters.put("observaciones", presupuesto.getObservaciones());
+       parameters.put("ds1", materialPresupuestoDatasource);
+       JasperPrint jasperPrint = JasperFillManager.fillReport(report, parameters, materialPresupuestoDatasource);
+       JasperViewer.viewReport(jasperPrint);
    }
-
-    public class materialPresupuestoDatasource implements JRDataSource{
-
-        private List<Presupuesto_Material> presupuestoMaterialList = new ArrayList<>();
-        private int indiceParticipanteActual = -1;
-
-        @Override
-        public boolean next() throws JRException {
-            return ++indiceParticipanteActual < presupuestoMaterialList.size();
-        }
-
-        @Override
-        public Object getFieldValue(JRField jrField) throws JRException {
-            Object valor = null;
-
-            if(jrField.getName().equals("dias")) {
-
-                valor = presupuestoMaterialList.get(indiceParticipanteActual).getDias_uso();
-            } else if(jrField.getName().equals("cantidad")){
-                valor = presupuestoMaterialList.get(indiceParticipanteActual).getCantidad();
-            } else if(jrField.getName().equals("modelo")){
-                valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getModelo();
-            } else if(jrField.getName().equals("nombre_material")){
-                valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getNombre();
-            } else if(jrField.getName().equals("precio_unidad")){
-                valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getPrecio_dia();
-            }
-
-            return valor;
-        }
-    }
 
     private static final String SMTP_HOST_NAME = "127.0.0.1";
     private static final String SMTP_AUTH_USER = "pruebas@delpozoaudiovisuales.com";
