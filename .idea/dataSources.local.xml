@@ -6,5 +6,9 @@
       <first-sync>true</first-sync>
       <user-name>root</user-name>
     </data-source>
+    <data-source name="MySQL - proyectodam@localhost" uuid="91c33712-c857-4ab9-b178-ec77b9f64728">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+    </data-source>
   </component>
 </project>

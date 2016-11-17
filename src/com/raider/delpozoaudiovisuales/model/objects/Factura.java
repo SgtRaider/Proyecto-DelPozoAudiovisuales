@@ -198,4 +198,12 @@ public class Factura {
     public void setFacturaMaterial(List<Factura_Material> facturaMaterial) {
         this.facturaMaterial = facturaMaterial;
     }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
 }

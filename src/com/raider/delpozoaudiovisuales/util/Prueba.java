@@ -3,23 +3,16 @@ package com.raider.delpozoaudiovisuales.util;
 import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.*;
 import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 import org.apache.commons.io.FileUtils;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
 import javax.activation.*;
 
-import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.mail.Message;
@@ -31,7 +24,6 @@ import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
 
@@ -151,31 +143,35 @@ public class Prueba {
 
        DbMethods dbMethods = new DbMethods();
 
-       MaterialPresupuestoDatasource materialPresupuestoDatasource = new MaterialPresupuestoDatasource();
+       Presupuesto presupuesto = (Presupuesto) dbMethods.list("presupuesto", new HashMap<>()).get(4);
 
-       Presupuesto presupuesto = ((List<Presupuesto>) dbMethods.list("presupuesto", new HashMap<>())).get(4);
+       MaterialPresupuestoDatasource materialPresupuestoDatasource = new MaterialPresupuestoDatasource();
 
        for (Presupuesto_Material presupuesto_material : presupuesto.getPresupuestoMaterial()) {
 
            materialPresupuestoDatasource.addPresupuestomaterial(presupuesto_material);
        }
 
-       JRBeanCollectionDataSource.
-
        JFileChooser fr = new JFileChooser();
        FileSystemView fw = fr.getFileSystemView();
-       File file = new File(fw.getDefaultDirectory() + File.separator + "reportPrueba2.jasper");
+       File file = new File(fw.getDefaultDirectory() + File.separator + "Factura_Venta_jasper_report.jasper");
        JasperReport report = (JasperReport) JRLoader.loadObject(file);
        Map<String, Object> parameters = new HashMap<>();
-       parameters.put("no_presupuesto", presupuesto.getNo_presupuesto());
+       //TODO no variar no de presupuesto ni fecha de validez al modificar
+       parameters.put("nopresupuesto", presupuesto.getNo_presupuesto());
        parameters.put("fecha_validez", presupuesto.getFecha_validez());
        parameters.put("fecha_emision", presupuesto.getFecha_emision());
        parameters.put("fecha_inicio", presupuesto.getFecha_inicio());
        parameters.put("fecha_fin", presupuesto.getFecha_fin());
-       parameters.put("iva", presupuesto.getId());
-       parameters.put("descuento", presupuesto.getDescuento());
+       parameters.put("iva", Float.parseFloat(Preferences.getPropertiesUnprotected().get("util.iva")));
+       parameters.put("empresaCliente", presupuesto.getCliente().getEmpresa());
+       parameters.put("cifCliente", presupuesto.getCliente().getCif());
+       parameters.put("direccionCliente", presupuesto.getCliente().getDireccion());
+       parameters.put("cpCliente", presupuesto.getCliente().getCp());
+       parameters.put("ciudadCliente", presupuesto.getCliente().getCiudad());
+       //TODO Meter imagen en capeta imagenes, de lo contrario no se carga en el report
+       //parameters.put("urlimagen", image);
        parameters.put("observaciones", presupuesto.getObservaciones());
-       parameters.put("ds1", materialPresupuestoDatasource);
        JasperPrint jasperPrint = JasperFillManager.fillReport(report, parameters, materialPresupuestoDatasource);
        JasperViewer.viewReport(jasperPrint);
    }

@@ -8,21 +8,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Raider on 15/11/2016.
+ * Created by Raider on 17/11/2016.
  */
-public class MaterialPresupuestoDatasource implements JRDataSource {
+public class MaterialFacturaDatasource implements JRDataSource{
 
-    private List<Presupuesto_Material> presupuestoMaterialList = new ArrayList<>();
+    private List<Factura_Material> facturaMaterialList = new ArrayList<>();
     private int indiceParticipanteActual = -1;
 
-    public void addPresupuestomaterial(Presupuesto_Material presupuestoMaterial) {
-        this.presupuestoMaterialList.add(presupuestoMaterial);
+    public void addFacturamaterial(Factura_Material facturaMaterial) {
+        this.facturaMaterialList.add(facturaMaterial);
     }
 
 
     @Override
     public boolean next() throws JRException {
-        return ++indiceParticipanteActual < presupuestoMaterialList.size();
+        return ++indiceParticipanteActual < facturaMaterialList.size();
     }
 
     @Override
@@ -31,16 +31,16 @@ public class MaterialPresupuestoDatasource implements JRDataSource {
 
         if(jrField.getName().equals("diasMaterial")) {
 
-            valor = presupuestoMaterialList.get(indiceParticipanteActual).getDias_uso();
+            valor = facturaMaterialList.get(indiceParticipanteActual).getDias_uso();
         } else if(jrField.getName().equals("cantidadMaterial")){
 
-            valor = presupuestoMaterialList.get(indiceParticipanteActual).getCantidad();
+            valor = facturaMaterialList.get(indiceParticipanteActual).getCantidad();
         } else if(jrField.getName().equals("nombreMaterial")){
 
-            valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getNombre();
+            valor = facturaMaterialList.get(indiceParticipanteActual).getMaterial().getNombre();
         } else if(jrField.getName().equals("precioMaterial")){
 
-            valor = presupuestoMaterialList.get(indiceParticipanteActual).getMaterial().getPrecio_dia();
+            valor = facturaMaterialList.get(indiceParticipanteActual).getMaterial().getPrecio_dia();
         } else if(jrField.getName().equals("descuentoMaterial")){
 
             valor = (float) 0.0;
