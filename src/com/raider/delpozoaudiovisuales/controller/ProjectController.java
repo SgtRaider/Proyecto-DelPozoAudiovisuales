@@ -1,6 +1,6 @@
 package com.raider.delpozoaudiovisuales.controller;
 
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.Usuario;
 import com.raider.delpozoaudiovisuales.view.*;
 import raider.Util.Utilities;
@@ -45,10 +45,7 @@ public class ProjectController implements ActionListener{
 
     private void addListeners() {
 
-        mw.getMiconsultarmaterial().addActionListener(this);
-        mw.getMiconsultarpedido().addActionListener(this);
-        mw.getMiconsultarpresupuesto().addActionListener(this);
-        mw.getMiconsultarfactura().addActionListener(this);
+        mw.getMiconsultardocumentos().addActionListener(this);
 
         mw.getMicrearcliente().addActionListener(this);
         mw.getMicrearmaterial().addActionListener(this);
@@ -56,7 +53,6 @@ public class ProjectController implements ActionListener{
         mw.getMicrearpresupuesto().addActionListener(this);
         mw.getMicrearfactura().addActionListener(this);
 
-        mw.getMilogin().addActionListener(this);
         mw.getMipreferencias().addActionListener(this);
     }
 
@@ -71,10 +67,6 @@ public class ProjectController implements ActionListener{
 
             switch (actionCommand) {
 
-                case "Login":
-
-                    break;
-
                 case "Preferencias":
                     new GUIPreferencias().setVisible(true);
                     break;
@@ -84,11 +76,6 @@ public class ProjectController implements ActionListener{
                     if(source == mw.getMicrearpedido()) {
 
                         new GUIPedido(dbm, mw);
-                    } else {
-
-                        if(source == mw.getMiconsultarpedido()) {
-
-                        }
                     }
 
                     break;
@@ -98,11 +85,6 @@ public class ProjectController implements ActionListener{
                     if(source == mw.getMicrearpresupuesto()) {
 
                         new GUIPresupuesto(dbm, mw);
-                    } else {
-
-                        if(source == mw.getMiconsultarpresupuesto()) {
-
-                        }
                     }
 
                     break;
@@ -112,11 +94,6 @@ public class ProjectController implements ActionListener{
                     if(source == mw.getMicrearfactura()) {
 
                         new GUIFactura(dbm, mw);
-                    } else {
-
-                        if(source == mw.getMiconsultarfactura()) {
-
-                        }
                     }
 
                     break;
@@ -124,6 +101,7 @@ public class ProjectController implements ActionListener{
                 case "Material":
 
                     if(source == mw.getMicrearmaterial()) {
+
                         new GUIcrearmaterial(dbm).setVisible(true);
                     }
 
@@ -134,6 +112,15 @@ public class ProjectController implements ActionListener{
                     if(source == mw.getMicrearcliente()) {
 
                         new GUIcrearcliente(dbm).setVisible(true);
+                    }
+
+                    break;
+
+                case "Documentos":
+
+                    if(source == mw.getMiconsultardocumentos()) {
+
+                        new GUIlistadodocumentos(dbm, mw);
                     }
 
                     break;

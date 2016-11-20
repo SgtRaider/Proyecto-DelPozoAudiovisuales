@@ -37,7 +37,7 @@ public class HibernateUtil {
 
     /**
      * Devuelve la sesión actual
-     * @return
+     *
      */
     public static Session getCurrentSession() {
 

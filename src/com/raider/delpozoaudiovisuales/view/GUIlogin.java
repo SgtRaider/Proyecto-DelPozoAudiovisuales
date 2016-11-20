@@ -3,6 +3,7 @@ package com.raider.delpozoaudiovisuales.view;
 import raider.Util.Utilities;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class GUIlogin extends JDialog implements ActionListener {
@@ -12,6 +13,7 @@ public class GUIlogin extends JDialog implements ActionListener {
     private JButton btCancel;
     private JPasswordField txtPassword;
     private JTextField txtUsuario;
+    private JButton preferenciasButton;
 
     private String usuario;
     private String contrasena;
@@ -66,10 +68,14 @@ public class GUIlogin extends JDialog implements ActionListener {
         setTitle("Login");
         getContentPane().add(contentPane);
         getRootPane().setDefaultButton(btOk);
+        setPreferredSize(new Dimension(300, 150));
+        setMinimumSize(new Dimension(300, 150));
+        setResizable(false);
         pack();
         setLocationRelativeTo(null);
         setModal(true);
 
+        preferenciasButton.addActionListener(this);
         btOk.addActionListener(this);
         btCancel.addActionListener(this);
     }
@@ -78,10 +84,15 @@ public class GUIlogin extends JDialog implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == btOk) {
+
             aceptar();
         }
         else if (e.getSource() == btCancel) {
+
             cancelar();
+        } else if (e.getSource() == preferenciasButton) {
+
+            new GUIPreferencias().setVisible(true);
         }
     }
 
@@ -102,7 +113,7 @@ public class GUIlogin extends JDialog implements ActionListener {
     public void visible(boolean bool) { setVisible(bool);}
 
     private void cancelar() {
-        setVisible(false);
+        System.exit(0);
     }
 
     public String getUsuario() {

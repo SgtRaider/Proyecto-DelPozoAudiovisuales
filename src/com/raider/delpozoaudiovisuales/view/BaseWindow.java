@@ -29,11 +29,7 @@ public class BaseWindow {
     private JMenuItem micrearcliente;
     private JMenuItem micrearmaterial;
 
-    private JMenuItem miconsultarpresupuesto;
-    private JMenuItem miconsultarpedido;
-    private JMenuItem miconsultarfactura;
-    private JMenuItem miconsultarcliente;
-    private JMenuItem miconsultarmaterial;
+    private JMenuItem miconsultardocumentos;
 
     public BaseWindow() {
 
@@ -42,8 +38,6 @@ public class BaseWindow {
     }
 
     public static void main(String[] args) {
-
-        // Creacion de la Ventana o Frame con sus elementos
 
         frame = new JFrame("Gestor DelPozoAudiovisuales");
         frame.setContentPane(new BaseWindow().basePanel);
@@ -67,7 +61,6 @@ public class BaseWindow {
         mcrear = new JMenu("Dar de alta");
         mconsultar = new JMenu("Consultar");
 
-        milogin = new JMenuItem("Login");
         mipreferencias = new JMenuItem("Preferencias");
 
         micrearpresupuesto = new JMenuItem("Presupuesto");
@@ -76,16 +69,12 @@ public class BaseWindow {
         micrearcliente = new JMenuItem("Cliente");
         micrearmaterial = new JMenuItem("Material");
 
-        miconsultarpresupuesto = new JMenuItem("Presupuesto");
-        miconsultarpedido = new JMenuItem("Pedido");
-        miconsultarfactura = new JMenuItem("Factura");
-        miconsultarmaterial = new JMenuItem("Material");
+        miconsultardocumentos = new JMenuItem("Documentos");
 
         mbventana.add(mmenu);
         mbventana.add(mcrear);
         mbventana.add(mconsultar);
 
-        mmenu.add(milogin);
         mmenu.add(mipreferencias);
 
         mcrear.add(micrearpresupuesto);
@@ -94,10 +83,7 @@ public class BaseWindow {
         mcrear.add(micrearcliente);
         mcrear.add(micrearmaterial);
 
-        mconsultar.add(miconsultarpresupuesto);
-        mconsultar.add(miconsultarpedido);
-        mconsultar.add(miconsultarfactura);
-        mconsultar.add(miconsultarmaterial);
+        mconsultar.add(miconsultardocumentos);
     }
 
     public static JMenuBar getMenuBar() {
@@ -200,44 +186,12 @@ public class BaseWindow {
         this.micrearmaterial = micrearmaterial;
     }
 
-    public JMenuItem getMiconsultarpresupuesto() {
-        return miconsultarpresupuesto;
+    public JMenuItem getMiconsultardocumentos() {
+        return miconsultardocumentos;
     }
 
-    public void setMiconsultarpresupuesto(JMenuItem miconsultarpresupuesto) {
-        this.miconsultarpresupuesto = miconsultarpresupuesto;
-    }
-
-    public JMenuItem getMiconsultarpedido() {
-        return miconsultarpedido;
-    }
-
-    public void setMiconsultarpedido(JMenuItem miconsultarpedido) {
-        this.miconsultarpedido = miconsultarpedido;
-    }
-
-    public JMenuItem getMiconsultarfactura() {
-        return miconsultarfactura;
-    }
-
-    public void setMiconsultarfactura(JMenuItem miconsultarfactura) {
-        this.miconsultarfactura = miconsultarfactura;
-    }
-
-    public JMenuItem getMiconsultarcliente() {
-        return miconsultarcliente;
-    }
-
-    public void setMiconsultarcliente(JMenuItem miconsultarcliente) {
-        this.miconsultarcliente = miconsultarcliente;
-    }
-
-    public JMenuItem getMiconsultarmaterial() {
-        return miconsultarmaterial;
-    }
-
-    public void setMiconsultarmaterial(JMenuItem miconsultarmaterial) {
-        this.miconsultarmaterial = miconsultarmaterial;
+    public void setMiconsultardocumentos(JMenuItem miconsultardocumentos) {
+        this.miconsultardocumentos = miconsultardocumentos;
     }
 
     public static JFrame getFrame() {

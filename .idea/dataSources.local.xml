@@ -3,7 +3,6 @@
   <component name="dataSourceStorageLocal">
     <data-source name="hibernate.cfg.xml/Hibernate" uuid="ee30d9e3-09bc-4c5b-b815-25183be30264">
       <secret-storage>memory</secret-storage>
-      <first-sync>true</first-sync>
       <user-name>root</user-name>
     </data-source>
     <data-source name="MySQL - proyectodam@localhost" uuid="91c33712-c857-4ab9-b178-ec77b9f64728">

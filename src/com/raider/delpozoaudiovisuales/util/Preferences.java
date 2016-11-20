@@ -5,6 +5,7 @@ import sun.misc.BASE64Encoder;
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.io.*;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -14,6 +15,9 @@ import java.util.Properties;
  */
 public class Preferences {
 
+    private static final JFileChooser fr = new JFileChooser();
+    private static final FileSystemView fw = fr.getFileSystemView();
+    private static final String PATH = fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "config.props";
     private static final String DEFAULT_ENCODING = "UTF-8";
     private static BASE64Encoder enc = new BASE64Encoder();
     private static BASE64Decoder dec = new BASE64Decoder();
@@ -34,6 +38,7 @@ public class Preferences {
         }
     }
 
+    @Deprecated
     public static boolean existsProperties() {
 
         InputStream input = null;
@@ -43,7 +48,7 @@ public class Preferences {
             JFileChooser fr = new JFileChooser();
             FileSystemView fw = fr.getFileSystemView();
 
-            input = new FileInputStream(fw.getDefaultDirectory() + File.separator + "config.props");
+            input = new FileInputStream(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "config.props");
 
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -74,7 +79,7 @@ public class Preferences {
             JFileChooser fr = new JFileChooser();
             FileSystemView fw = fr.getFileSystemView();
 
-            output = new FileOutputStream(fw.getDefaultDirectory() + File.separator + "config.props");
+            output = new FileOutputStream(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "config.props");
 
             prop.setProperty( base64encode("db.host"), base64encode("localhost"));
             prop.setProperty( base64encode("db.name"), base64encode("proyectodam"));
@@ -108,7 +113,7 @@ public class Preferences {
             JFileChooser fr = new JFileChooser();
             FileSystemView fw = fr.getFileSystemView();
 
-            output = new FileOutputStream(fw.getDefaultDirectory() + File.separator + "config.props");
+            output = new FileOutputStream(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "config.props");
 
             prop.setProperty( base64encode("db.host"), base64encode(host));
             prop.setProperty( base64encode("db.name"), base64encode(name));
@@ -139,13 +144,9 @@ public class Preferences {
 
         try {
 
-            if (existsProperties()) {
-
-                JFileChooser fr = new JFileChooser();
-                FileSystemView fw = fr.getFileSystemView();
                 HashMap<String, String> properties = new HashMap<>();
 
-                input = new FileInputStream(fw.getDefaultDirectory() + File.separator + "config.props");
+                input = getInputStream(PATH);
 
                 prop.load(input);
 
@@ -157,13 +158,6 @@ public class Preferences {
                 properties.put("util.SecurityKey", base64decode(prop.getProperty(base64encode("util.SecurityKey"))));
 
                 return properties;
-
-            } else {
-
-                initializeProperties();
-
-                return getPropertiesUnprotected();
-            }
 
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -189,31 +183,20 @@ public class Preferences {
 
         try {
 
-            if (existsProperties()) {
+            HashMap<String, String> properties = new HashMap<>();
 
-                JFileChooser fr = new JFileChooser();
-                FileSystemView fw = fr.getFileSystemView();
-                HashMap<String, String> properties = new HashMap<>();
+            input = getInputStream(PATH);
 
-                input = new FileInputStream(fw.getDefaultDirectory() + File.separator + "config.props");
+            prop.load(input);
 
-                prop.load(input);
+            properties.put("db.host", prop.getProperty(base64encode("db.host")));
+            properties.put("db.name", prop.getProperty(base64encode("db.name")));
+            properties.put("db.user", prop.getProperty(base64encode("db.user")));
+            properties.put("db.password", prop.getProperty(base64encode("db.password")));
+            properties.put("util.iva", prop.getProperty(base64encode("util.iva")));
+            properties.put("util.SecurityKey", prop.getProperty(base64encode("util.SecurityKey")));
 
-                properties.put("db.host", prop.getProperty(base64encode("db.host")));
-                properties.put("db.name", prop.getProperty(base64encode("db.name")));
-                properties.put("db.user", prop.getProperty(base64encode("db.user")));
-                properties.put("db.password", prop.getProperty(base64encode("db.password")));
-                properties.put("util.iva", prop.getProperty(base64encode("util.iva")));
-                properties.put("util.SecurityKey", prop.getProperty(base64encode("util.SecurityKey")));
-
-                return properties;
-
-            } else {
-
-                initializeProperties();
-
-                return getPropertiesProtected();
-            }
+            return properties;
 
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -230,5 +213,25 @@ public class Preferences {
         }
 
         return null;
+    }
+
+    private static FileInputStream getInputStream(String path) throws FileNotFoundException {
+
+        File file = new File(path);
+        FileManager fm = new FileManager();
+        FileInputStream input = null;
+
+        if (fm.existsDir(Paths.get(file.getPath()))) {
+
+            input = new FileInputStream(file.getPath());
+        } else {
+
+            fm.createProjectStructure();
+            initializeProperties();
+
+            return getInputStream(path);
+        }
+
+        return input;
     }
 }

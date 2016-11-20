@@ -1,8 +1,10 @@
 package com.raider.delpozoaudiovisuales.view;
 
 import com.raider.delpozoaudiovisuales.controller.guiControllers.FacturaController;
-import com.raider.delpozoaudiovisuales.controller.guiControllers.PedidoController;
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.controller.guiControllers.PresupuestoController;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.objects.Factura;
+import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
@@ -64,9 +66,17 @@ public class GUIFactura {
         }
     }
 
+    public GUIFactura(DbMethods dbm, BaseWindow mw, Factura factura) {
+
+        this.fc = new FacturaController(dbm, GUIFactura.this, factura);
+        this.mw = mw;
+
+        buildFrame();
+    }
+
     private void buildFrame() {
 
-        frame = new JFrame("Nuevo Presupuesto");
+        frame = new JFrame("Nuevo Pedido");
         frame.setContentPane(GUIFactura.this.panel1);
         frame.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setMinimumSize(new Dimension(1100, 800));

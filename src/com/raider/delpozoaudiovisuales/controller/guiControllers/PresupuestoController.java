@@ -1,11 +1,14 @@
 package com.raider.delpozoaudiovisuales.controller.guiControllers;
 
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.*;
 import com.raider.delpozoaudiovisuales.util.Preferences;
+import com.raider.delpozoaudiovisuales.util.PrintReport;
 import com.raider.delpozoaudiovisuales.view.GUIPresupuesto;
+import com.raider.delpozoaudiovisuales.view.GUIenviaremail;
 import com.raider.delpozoaudiovisuales.view.GUIseleccioncliente;
 import com.raider.delpozoaudiovisuales.view.GUIseleccionmaterial;
+import net.sf.jasperreports.engine.JRException;
 import raider.Util.Utilities;
 
 import javax.swing.*;
@@ -15,7 +18,6 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Arc2D;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -29,6 +31,7 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
     private Presupuesto presupuesto;
     private int id;
     private int selectedRow;
+    private boolean modify;
 
     private DefaultTableModel defaultTableModel;
 
@@ -45,20 +48,27 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
         createTable();
         loadMaterial();
         addListeners();
+        modify = false;
     }
 
     public PresupuestoController(DbMethods dbm, GUIPresupuesto guip, Presupuesto presupuesto) {
 
         this.dbm = dbm;
         this.gui = guip;
+        gui.getObservacionesTA().setLineWrap(true);
 
         this.presupuesto = presupuesto;
 
         loadPresupuesto(presupuesto);
+        loadCliente(presupuesto.getCliente());
+        calcular();
+
+        gui.getNoLB().setText(String.valueOf(presupuesto.getNo_presupuesto()));
 
         createTable();
         loadMaterial();
         addListeners();
+        modify = true;
     }
 
     private void createTable() {
@@ -89,7 +99,6 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
     public void addRowMaterial(Presupuesto_Material presupuesto_material) {
 
         Material material = presupuesto_material.getMaterial();
-
         String[] fila = {String.valueOf(material.getId()), material.getSub_categoria(), material.getNombre(), material.getModelo(), material.getFabricante(), material.isComprobado() ? "Si" : "No", String.valueOf(material.getPrecio_dia()), String.valueOf(material.getPrecio_feria()), String.valueOf(presupuesto_material.getCantidad()), String.valueOf(presupuesto_material.getDias_uso())};
         defaultTableModel.addRow(fila);
     }
@@ -247,6 +256,7 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
         float iva = Float.valueOf(Preferences.getPropertiesUnprotected().get("util.iva"));
         float subtotal = 0;
+        float subtotalDesc = 0;
         float total = 0;
         float descuento = Float.parseFloat(gui.getDescuentoTF().getText().toString().isEmpty() ? "0" : gui.getDescuentoTF().getText().toString()) / 100;
 
@@ -255,13 +265,13 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
             subtotal += (presupuesto_material.getCantidad() * presupuesto_material.getDias_uso() * presupuesto_material.getMaterial().getPrecio_dia());
         }
 
-        subtotal = subtotal - (descuento * subtotal);
+        subtotalDesc = (descuento * subtotal);
 
-        iva = subtotal * iva;
+        iva = (subtotal - subtotalDesc) * iva;
 
-        total = subtotal + iva;
+        total = (subtotal - subtotalDesc) + iva;
 
-        presupuesto.setDescuento(descuento);
+        presupuesto.setDescuento(descuento * 100);
         presupuesto.setSub_total(subtotal);
         presupuesto.setIva(iva);
         presupuesto.setTotal(total);
@@ -277,47 +287,56 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
         Pedido pedido = new Pedido();
 
-        pedido.setPresupuesto(presupuesto);
-        pedido.setCliente(presupuesto.getCliente());
-        pedido.setDescuento(presupuesto.getDescuento());
-        pedido.setFecha_emision(new Date());
-        pedido.setFecha_inicio(presupuesto.getFecha_inicio());
-        pedido.setFecha_fin(presupuesto.getFecha_fin());
-        pedido.setIva(presupuesto.getIva());
-        pedido.setTotal(presupuesto.getTotal());
-        pedido.setSub_total(presupuesto.getSub_total());
-        pedido.setMostrar_descuento(presupuesto.isMostrar_descuento());
-        pedido.setMostrar_precios(presupuesto.isMostrar_precios());
-        pedido.setNo_pedido(dbm.lastID(2));
-        pedido.setObservaciones(presupuesto.getObservaciones());
+        if (presupuesto.getPedido() == null) {
 
-        for (Presupuesto_Material presupuesto_material : presupuesto.getPresupuestoMaterial()) {
+            pedido.setPresupuesto(presupuesto);
+            pedido.setCliente(presupuesto.getCliente());
+            pedido.setDescuento(presupuesto.getDescuento());
+            pedido.setFecha_emision(new Date());
+            pedido.setFecha_inicio(presupuesto.getFecha_inicio());
+            pedido.setFecha_fin(presupuesto.getFecha_fin());
+            pedido.setIva(presupuesto.getIva());
+            pedido.setTotal(presupuesto.getTotal());
+            pedido.setSub_total(presupuesto.getSub_total());
+            pedido.setMostrar_descuento(presupuesto.isMostrar_descuento());
+            pedido.setMostrar_precios(presupuesto.isMostrar_precios());
+            pedido.setNo_pedido(dbm.lastID(2));
+            pedido.setObservaciones(presupuesto.getObservaciones());
 
-            Pedido_Material pedido_material = new Pedido_Material();
-            pedido_material.setPedido(pedido);
-            pedido_material.setMaterial(presupuesto_material.getMaterial());
-            pedido_material.setCantidad(presupuesto_material.getCantidad());
-            pedido_material.setDias_uso(presupuesto_material.getDias_uso());
+            for (Presupuesto_Material presupuesto_material : presupuesto.getPresupuestoMaterial()) {
 
-            pedido.getPedidoMaterial().add(pedido_material);
+                Pedido_Material pedido_material = new Pedido_Material();
+                pedido_material.setPedido(pedido);
+                pedido_material.setMaterial(presupuesto_material.getMaterial());
+                pedido_material.setCantidad(presupuesto_material.getCantidad());
+                pedido_material.setDias_uso(presupuesto_material.getDias_uso());
+
+                pedido.getPedidoMaterial().add(pedido_material);
+            }
+
+            dbm.save(pedido);
+            PrintReport printReport = new PrintReport();
+
+            try {
+
+                printReport.printReport(presupuesto.getFecha_emision(), "pedido", pedido, gui.getImprimirCB().isSelected());
+            } catch (JRException e) {
+
+                e.printStackTrace();
+                Utilities.mensajeError("Error al generar el report.");
+            }
+
+            if (Utilities.mensajeConfirmacion("Pedido generado correctamente.\n ¿Desea enviar el pedido por correo?") == 0) {
+
+                new GUIenviaremail(pedido, "pedido").setVisible(true);
+            }
         }
-
-        dbm.save(pedido);
-
-        //TODO crear report.
-
-        //if(Utilities.mensajeConfirmacion("Pedido generado correctamente.\n ¿Desea enviar el pedido por correo?")==0) {
-
-            //TODO enviar correo.
-        //}
     }
 
     public void guardar() {
 
-        System.out.println(gui.getObservacionesTA().getText().toString().replace("\n", "x"));
-
         presupuesto.setNo_presupuesto(Integer.parseInt(gui.getNoLB().getText()));
-        presupuesto.setFecha_emision(new Date());
+        if(modify) presupuesto.setFecha_emision(presupuesto.getFecha_emision()); else presupuesto.setFecha_emision(new Date());
         presupuesto.setFecha_validez(gui.getValidezDC().getDate());
         presupuesto.setFecha_inicio(gui.getInicioDC().getDate());
         presupuesto.setFecha_fin(gui.getFinDC().getDate());
@@ -327,16 +346,27 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
         dbm.save(presupuesto);
 
-        //TODO crear report.
+        PrintReport printReport = new PrintReport();
 
-        //if(Utilities.mensajeConfirmacion("Pedido generado correctamente.\n ¿Desea enviar el presupesto por correo?")==0) {
+        try {
 
-            //TODO enviar correo.
+            printReport.printReport(presupuesto.getFecha_emision(), "presupuesto", presupuesto, gui.getImprimirCB().isSelected());
+        } catch (JRException e) {
 
-        //}
+            e.printStackTrace();
+            Utilities.mensajeError("Error al generar el report.");
+        }
+
+        if(gui.getCorreoCB().isSelected()) {
+
+            new GUIenviaremail(presupuesto, "presupuesto").setVisible(true);
+        }
 
         if (gui.getBoolCB().isSelected()) {
+
             presupuestoAprovado(presupuesto);
+        } else {
+            presupuesto.setAprovado(false);
         }
     }
 
@@ -344,6 +374,7 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
     public void valueChanged(ListSelectionEvent e) {
 
         if(gui.getTB().isRowSelected(gui.getTB().getSelectedRow())) {
+
             id = Integer.parseInt((String) gui.getTB().getValueAt(gui.getTB().getSelectedRow(),0));
             selectedRow = gui.getTB().getSelectedRow();
         }

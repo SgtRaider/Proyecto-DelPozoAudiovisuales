@@ -1,4 +1,4 @@
-package com.raider.delpozoaudiovisuales.model.logic;
+package com.raider.delpozoaudiovisuales.model.database.logic;
 
 import com.raider.delpozoaudiovisuales.model.objects.*;
 import com.raider.delpozoaudiovisuales.util.HibernateUtil;
@@ -162,6 +162,40 @@ public class DbMethods {
                     presupuestoList = query.list();
                     return presupuestoList;
                 }
+
+            default:
+                return null;
+        }
+    }
+
+    public Object getById(String type, int id) {
+
+        String sql;
+        Query query;
+        Session session = db.getCurrentSession();
+
+        switch (type) {
+
+            case "factura":
+
+                sql = "FROM Factura as f WHERE f.id = " + id;
+                query = session.createQuery(sql);
+                Factura factura = (Factura) query.uniqueResult();
+                return factura;
+
+            case "pedido":
+
+                sql = "FROM Pedido as p WHERE p.id = " + id;
+                query = session.createQuery(sql);
+                Pedido pedido = (Pedido) query.uniqueResult();
+                return pedido;
+
+            case "presupuesto":
+
+                sql = "FROM Presupuesto as p WHERE p.id = " + id;
+                query = session.createQuery(sql);
+                Presupuesto presupuesto = (Presupuesto) query.uniqueResult();
+                return presupuesto;
 
             default:
                 return null;

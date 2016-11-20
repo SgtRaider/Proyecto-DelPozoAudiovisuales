@@ -1,10 +1,8 @@
 package com.raider.delpozoaudiovisuales.util;
 
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.*;
 import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.util.JRLoader;
-import net.sf.jasperreports.view.JasperViewer;
 import org.apache.commons.io.FileUtils;
 
 import java.util.*;
@@ -143,7 +141,7 @@ public class Prueba {
 
        DbMethods dbMethods = new DbMethods();
 
-       Presupuesto presupuesto = (Presupuesto) dbMethods.list("presupuesto", new HashMap<>()).get(4);
+       Presupuesto presupuesto = (Presupuesto) dbMethods.list("presupuesto", new HashMap<>()).get(8);
 
        MaterialPresupuestoDatasource materialPresupuestoDatasource = new MaterialPresupuestoDatasource();
 
@@ -152,9 +150,12 @@ public class Prueba {
            materialPresupuestoDatasource.addPresupuestomaterial(presupuesto_material);
        }
 
-       JFileChooser fr = new JFileChooser();
+       PrintReport pr = new PrintReport();
+       pr.printReport(presupuesto.getFecha_emision(), "presupuesto", presupuesto, true);
+
+       /*JFileChooser fr = new JFileChooser();
        FileSystemView fw = fr.getFileSystemView();
-       File file = new File(fw.getDefaultDirectory() + File.separator + "Factura_Venta_jasper_report.jasper");
+       File file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor"+ File.separator + "Jaspers" + File.separator + "Presupuesto_Venta_jasper_report.jasper");
        JasperReport report = (JasperReport) JRLoader.loadObject(file);
        Map<String, Object> parameters = new HashMap<>();
        //TODO no variar no de presupuesto ni fecha de validez al modificar
@@ -169,11 +170,11 @@ public class Prueba {
        parameters.put("direccionCliente", presupuesto.getCliente().getDireccion());
        parameters.put("cpCliente", presupuesto.getCliente().getCp());
        parameters.put("ciudadCliente", presupuesto.getCliente().getCiudad());
-       //TODO Meter imagen en capeta imagenes, de lo contrario no se carga en el report
-       //parameters.put("urlimagen", image);
+       parameters.put("imagePath", new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor"+ File.separator + "Jaspers" + File.separator + "logo-delpozo.jpg").getCanonicalPath());
+       //TODO Meter imagenes como canonical path
        parameters.put("observaciones", presupuesto.getObservaciones());
        JasperPrint jasperPrint = JasperFillManager.fillReport(report, parameters, materialPresupuestoDatasource);
-       JasperViewer.viewReport(jasperPrint);
+       JasperViewer.viewReport(jasperPrint);*/
    }
 
     private static final String SMTP_HOST_NAME = "127.0.0.1";

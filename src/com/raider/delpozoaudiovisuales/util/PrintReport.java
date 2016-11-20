@@ -10,6 +10,7 @@ import net.sf.jasperreports.view.JasperViewer;
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -21,9 +22,9 @@ import java.util.Map;
  */
 public class PrintReport {
 
-    public File printReport(Date docDate, String type, Object source) throws JRException {
+    public File printReport(Date docDate, String type, Object source, boolean mostrar) throws JRException {
 
-        File file;
+        File file = null;
         JFileChooser fr = new JFileChooser();
         FileSystemView fw = fr.getFileSystemView();
         FileManager fileManager = new FileManager();
@@ -32,38 +33,37 @@ public class PrintReport {
         switch (type) {
 
             case "presupuesto":
-
-                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + "Presupuesto_Venta_jasper_report.jasper");
+                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator +  "Presupuesto_Venta_jasper_report.jasper");
                 nombreCliente = ((Presupuesto) source).getCliente().getEmpresa();
                 break;
 
             case "presupuesto_agrupado":
 
-                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + "Presupuesto_Agrupado_Venta_jasper_report.jasper");
+                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Presupuesto_Agrupado_Venta_jasper_report.jasper");
                 nombreCliente = ((Presupuesto) source).getCliente().getEmpresa();
                 break;
 
             case "pedido":
 
-                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + "Pedido_Venta_jasper_report.jasper");
+                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Pedido_Venta_jasper_report.jasper");
                 nombreCliente = ((Pedido) source).getCliente().getEmpresa();
                 break;
 
             case "pedido_agrupado":
 
-                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + "Pedido_Agrupado_Venta_jasper_report.jasper");
+                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Pedido_Agrupado_Venta_jasper_report.jasper");
                 nombreCliente = ((Pedido) source).getCliente().getEmpresa();
                 break;
 
             case "factura":
 
-                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + "Factura_Venta_jasper_report.jasper");
+                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Factura_Venta_jasper_report.jasper");
                 nombreCliente = ((Factura) source).getCliente().getEmpresa();
                 break;
 
             case "factura_agrupado":
 
-                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + "Factura_Agrupada_Venta_jasper_report.jasper");
+                file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Factura_Agrupada_Venta_jasper_report.jasper");
                 nombreCliente = ((Factura) source).getCliente().getEmpresa();
                 break;
 
@@ -82,11 +82,9 @@ public class PrintReport {
 
         File pdf = new File(contentDir.getPath() + File.separator + type + "_" + nombreCliente + "_" + dia + ".pdf");
 
-        JRExporter exporter = new JRPdfExporter();
-        exporter.setParameter(JRExporterParameter.JASPER_PRINT, getJasperPrint(type, source, file));
-        exporter.setParameter(JRExporterParameter.OUTPUT_FILE, pdf);
+        if (mostrar) JasperViewer.viewReport(getJasperPrint(type, source, file), false);
 
-        //JasperViewer.viewReport(getJasperPrint(type, source, file));
+        JasperExportManager.exportReportToPdfFile(getJasperPrint(type, source, file), pdf.getPath());
 
         return pdf;
     }
@@ -100,7 +98,7 @@ public class PrintReport {
 
         switch (type) {
 
-            case "presupuesto":
+            case "Presupuesto":
 
                 Presupuesto presupuesto = (Presupuesto) source;
                 MaterialPresupuestoDatasource materialPresupuestoDatasource = new MaterialPresupuestoDatasource();
@@ -112,7 +110,7 @@ public class PrintReport {
 
                 return materialPresupuestoDatasource;
 
-            case "pedido":
+            case "Pedido":
 
                 Pedido pedido = (Pedido) source;
                 MaterialPedidoDatasource materialPedidoDatasource = new MaterialPedidoDatasource();
@@ -124,7 +122,7 @@ public class PrintReport {
 
                 return materialPedidoDatasource;
 
-            case "factura":
+            case "Factura":
 
                 Factura factura = (Factura) source;
                 MaterialFacturaDatasource materialFacturaDatasource = new MaterialFacturaDatasource();
@@ -145,15 +143,23 @@ public class PrintReport {
 
         JFileChooser fr = new JFileChooser();
         FileSystemView fw = fr.getFileSystemView();
+        String imagePath = "";
+        try {
+            imagePath = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor"+ File.separator + "Jaspers" + File.separator + "logo-delpozo.jpg").getCanonicalPath();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
         Map<String, Object> parameters;
 
         switch (type) {
 
-            case "presupuesto":
+            case "Presupuesto":
 
                 Presupuesto presupuesto = (Presupuesto) source;
 
                 parameters = new HashMap<>();
+                parameters.put("descuentoGen", presupuesto.getDescuento()/100);
                 parameters.put("nopresupuesto", presupuesto.getNo_presupuesto());
                 parameters.put("fecha_validez", presupuesto.getFecha_validez());
                 parameters.put("fecha_emision", presupuesto.getFecha_emision());
@@ -165,25 +171,17 @@ public class PrintReport {
                 parameters.put("direccionCliente", presupuesto.getCliente().getDireccion());
                 parameters.put("cpCliente", presupuesto.getCliente().getCp());
                 parameters.put("ciudadCliente", presupuesto.getCliente().getCiudad());
-
-                if (SystemUtils.IS_OS_LINUX) {
-
-                    parameters.put("urlimagen",(fw.getDefaultDirectory() + File.separator + "logo-delpozo-recortado-4.png").replace("/","//"));
-                } else {
-
-                    if (SystemUtils.IS_OS_WINDOWS) {
-                        parameters.put("urlimagen",(fw.getDefaultDirectory() + File.separator + "logo-delpozo-recortado-4.png").replace("\\","\\\\"));
-                    }
-                }
+                parameters.put("imagePath", imagePath);
                 parameters.put("observaciones", presupuesto.getObservaciones());
 
                 return parameters;
 
-            case "pedido":
+            case "Pedido":
 
                 Pedido pedido = (Pedido) source;
 
                 parameters = new HashMap<>();
+                parameters.put("descuentoGen", pedido.getDescuento()/100);
                 parameters.put("nopedido", pedido.getNo_pedido());
                 parameters.put("fecha_emision", pedido.getFecha_emision());
                 parameters.put("fecha_inicio", pedido.getFecha_inicio());
@@ -194,24 +192,17 @@ public class PrintReport {
                 parameters.put("direccionCliente", pedido.getCliente().getDireccion());
                 parameters.put("cpCliente", pedido.getCliente().getCp());
                 parameters.put("ciudadCliente", pedido.getCliente().getCiudad());
-
-                if (SystemUtils.IS_OS_LINUX) {
-
-                    parameters.put("urlimagen",(fw.getDefaultDirectory() + File.separator + "logo-delpozo-recortado-4.png").replace("/","//"));
-                } else {
-
-                    if (SystemUtils.IS_OS_WINDOWS) {
-                        parameters.put("urlimagen",(fw.getDefaultDirectory() + File.separator + "logo-delpozo-recortado-4.png").replace("\\","\\\\"));
-                    }
-                }                parameters.put("observaciones", pedido.getObservaciones());
+                parameters.put("imagePath", imagePath);
+                parameters.put("observaciones", pedido.getObservaciones());
 
                 return parameters;
 
-            case "factura":
+            case "Factura":
 
                 Factura factura = (Factura) source;
 
                 parameters = new HashMap<>();
+                parameters.put("descuentoGen", factura.getDescuento()/100);
                 parameters.put("nofactura", factura.getNo_factura());
                 parameters.put("fecha_pago", factura.getFecha_pago());
                 parameters.put("fecha_emision", factura.getFecha_emision());
@@ -223,16 +214,8 @@ public class PrintReport {
                 parameters.put("direccionCliente", factura.getCliente().getDireccion());
                 parameters.put("cpCliente", factura.getCliente().getCp());
                 parameters.put("ciudadCliente", factura.getCliente().getCiudad());
-
-                if (SystemUtils.IS_OS_LINUX) {
-
-                    parameters.put("urlimagen",(fw.getDefaultDirectory() + File.separator + "logo-delpozo-recortado-4.png").replace("/","//"));
-                } else {
-
-                    if (SystemUtils.IS_OS_WINDOWS) {
-                        parameters.put("urlimagen",(fw.getDefaultDirectory() + File.separator + "logo-delpozo-recortado-4.png").replace("\\","\\\\"));
-                    }
-                }                parameters.put("observaciones", factura.getObservaciones());
+                parameters.put("imagePath", imagePath);
+                parameters.put("observaciones", factura.getObservaciones());
 
                 return parameters;
 

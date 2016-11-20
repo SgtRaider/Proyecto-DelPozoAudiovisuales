@@ -1,6 +1,6 @@
 package com.raider.delpozoaudiovisuales.view;
 
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.Cliente;
 import raider.Util.Utilities;
 import javax.swing.*;

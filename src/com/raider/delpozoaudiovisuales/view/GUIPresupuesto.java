@@ -1,13 +1,11 @@
 package com.raider.delpozoaudiovisuales.view;
 
 import com.raider.delpozoaudiovisuales.controller.guiControllers.PresupuestoController;
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
-import com.raider.delpozoaudiovisuales.model.objects.Material;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 import java.awt.*;
 
 /**
@@ -64,6 +62,14 @@ public class GUIPresupuesto {
 
             addFrame(mw);
         }
+    }
+
+    public GUIPresupuesto(DbMethods dbm, BaseWindow mw, Presupuesto presupuesto) {
+
+        this.pc = new PresupuestoController(dbm, GUIPresupuesto.this, presupuesto);
+        this.mw = mw;
+
+        buildFrame();
     }
 
     private void buildFrame() {

@@ -1,7 +1,6 @@
 package com.raider.delpozoaudiovisuales.view;
 
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
-import com.raider.delpozoaudiovisuales.model.objects.Cliente;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.Material;
 import raider.Util.Utilities;
 
@@ -52,7 +51,7 @@ public class GUIcrearmaterial extends JDialog implements ListSelectionListener{
 
         loadList();
 
-        setTitle("Alta material");
+        setTitle("Material");
         setContentPane(contentPane);
         getRootPane().setDefaultButton(buttonOK);
         setPreferredSize(new Dimension(700, 470));
@@ -64,6 +63,7 @@ public class GUIcrearmaterial extends JDialog implements ListSelectionListener{
         getRootPane().setDefaultButton(buttonOK);
 
         buscarTF.addKeyListener(new KeyListener() {
+
             @Override
             public void keyTyped(KeyEvent e) {
 
@@ -118,7 +118,6 @@ public class GUIcrearmaterial extends JDialog implements ListSelectionListener{
             }
         });
 
-// call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -126,7 +125,6 @@ public class GUIcrearmaterial extends JDialog implements ListSelectionListener{
             }
         });
 
-// call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -142,12 +140,11 @@ public class GUIcrearmaterial extends JDialog implements ListSelectionListener{
     }
 
     private void onCancel() {
-// add your code here if necessary
+
         dispose();
     }
 
     private void JComboBoxInit() {
-
 
         String[] values = {
                 "Proyectores",

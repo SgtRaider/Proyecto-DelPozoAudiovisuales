@@ -3,7 +3,7 @@ package com.raider.delpozoaudiovisuales.view;
 import com.raider.delpozoaudiovisuales.controller.guiControllers.FacturaController;
 import com.raider.delpozoaudiovisuales.controller.guiControllers.PedidoController;
 import com.raider.delpozoaudiovisuales.controller.guiControllers.PresupuestoController;
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.Cliente;
 import com.raider.delpozoaudiovisuales.model.objects.Factura;
 import com.raider.delpozoaudiovisuales.model.objects.Pedido;

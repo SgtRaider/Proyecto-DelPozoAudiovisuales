@@ -31,7 +31,7 @@ public class Email {
     private static final FileSystemView fw = fr.getFileSystemView();
     private static final FileManager fm = new FileManager();
 
-    public void enviarEmail(String to, String bodyText, String asunto, Date docDate, String type, String empresaCliente) {
+    public void enviarEmail(String to, String bodyText, String asunto, Date docDate, String type, String empresaCliente) throws MessagingException, IOException {
 
         File rootFile = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor");
 
@@ -52,51 +52,45 @@ public class Email {
         Session session = Session.getDefaultInstance(properties, auth);
         session.setDebug(false);
 
-        try {
-            MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(from));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-            message.setSubject(asunto);
+        MimeMessage message = new MimeMessage(session);
+        message.setFrom(new InternetAddress(from));
+        message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+        message.setSubject(asunto);
 
-            BodyPart messageBodyPart = new MimeBodyPart();
-            String str = null;
-            File file = new File(rootFile + File.separator + "Jaspers" + File.separator + "email.html");
-            str = FileUtils.readFileToString(file, "UTF-8");
-            str = str.replace("[texto]", transformContent(bodyText));
-            messageBodyPart.setContent(str , "text/html; charset=utf-8");
+        BodyPart messageBodyPart = new MimeBodyPart();
+        String str = null;
+        File file = new File(rootFile + File.separator + "Jaspers" + File.separator + "email.html");
+        str = FileUtils.readFileToString(file, "UTF-8");
+        str = str.replace("[texto]", transformContent(bodyText));
+        messageBodyPart.setContent(str , "text/html; charset=utf-8");
 
-            Multipart multipart = new MimeMultipart();
-            multipart.addBodyPart(messageBodyPart);
+        Multipart multipart = new MimeMultipart();
+        multipart.addBodyPart(messageBodyPart);
 
-            messageBodyPart = new MimeBodyPart();
+        messageBodyPart = new MimeBodyPart();
 
-            empresaCliente = empresaCliente.substring(0, 1).toUpperCase() + empresaCliente.substring(1);
-            type = type.substring(0, 1).toUpperCase() + type.substring(1);
-            String dia = new SimpleDateFormat("dd").format(docDate).toString();
-            String filename = fm.createMonthYearhDir(new SimpleDateFormat("yyyy").format(docDate).toString(), new SimpleDateFormat("MM").format(docDate).toString()).getPath() + File.separator + type + "_" + empresaCliente + "_" + dia + ".pdf";
+        empresaCliente = empresaCliente.substring(0, 1).toUpperCase() + empresaCliente.substring(1);
+        type = type.substring(0, 1).toUpperCase() + type.substring(1);
+        String dia = new SimpleDateFormat("dd").format(docDate).toString();
+        String filename = fm.createMonthYearhDir(new SimpleDateFormat("yyyy").format(docDate).toString(), new SimpleDateFormat("MM").format(docDate).toString()).getPath() + File.separator + type + "_" + empresaCliente + "_" + dia + ".pdf";
 
-            String name = type.replace("_agrupado", "") + ".pdf";
+        String name = type.replace("_agrupado", "") + ".pdf";
 
-            DataSource source = new FileDataSource(filename);
-            messageBodyPart.setDataHandler(new DataHandler(source));
-            messageBodyPart.setFileName(name);
-            multipart.addBodyPart(messageBodyPart);
+        DataSource source = new FileDataSource(filename);
+        messageBodyPart.setDataHandler(new DataHandler(source));
+        messageBodyPart.setFileName(name);
+        multipart.addBodyPart(messageBodyPart);
 
-            messageBodyPart = new MimeBodyPart();
-            DataSource fds = new FileDataSource(rootFile + File.separator + "Imagenes" + File.separator + "logo-delpozo.png");
-            messageBodyPart.setDataHandler(new DataHandler(fds));
-            messageBodyPart.setHeader("Content-ID","<image>");
+        messageBodyPart = new MimeBodyPart();
+        DataSource fds = new FileDataSource(rootFile + File.separator + "Imagenes" + File.separator + "logo-delpozo.png");
+        messageBodyPart.setDataHandler(new DataHandler(fds));
+        messageBodyPart.setHeader("Content-ID","<image>");
 
-            multipart.addBodyPart(messageBodyPart);
-            message.setContent(multipart);
+        multipart.addBodyPart(messageBodyPart);
+        message.setContent(multipart);
 
-            Transport.send(message);
-            System.out.println("Sent message successfully....");
-        }catch (MessagingException mex) {
-            mex.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Transport.send(message);
+        System.out.println("Sent message successfully....");
     }
 
     private static class SMTPAuthenticator extends javax.mail.Authenticator {
@@ -111,8 +105,12 @@ public class Email {
 
         StringBuffer sb = new StringBuffer();
 
-        for (String part:content.split("\n")) {
-            if (!part.isEmpty()) sb.append("<p>" + part + "</p>");
+        if (content.contains("\n")){
+            for (String part:content.split("\n")) {
+                if (!part.isEmpty()) sb.append("<p>" + part + "</p>");
+            }
+        } else {
+            sb.append("<p>" + content + "</p>");
         }
 
         return sb.toString();

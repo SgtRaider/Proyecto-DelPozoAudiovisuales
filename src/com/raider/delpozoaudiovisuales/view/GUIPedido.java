@@ -1,7 +1,10 @@
 package com.raider.delpozoaudiovisuales.view;
 
 import com.raider.delpozoaudiovisuales.controller.guiControllers.PedidoController;
-import com.raider.delpozoaudiovisuales.model.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.controller.guiControllers.PresupuestoController;
+import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
+import com.raider.delpozoaudiovisuales.model.objects.Pedido;
+import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
@@ -62,9 +65,17 @@ public class GUIPedido {
         }
     }
 
+    public GUIPedido(DbMethods dbm, BaseWindow mw, Pedido pedido) {
+
+        this.pc = new PedidoController(dbm, GUIPedido.this, pedido);
+        this.mw = mw;
+
+        buildFrame();
+    }
+
     private void buildFrame() {
 
-        frame = new JFrame("Nuevo Presupuesto");
+        frame = new JFrame("Nuevo Pedido");
         frame.setContentPane(GUIPedido.this.panel1);
         frame.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setMinimumSize(new Dimension(1100, 800));
