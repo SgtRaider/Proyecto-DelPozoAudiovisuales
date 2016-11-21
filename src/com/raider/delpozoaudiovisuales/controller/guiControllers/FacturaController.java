@@ -280,6 +280,7 @@ public class FacturaController implements ActionListener, ListSelectionListener{
 
         factura.setNo_factura(Integer.parseInt(gui.getNoLB().getText()));
         if(modify) factura.setFecha_emision(factura.getFecha_emision()); else factura.setFecha_emision(new Date());
+        if(gui.getBoolCB().isSelected()) factura.setFecha_pago(new Date()); else factura.setFecha_pago(null);
         factura.setFecha_inicio(gui.getInicioDC().getDate());
         factura.setFecha_fin(gui.getFinDC().getDate());
         factura.setMostrar_descuento(gui.getDescuentoCB().isSelected());
@@ -291,18 +292,25 @@ public class FacturaController implements ActionListener, ListSelectionListener{
 
         PrintReport printReport = new PrintReport();
 
-        try {
+        if (factura.getFacturaMaterial().size() > 1) {
 
-            printReport.printReport(factura.getFecha_emision(), "factura", factura, gui.getImprimirCB().isSelected());
-        } catch (JRException e) {
 
-            e.printStackTrace();
-            Utilities.mensajeError("Error al generar el report.");
-        }
+            try {
 
-        if(gui.getCorreoCB().isSelected()) {
+                printReport.printReport(factura.getFecha_emision(), "factura", factura, gui.getImprimirCB().isSelected());
+            } catch (JRException e) {
 
-            new GUIenviaremail(factura, "factura").setVisible(true);
+                e.printStackTrace();
+                Utilities.mensajeError("Error al generar el report.");
+            }
+
+            if(gui.getCorreoCB().isSelected()) {
+
+                new GUIenviaremail(factura, "factura").setVisible(true);
+            }
+
+        } else {
+            Utilities.mensajeError("Introduzca mas de un Material.");
         }
     }
 

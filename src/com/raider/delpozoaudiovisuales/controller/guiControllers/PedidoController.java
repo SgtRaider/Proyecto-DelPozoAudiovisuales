@@ -343,25 +343,31 @@ public class PedidoController implements ActionListener, ListSelectionListener{
 
         PrintReport printReport = new PrintReport();
 
-        try {
+        if (pedido.getPedidoMaterial().size() > 1) {
 
-            printReport.printReport(pedido.getFecha_emision(), "pedido", pedido, gui.getImprimirCB().isSelected());
-        } catch (JRException e) {
+            try {
 
-            e.printStackTrace();
-            Utilities.mensajeError("Error al generar el report.");
-        }
+                printReport.printReport(pedido.getFecha_emision(), "pedido", pedido, gui.getImprimirCB().isSelected());
+            } catch (JRException e) {
 
-        if(gui.getCorreoCB().isSelected()) {
+                e.printStackTrace();
+                Utilities.mensajeError("Error al generar el report.");
+            }
 
-            new GUIenviaremail(pedido, "pedido").setVisible(true);
-        }
+            if (gui.getCorreoCB().isSelected()) {
 
-        if (gui.getBoolCB().isSelected()) {
+                new GUIenviaremail(pedido, "pedido").setVisible(true);
+            }
 
-            pedidoRealizado(pedido);
+            if (gui.getBoolCB().isSelected()) {
+
+                pedidoRealizado(pedido);
+            } else {
+                pedido.setFinalizado(false);
+            }
+
         } else {
-            pedido.setFinalizado(false);
+            Utilities.mensajeError("Introduzca mas de un Material.");
         }
     }
 

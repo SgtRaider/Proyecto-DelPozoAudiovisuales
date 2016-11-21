@@ -29,42 +29,49 @@ public class PrintReport {
         FileSystemView fw = fr.getFileSystemView();
         FileManager fileManager = new FileManager();
         String nombreCliente = "";
+        int no = 0;
 
         switch (type) {
 
             case "presupuesto":
                 file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator +  "Presupuesto_Venta_jasper_report.jasper");
                 nombreCliente = ((Presupuesto) source).getCliente().getEmpresa();
+                no = ((Presupuesto) source).getNo_presupuesto();
                 break;
 
             case "presupuesto_agrupado":
 
                 file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Presupuesto_Agrupado_Venta_jasper_report.jasper");
                 nombreCliente = ((Presupuesto) source).getCliente().getEmpresa();
+                no = ((Presupuesto) source).getNo_presupuesto();
                 break;
 
             case "pedido":
 
                 file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Pedido_Venta_jasper_report.jasper");
                 nombreCliente = ((Pedido) source).getCliente().getEmpresa();
+                no = ((Pedido) source).getNo_pedido();
                 break;
 
             case "pedido_agrupado":
 
                 file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Pedido_Agrupado_Venta_jasper_report.jasper");
                 nombreCliente = ((Pedido) source).getCliente().getEmpresa();
+                no = ((Pedido) source).getNo_pedido();
                 break;
 
             case "factura":
 
                 file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Factura_Venta_jasper_report.jasper");
                 nombreCliente = ((Factura) source).getCliente().getEmpresa();
+                no = ((Factura) source).getNo_factura();
                 break;
 
             case "factura_agrupado":
 
                 file = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor" + File.separator + "Jaspers" + File.separator + "Factura_Agrupada_Venta_jasper_report.jasper");
                 nombreCliente = ((Factura) source).getCliente().getEmpresa();
+                no = ((Factura) source).getNo_factura();
                 break;
 
             default:
@@ -80,11 +87,11 @@ public class PrintReport {
         nombreCliente = nombreCliente.substring(0, 1).toUpperCase() + nombreCliente.substring(1);
         String dia = new SimpleDateFormat("dd").format(docDate).toString();
 
-        File pdf = new File(contentDir.getPath() + File.separator + type + "_" + nombreCliente + "_" + dia + ".pdf");
-
-        if (mostrar) JasperViewer.viewReport(getJasperPrint(type, source, file), false);
+        File pdf = new File(contentDir.getPath() + File.separator + type + "." + no + "_" + nombreCliente + "_" + dia + ".pdf");
 
         JasperExportManager.exportReportToPdfFile(getJasperPrint(type, source, file), pdf.getPath());
+
+        if (mostrar) JasperViewer.viewReport(getJasperPrint(type, source, file), false);
 
         return pdf;
     }
@@ -159,13 +166,11 @@ public class PrintReport {
                 Presupuesto presupuesto = (Presupuesto) source;
 
                 parameters = new HashMap<>();
-                parameters.put("descuentoGen", presupuesto.getDescuento()/100);
                 parameters.put("nopresupuesto", presupuesto.getNo_presupuesto());
                 parameters.put("fecha_validez", presupuesto.getFecha_validez());
                 parameters.put("fecha_emision", presupuesto.getFecha_emision());
                 parameters.put("fecha_inicio", presupuesto.getFecha_inicio());
                 parameters.put("fecha_fin", presupuesto.getFecha_fin());
-                parameters.put("iva", Float.parseFloat(Preferences.getPropertiesUnprotected().get("util.iva")));
                 parameters.put("empresaCliente", presupuesto.getCliente().getEmpresa());
                 parameters.put("cifCliente", presupuesto.getCliente().getCif());
                 parameters.put("direccionCliente", presupuesto.getCliente().getDireccion());
@@ -173,6 +178,8 @@ public class PrintReport {
                 parameters.put("ciudadCliente", presupuesto.getCliente().getCiudad());
                 parameters.put("imagePath", imagePath);
                 parameters.put("observaciones", presupuesto.getObservaciones());
+                parameters.put("descuentoGen", presupuesto.getDescuento()/100f);
+                parameters.put("iva", Float.valueOf(Preferences.getPropertiesUnprotected().get("util.iva")));
 
                 return parameters;
 
@@ -181,12 +188,11 @@ public class PrintReport {
                 Pedido pedido = (Pedido) source;
 
                 parameters = new HashMap<>();
-                parameters.put("descuentoGen", pedido.getDescuento()/100);
+
                 parameters.put("nopedido", pedido.getNo_pedido());
                 parameters.put("fecha_emision", pedido.getFecha_emision());
                 parameters.put("fecha_inicio", pedido.getFecha_inicio());
                 parameters.put("fecha_fin", pedido.getFecha_fin());
-                parameters.put("iva", Float.parseFloat(Preferences.getPropertiesUnprotected().get("util.iva")));
                 parameters.put("empresaCliente", pedido.getCliente().getEmpresa());
                 parameters.put("cifCliente", pedido.getCliente().getCif());
                 parameters.put("direccionCliente", pedido.getCliente().getDireccion());
@@ -194,6 +200,8 @@ public class PrintReport {
                 parameters.put("ciudadCliente", pedido.getCliente().getCiudad());
                 parameters.put("imagePath", imagePath);
                 parameters.put("observaciones", pedido.getObservaciones());
+                parameters.put("descuentoGen", pedido.getDescuento()/100f);
+                parameters.put("iva", Float.valueOf(Preferences.getPropertiesUnprotected().get("util.iva")));
 
                 return parameters;
 
@@ -202,13 +210,13 @@ public class PrintReport {
                 Factura factura = (Factura) source;
 
                 parameters = new HashMap<>();
-                parameters.put("descuentoGen", factura.getDescuento()/100);
+                parameters.put("descuentoGen", factura.getDescuento()/100f);
                 parameters.put("nofactura", factura.getNo_factura());
                 parameters.put("fecha_pago", factura.getFecha_pago());
                 parameters.put("fecha_emision", factura.getFecha_emision());
                 parameters.put("fecha_inicio", factura.getFecha_inicio());
                 parameters.put("fecha_fin", factura.getFecha_fin());
-                parameters.put("iva", Float.parseFloat(Preferences.getPropertiesUnprotected().get("util.iva")));
+                parameters.put("iva", Float.valueOf(Preferences.getPropertiesUnprotected().get("util.iva")));
                 parameters.put("empresaCliente", factura.getCliente().getEmpresa());
                 parameters.put("cifCliente", factura.getCliente().getCif());
                 parameters.put("direccionCliente", factura.getCliente().getDireccion());

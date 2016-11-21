@@ -31,7 +31,7 @@ public class Email {
     private static final FileSystemView fw = fr.getFileSystemView();
     private static final FileManager fm = new FileManager();
 
-    public void enviarEmail(String to, String bodyText, String asunto, Date docDate, String type, String empresaCliente) throws MessagingException, IOException {
+    public void enviarEmail(String to, String bodyText, String asunto, Date docDate, String type, String empresaCliente, int no) throws MessagingException, IOException {
 
         File rootFile = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor");
 
@@ -72,7 +72,7 @@ public class Email {
         empresaCliente = empresaCliente.substring(0, 1).toUpperCase() + empresaCliente.substring(1);
         type = type.substring(0, 1).toUpperCase() + type.substring(1);
         String dia = new SimpleDateFormat("dd").format(docDate).toString();
-        String filename = fm.createMonthYearhDir(new SimpleDateFormat("yyyy").format(docDate).toString(), new SimpleDateFormat("MM").format(docDate).toString()).getPath() + File.separator + type + "_" + empresaCliente + "_" + dia + ".pdf";
+        String filename = fm.createMonthYearhDir(new SimpleDateFormat("yyyy").format(docDate).toString(), new SimpleDateFormat("MM").format(docDate).toString()).getPath() + File.separator + type + "." + no + "_" + empresaCliente + "_" + dia + ".pdf";
 
         String name = type.replace("_agrupado", "") + ".pdf";
 

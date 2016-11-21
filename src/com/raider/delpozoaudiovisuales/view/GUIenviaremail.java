@@ -73,6 +73,7 @@ public class GUIenviaremail extends JDialog {
         Factura factura;
         String empresaCliente = "";
         String to = "";
+        int no = 0;
         Date docDate = null;
 
         switch (type) {
@@ -82,6 +83,7 @@ public class GUIenviaremail extends JDialog {
                 empresaCliente = presupuesto.getCliente().getEmpresa();
                 to = presupuesto.getCliente().getEmail();
                 docDate = presupuesto.getFecha_emision();
+                no = presupuesto.getNo_presupuesto();
                 break;
 
             case "pedido":
@@ -89,6 +91,7 @@ public class GUIenviaremail extends JDialog {
                 empresaCliente = pedido.getCliente().getEmpresa();
                 to = pedido.getCliente().getEmail();
                 docDate = pedido.getFecha_emision();
+                no = pedido.getNo_pedido();
                 break;
 
             case "factura":
@@ -96,6 +99,7 @@ public class GUIenviaremail extends JDialog {
                 empresaCliente = factura.getCliente().getEmpresa();
                 to = factura.getCliente().getEmail();
                 docDate = factura.getFecha_emision();
+                no = factura.getNo_factura();
                 break;
         }
 
@@ -104,7 +108,7 @@ public class GUIenviaremail extends JDialog {
             Email sc = new Email();
 
             try {
-                sc.enviarEmail(to, cuerpoTA.getText().toString(), asuntoTF.getText().toString(), docDate, type, empresaCliente);
+                sc.enviarEmail(to, cuerpoTA.getText().toString(), asuntoTF.getText().toString(), docDate, type, empresaCliente, no);
             } catch (MessagingException e) {
                 e.printStackTrace();
                 Utilities.mensajeError("Error al enviar mensaje.");

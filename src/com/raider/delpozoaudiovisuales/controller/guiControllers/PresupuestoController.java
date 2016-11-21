@@ -336,7 +336,8 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
     public void guardar() {
 
         presupuesto.setNo_presupuesto(Integer.parseInt(gui.getNoLB().getText()));
-        if(modify) presupuesto.setFecha_emision(presupuesto.getFecha_emision()); else presupuesto.setFecha_emision(new Date());
+        if (modify) presupuesto.setFecha_emision(presupuesto.getFecha_emision());
+        else presupuesto.setFecha_emision(new Date());
         presupuesto.setFecha_validez(gui.getValidezDC().getDate());
         presupuesto.setFecha_inicio(gui.getInicioDC().getDate());
         presupuesto.setFecha_fin(gui.getFinDC().getDate());
@@ -348,25 +349,33 @@ public class PresupuestoController implements ActionListener, ListSelectionListe
 
         PrintReport printReport = new PrintReport();
 
-        try {
+        if (presupuesto.getPresupuestoMaterial().size() > 1) {
 
-            printReport.printReport(presupuesto.getFecha_emision(), "presupuesto", presupuesto, gui.getImprimirCB().isSelected());
-        } catch (JRException e) {
+            try {
 
-            e.printStackTrace();
-            Utilities.mensajeError("Error al generar el report.");
-        }
+                printReport.printReport(presupuesto.getFecha_emision(), "presupuesto", presupuesto, gui.getImprimirCB().isSelected());
 
-        if(gui.getCorreoCB().isSelected()) {
+            } catch (JRException e) {
 
-            new GUIenviaremail(presupuesto, "presupuesto").setVisible(true);
-        }
+                e.printStackTrace();
+                Utilities.mensajeError("Error al generar el report.");
+            }
 
-        if (gui.getBoolCB().isSelected()) {
+            if (gui.getCorreoCB().isSelected()) {
 
-            presupuestoAprovado(presupuesto);
+                if (presupuesto.getPresupuestoMaterial().size() > 1)
+                    new GUIenviaremail(presupuesto, "presupuesto").setVisible(true);
+            }
+
+            if (gui.getBoolCB().isSelected()) {
+
+                if (presupuesto.getPresupuestoMaterial().size() > 1) presupuestoAprovado(presupuesto);
+            } else {
+                if (presupuesto.getPresupuestoMaterial().size() > 1) presupuesto.setAprovado(false);
+            }
+
         } else {
-            presupuesto.setAprovado(false);
+            Utilities.mensajeError("Introduzca mas de un Material.");
         }
     }
 
