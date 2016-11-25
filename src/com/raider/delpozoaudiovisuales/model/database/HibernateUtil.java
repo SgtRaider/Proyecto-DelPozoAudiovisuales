@@ -7,7 +7,11 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
- * Created by raider on 3/02/16.
+ * Created by Raider on 06/11/2016.
+ * Esta clase es la encargada de crear las sesiones, y la conexión con la base de datos.
+ * Para poder realizar las gestiones en DbMethods
+ *
+ * @since 0.1 Base Alpha
  */
 public class HibernateUtil {
 
@@ -37,7 +41,7 @@ public class HibernateUtil {
 
     /**
      * Devuelve la sesión actual
-     * @return
+     * @return sesión
      */
     public static Session getCurrentSession() {
 

@@ -1,35 +1,62 @@
 package com.raider.delpozoaudiovisuales.util;
 
 import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
-import com.raider.delpozoaudiovisuales.model.objects.*;
-import net.sf.jasperreports.engine.*;
+import com.raider.delpozoaudiovisuales.model.objects.MaterialPresupuestoDatasource;
+import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
+import com.raider.delpozoaudiovisuales.model.objects.Presupuesto_Material;
+import net.sf.jasperreports.engine.JRException;
 import org.apache.commons.io.FileUtils;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.time.Month;
+import org.jfree.data.time.TimeSeries;
+import org.jfree.data.time.TimeSeriesCollection;
+import org.jfree.data.time.Year;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
 
-import java.util.*;
-import javax.mail.*;
-import javax.mail.internet.*;
-import javax.activation.*;
-
-import javax.crypto.NoSuchPaddingException;
 import javax.activation.DataHandler;
+import javax.activation.DataSource;
 import javax.activation.FileDataSource;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Transport;
+import javax.crypto.NoSuchPaddingException;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Properties;
 
 
 /**
  * Created by Raider on 04/11/2016.
  */
-public class Prueba {
+public class Prueba extends ApplicationFrame{
+
+    public static DbMethods dbm;
+
+    public Prueba(final String title) {
+        super(title);
+
+
+        dbm = new DbMethods();
+
+        JFreeChart chart = createJFreeChart("Mensual");
+        ChartPanel chartPanel = new ChartPanel(chart);
+        chartPanel.setPreferredSize(new Dimension(500, 270));
+        setContentPane(chartPanel);
+    }
 
     public static void main(String args[]) throws NoSuchPaddingException, NoSuchAlgorithmException {
 
@@ -93,11 +120,129 @@ public class Prueba {
                 "Integer vel ante et nisl bibendum pulvinar et nec mi. Vivamus ac purus purus. Aenean tincidunt nibh risus, vitae sodales quam viverra vitae. Vivamus ullamcorper mi vitae mauris congue suscipit. Nam tristique mi elit, tincidunt hendrerit lectus congue eu. Duis eleifend neque in neque finibus, nec efficitur est porta. Aliquam non rutrum lacus, condimentum aliquet mi. Duis vel massa vel massa posuere luctus eget sit amet diam. Duis pellentesque vestibulum mi, vitae facilisis nisl volutpat at. Etiam in vulputate mi, at posuere metus.\n" +
                 "Fin de la prueba");*/
 
-        try {
+        Prueba prueba = new Prueba("EL TITULO");
+        prueba.pack();
+        RefineryUtilities.centerFrameOnScreen(prueba);
+        prueba.setVisible(true);
+
+        /*try {
             report();
         } catch (Exception e) {
             e.printStackTrace();
+        }*/
+    }
+
+    private static JFreeChart createJFreeChart(String type) {
+
+        Date lastDate = dbm.getLastFactura();
+        Date firstDate = dbm.getFirstFactura();
+
+        Long intervalo = 7 * 24 * 60 * 60 * 1000L;
+        String x = "";
+
+        TimeSeries gananciasPagadas = new TimeSeries("Ganancias Pagado");
+        TimeSeries gananciasNoPagadas = new TimeSeries("Ganancias Sin Pagar");
+        TimeSeriesCollection dataset = new TimeSeriesCollection();
+
+        switch (type) {
+
+            case "Mensual":
+
+
+                for (int i = getYear(firstDate); i <= getYear(lastDate); i++) {
+                    for (int j = 1; j <= 12; j++) {
+                        gananciasPagadas.add(new Month(j, i), dbm.getGananciasMesAno(j, i, true));
+                        gananciasNoPagadas.add(new Month(j, i), dbm.getGananciasMesAno(j, i, false));
+                    }
+                }
+
+                x = "Meses";
+
+                break;
+
+            case "Trimestral":
+
+                for (int i = getYear(firstDate); i <= getYear(lastDate); i++) {
+                    for (int j = 1; j <= 4; j++) {
+                        gananciasPagadas.add(new Month(((j * 3) - 2), i), dbm.getGananciasTrimestralesAno(j, i, true));
+                        gananciasNoPagadas.add(new Month(((j * 3) - 2), i), dbm.getGananciasTrimestralesAno(j, i, false));
+                    }
+                }
+
+                x = "Trimestres";
+
+                break;
+
+            case "Anual":
+
+                for (int i = getYear(firstDate); i <= getYear(lastDate); i++) {
+                    gananciasPagadas.add(new Year(i), dbm.getGananciasAno(i, true));
+                    gananciasNoPagadas.add(new Year(i), dbm.getGananciasAno(i, false));
+                }
+
+                x = "Años";
+
+                break;
         }
+
+        dataset.addSeries(gananciasPagadas);
+        dataset.addSeries(gananciasNoPagadas);
+
+        JFreeChart chart = ChartFactory.createTimeSeriesChart(
+                "Gráfico " + type,
+                x,
+                "Ingresos en Euros",
+                dataset,
+                true,
+                true,
+                false
+        );
+
+
+        XYPlot plot = chart.getXYPlot();
+        XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
+        plot.setRenderer(renderer);
+
+        return chart;
+    }
+
+    private static int getTrimestre(Date date) {
+
+        int mes = Integer.parseInt(new SimpleDateFormat("MM").format(date));
+        int trimestre = 0;
+
+        if (mes > 1 & mes <= 3) {
+
+            trimestre = 1;
+        } else {
+
+            if (mes > 3 & mes <= 6) {
+
+                trimestre = 2;
+            } else {
+
+                if (mes > 6 & mes <= 9) {
+
+                    trimestre = 3;
+                } else {
+
+                    if (mes > 9 & mes <= 12) {
+
+                        trimestre = 4;
+                    }
+                }
+            }
+        }
+
+        return trimestre;
+    }
+
+    private static int getYear(Date date) {
+        return  Integer.parseInt(new SimpleDateFormat("yyyy").format(date));
+    }
+
+    private static int getMonth(Date date) {
+        return  Integer.parseInt(new SimpleDateFormat("MM").format(date));
     }
 
    /* public static <T> Object save(T entity) {

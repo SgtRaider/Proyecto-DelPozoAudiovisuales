@@ -4,7 +4,10 @@ import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
 import com.raider.delpozoaudiovisuales.model.objects.*;
 import com.raider.delpozoaudiovisuales.util.Preferences;
 import com.raider.delpozoaudiovisuales.util.PrintReport;
-import com.raider.delpozoaudiovisuales.view.*;
+import com.raider.delpozoaudiovisuales.view.GUIPedido;
+import com.raider.delpozoaudiovisuales.view.GUIenviaremail;
+import com.raider.delpozoaudiovisuales.view.GUIseleccioncliente;
+import com.raider.delpozoaudiovisuales.view.GUIseleccionmaterial;
 import net.sf.jasperreports.engine.JRException;
 import raider.Util.Utilities;
 
@@ -20,6 +23,12 @@ import java.util.Date;
 
 /**
  * Created by Raider on 06/11/2016.
+ * Controlador de la clase:
+ *  @see GUIPedido
+ * En esta clase se controlan y gestionan todos los eventos de la clase GUIPedido,
+ * para posteriormente ejecutar la acción correspondiente de la clase model.
+ *
+ * @since 0.1 Base Alpha
  */
 public class PedidoController implements ActionListener, ListSelectionListener{
 
@@ -32,6 +41,22 @@ public class PedidoController implements ActionListener, ListSelectionListener{
 
     private DefaultTableModel defaultTableModel;
 
+    /**
+     * Constructor principal de la clase, se acciona al abrir el formulario de creación,
+     * para poder gestionar los eventos posteriormente.
+     * Se hacen llamadas a varios metodos para iniciar y cargar la tabla, y a su vez añadir los listeners al view.
+     *
+     * @param dbm de la clase DbMethods, con esta variable se gestionan todas las peticiones
+     *            realizadas contra la base de datos.
+     * @param guip de la clase GUIPedido, es la clase donde se constuye el frame, y mediante la cual se accede
+     *             a todos los componentes de este, para gestionar eventos o interactuar con los datos.
+     *
+     * @see com.raider.delpozoaudiovisuales.model.database.logic.DbMethods
+     * @see com.raider.delpozoaudiovisuales.view.GUIPedido
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public PedidoController(DbMethods dbm, GUIPedido guip) {
 
         this.dbm = dbm;
@@ -48,6 +73,25 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         modify = false;
     }
 
+    /**
+     * Constructor secundario de la clase, se acciona al abrir el formulario de modificacion/visualización
+     * de la información previamente creada, para poder gestionar los eventos posteriormente.
+     * Se hacen llamadas a varios metodos para iniciar y cargar la tabla, y a su vez añadir los listeners al view.
+     *
+     * @param dbm de la clase DbMethods, con esta variable se gestionan todas las peticiones
+     *            realizadas contra la base de datos.
+     * @param guip de la clase GUIPedido, es la clase donde se constuye el frame, y mediante la cual se accede
+     *             a todos los componentes de este, para gestionar eventos o interactuar con los datos.
+     * @param pedido de la clase Pedido, de esta variable se cargan los datos en la gui, para ser visualizados
+     *                o modificados.
+     *
+     * @see com.raider.delpozoaudiovisuales.model.database.logic.DbMethods
+     * @see com.raider.delpozoaudiovisuales.view.GUIPedido
+     * @see com.raider.delpozoaudiovisuales.model.objects.Pedido
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public PedidoController(DbMethods dbm, GUIPedido guip, Pedido pedido) {
 
         this.dbm = dbm;
@@ -68,6 +112,13 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         modify = true;
     }
 
+    /**
+     * Método de construcción y renderizado de las columnas de la tabla,
+     * crea la tabla para su posterior uso.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private void createTable() {
 
         gui.getTB().getSelectionModel().addListSelectionListener(this);
@@ -93,6 +144,18 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         gui.getTB().setColumnSelectionAllowed(false);
     }
 
+    /**
+     * Método el cual añade filas a en la tabla, a partir de los datos del parámetro.
+     *
+     * @param pedido_material clase con los datos necesarios para rellenar la fila,
+     *                        tanto datos de la clase Pedido, como Material, y datos
+     *                        específicos de esta clase.
+     *
+     * @see com.raider.delpozoaudiovisuales.model.objects.Pedido_Material
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public void addRowMaterial(Pedido_Material pedido_material) {
 
         Material material = pedido_material.getMaterial();
@@ -100,6 +163,12 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         defaultTableModel.addRow(fila);
     }
 
+    /**
+     * Método el cual añade los listeners a la view.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private void addListeners() {
 
         gui.getCalcularBT().addActionListener(this);
@@ -111,6 +180,12 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         gui.getGuardarBT().addActionListener(this);
     }
 
+    /**
+     * Método que gestiona los eventos click,
+     * sobre los botones de la view.
+     *
+     * @since 0.1 Base Alpha
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -182,6 +257,15 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         }
     }
 
+    /**
+     * Método de carga de los datos del cliente sobre la view.
+     *
+     * @param cliente Clase cliente la cual contiene sus datos.
+     *
+     * @see Cliente
+     *
+     * @since 0.1 Base Alpha
+     */
     public void loadCliente(Cliente cliente) {
 
         gui.getEmpresaLB().setText(cliente.getEmpresa());
@@ -195,6 +279,15 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         gui.getDireccionLB().setText(cliente.getDireccion());
     }
 
+    /**
+     * Método de carga de los datos de la pedido sobre la view.
+     *
+     * @param pedido Clase pedido la cual contiene sus datos.
+     *
+     * @see Pedido
+     *
+     * @since 0.1 Base Alpha
+     */
     public void loadPedido(Pedido pedido) {
 
         gui.getNoLB().setText(String.valueOf(pedido.getNo_pedido()));
@@ -210,6 +303,14 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         gui.getObservacionesTA().setText(pedido.getObservaciones());
     }
 
+    /**
+     * Método de carga de mateiales contenidos en el presupeusto,
+     * sobre la tabla.
+     *
+     * @see Material
+     *
+     * @since 0.1 Base Alpha
+     */
     public void loadMaterial() {
 
         defaultTableModel.setNumRows(0);
@@ -222,6 +323,13 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         }
     }
 
+    /**
+     * Método de eliminación de todos los materiales de la tabla.
+     *
+     * @see Material
+     *
+     * @since 0.1 Base Alpha
+     */
     private void removeMateriales() {
 
         defaultTableModel.setNumRows(0);
@@ -229,6 +337,13 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         loadMaterial();
     }
 
+    /**
+     * Método de eliminación, únicamente del material seleccionado.
+     *
+     * @see Material
+     *
+     * @since 0.1 Base Alpha
+     */
     private void removeMaterial() {
 
         if(gui.getTB().isRowSelected(selectedRow)) {
@@ -248,6 +363,12 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         }
     }
 
+    /**
+     * Método que calcula el subtotal, el iva y el total a partir de los materiales, el descuento y el iva,
+     * establecido en los parámetros.
+     *
+     * @since 0.1 Base Alpha
+     */
     public void calcular() {
 
         float iva = Float.valueOf(Preferences.getPropertiesUnprotected().get("util.iva"));
@@ -276,6 +397,21 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         gui.getSubtotalLB().setText(String.valueOf(Math.round(subtotal*100.0)/100.0) + " €");
     }
 
+    /**
+     * Método en el cual se recogen todos los datos del pedido,
+     * para que en caso de haberse realizado el pedido guardarlos en la base de datos como una factura,
+     * y posteriormente, abrir la pantalla de impresión,o de envío de email para enviarlo al cliente
+     * correspondiente. Ademas de guardar un pdf con la factura en ../Documents/Del_PozoGestor/PDFs
+     * y la ruta temporal (De tiempo, año, mes...) correspondiente.
+     *
+     * @param pedido Clase Pedido de la cual se extraerán los datos para crear la nueva factura.
+     *
+     * @see PrintReport
+     * @see com.raider.delpozoaudiovisuales.util.Email
+     * @see GUIenviaremail
+     *
+     * @since 0.1 Base Alpha
+     */
     public void pedidoRealizado(Pedido pedido) {
 
         pedido.setFinalizado(true);
@@ -329,6 +465,18 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         }
     }
 
+    /**
+     * Método en el cual se recogen todos los datos del pedido,
+     * para guardarlos en la base de datos, y posteriormente, abrir la pantalla de impresión,
+     * o de envío de email para enviarlo al cliente correspondiente. Ademas de guardar un pdf
+     * con el pedido en ../Documents/Del_PozoGestor/PDFs y la ruta temporal correspondiente.
+     *
+     * @see PrintReport
+     * @see com.raider.delpozoaudiovisuales.util.Email
+     * @see GUIenviaremail
+     *
+     * @since 0.1 Base Alpha
+     */
     public void guardar() {
 
         pedido.setNo_pedido(Integer.parseInt(gui.getNoLB().getText()));
@@ -371,6 +519,12 @@ public class PedidoController implements ActionListener, ListSelectionListener{
         }
     }
 
+
+    /**
+     * Método que gestiona los eventos de selección de tabla.
+     *
+     * @since 0.1 Base Alpha
+     */
     @Override
     public void valueChanged(ListSelectionEvent e) {
 

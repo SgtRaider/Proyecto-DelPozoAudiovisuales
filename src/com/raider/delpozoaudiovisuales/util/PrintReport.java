@@ -1,9 +1,7 @@
 package com.raider.delpozoaudiovisuales.util;
 
-import com.jgoodies.common.base.SystemUtils;
 import com.raider.delpozoaudiovisuales.model.objects.*;
 import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
@@ -14,14 +12,32 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
- * Created by raider on 11/11/2016.
+ * Created by Raider on 06/11/2016.
+ * Clase encargada de crear, guardar y visualizar los reports,
+ * asi como organizar los datos para este propósito.
+ *
+ * @since 0.1 Base Alpha
  */
 public class PrintReport {
 
+    /**
+     * Método que crea, guarda, y visualiza el report de una clase determinada.
+     *
+     * @param docDate Date con la fecha de creación del fichero.
+     * @param type String con el tipo de documento.
+     * @param source Objeto origen, del cual procesar los datos.
+     * @param mostrar boolean el cual determina si enseñar la pantalla de impresión, o no.
+     *
+     * @return File con la ruta del archivo
+     *
+     * @exception JRException
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public File printReport(Date docDate, String type, Object source, boolean mostrar) throws JRException {
 
         File file = null;
@@ -96,11 +112,40 @@ public class PrintReport {
         return pdf;
     }
 
+    /**
+     * Método que crea el JasperPrint con los datos
+     *
+     * @param type String con el tipo de documento.
+     * @param source Objeto origen, del cual procesar los datos.
+     * @param file Fichero en el que se encuentra el .jasper
+     *
+     * @return JasperPrint
+     *
+     * @exception JRException
+     *
+     * @see JasperPrint
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public JasperPrint getJasperPrint(String type, Object source, File file) throws JRException {
         JasperReport report = (JasperReport) JRLoader.loadObject(file);
         return JasperFillManager.fillReport(report, getMap(type, source), getDataSource(type, source));
     }
 
+    /**
+     * Método que obtiene los datos del objeto para sintetizar el JRDataSource.
+     *
+     * @param type String con el tipo de documento.
+     * @param source Objeto origen, del cual procesar los datos.
+     *
+     * @return JRDataSource
+     *
+     * @see JRDataSource
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public JRDataSource getDataSource(String type, Object source) {
 
         switch (type) {
@@ -146,6 +191,18 @@ public class PrintReport {
         }
     }
 
+    /**
+     * Método que prepara los parametros en un Map para cargarlos
+     * en el Jasper
+     *
+     * @param type String con el tipo de documento.
+     * @param source Objeto origen, del cual procesar los datos.
+     *
+     * @return Map
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public Map<String, Object> getMap(String type, Object source) {
 
         JFileChooser fr = new JFileChooser();

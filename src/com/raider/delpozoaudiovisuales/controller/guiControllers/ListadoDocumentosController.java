@@ -1,7 +1,9 @@
 package com.raider.delpozoaudiovisuales.controller.guiControllers;
 
 import com.raider.delpozoaudiovisuales.model.database.logic.DbMethods;
-import com.raider.delpozoaudiovisuales.model.objects.*;
+import com.raider.delpozoaudiovisuales.model.objects.Factura;
+import com.raider.delpozoaudiovisuales.model.objects.Pedido;
+import com.raider.delpozoaudiovisuales.model.objects.Presupuesto;
 import com.raider.delpozoaudiovisuales.view.*;
 
 import javax.swing.*;
@@ -11,14 +13,18 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by pmata_ext on 18/11/2016.
+ * Created by Raider on 06/11/2016.
+ * Controlador de la clase:
+ *  @see GUIlistadodocumentos
+ * En esta clase se controlan y gestionan todos los eventos de la clase GUIlistadodocumentos,
+ * para posteriormente ejecutar la acción correspondiente de la clase model.
+ *
+ * @since 0.1 Base Alpha
  */
 public class ListadoDocumentosController implements ListSelectionListener, ActionListener {
 
@@ -31,6 +37,25 @@ public class ListadoDocumentosController implements ListSelectionListener, Actio
 
     private DefaultTableModel defaultTableModel;
 
+    /**
+     * Constructor principal de la clase, crea una tabla con todos los documentos(Presupuestos, Pedidos y Facturas)
+     * de la base de datos, para poder acceder a toda su información, así como modificarla, imprimirla o enviarla
+     * al cliente en cuestión.
+     *
+     * @param dbm de la clase DbMethods, con esta variable se gestionan todas las peticiones
+     *            realizadas contra la base de datos.
+     * @param gui de la clase GUIlistadodocumentos, es la clase donde se constuye el frame,
+     *            y la tabla en la cual se van a mostrar todos los documentos.
+     *
+     * @param mw de la clase BaseWindow, es la gui principal.
+     *
+     * @see com.raider.delpozoaudiovisuales.model.database.logic.DbMethods
+     * @see com.raider.delpozoaudiovisuales.view.GUIFactura
+     * @see com.raider.delpozoaudiovisuales.view.BaseWindow
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public ListadoDocumentosController(DbMethods dbm, GUIlistadodocumentos gui, BaseWindow mw) {
         this.dbm = dbm;
         this.gui = gui;
@@ -43,6 +68,13 @@ public class ListadoDocumentosController implements ListSelectionListener, Actio
         loadDocuments();
     }
 
+    /**
+     * Método de construcción y renderizado de las columnas de la tabla,
+     * crea la tabla para su posterior uso.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private void createTable() {
 
         gui.getTB().getSelectionModel().addListSelectionListener(this);
@@ -65,6 +97,22 @@ public class ListadoDocumentosController implements ListSelectionListener, Actio
         gui.getTB().setColumnSelectionAllowed(false);
     }
 
+    /**
+     * Método el cual añade filas a en la tabla, a partir de los datos del parámetro.
+     *
+     * @param source Clase genérica, la cual sera casteada dependiendo de la key,
+     *               para cargar los datos en la tabla, y poderlos identificar,
+     *               dependiendo del tipo que sea.
+     *
+     * @param key String la cual va a determinar que tipo de objeto es source.
+     *
+     * @see Presupuesto
+     * @see Pedido
+     * @see Factura
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public void addRow(Object source, String key) {
 
         switch (key) {
@@ -89,6 +137,16 @@ public class ListadoDocumentosController implements ListSelectionListener, Actio
         }
     }
 
+    /**
+     * Método el cual llama a DbMethods para obtener los registros de Presupeusto, Pedido y Factura, para añadirlos
+     * posteriormente con el metodo anterior.
+     *
+     * @see Presupuesto
+     * @see Pedido
+     * @see Factura
+     *
+     * @since 0.1 Base Alpha
+     */
     public void loadDocuments() {
 
         defaultTableModel.setNumRows(0);
@@ -129,6 +187,18 @@ public class ListadoDocumentosController implements ListSelectionListener, Actio
         }
     }
 
+    /**
+     * Método el cual crea la gui del documento correspondiente, dependiendo de la fila seleccionada.
+     *
+     * @see Presupuesto
+     * @see GUIPresupuesto
+     * @see Pedido
+     * @see GUIPedido
+     * @see Factura
+     * @see GUIFactura
+     *
+     * @since 0.1 Base Alpha
+     */
     private void abrir() {
 
         if (docTyp != "" & id != 0){
@@ -153,10 +223,23 @@ public class ListadoDocumentosController implements ListSelectionListener, Actio
         }
     }
 
+    /**
+     * Método que cierra este frame.
+     *
+     * @since 0.1 Base Alpha
+     */
     private void cancelar() {
         gui.getFrame().dispose();
     }
 
+    /**
+     * Método que gestiona los eventos de los metodos:
+     *
+     * @see ListadoDocumentosController#abrir
+     * @see ListadoDocumentosController#cancelar
+     *
+     * @since 0.1 Base Alpha
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -179,6 +262,13 @@ public class ListadoDocumentosController implements ListSelectionListener, Actio
         }
     }
 
+    /**
+     * Método que gestiona los eventos de selección de tabla,
+     * y obtiene las variables del id y el tipo de documento,
+     * para mas tarde cargar la gui que corresponda.
+     *
+     * @since 0.1 Base Alpha
+     */
     @Override
     public void valueChanged(ListSelectionEvent e) {
 

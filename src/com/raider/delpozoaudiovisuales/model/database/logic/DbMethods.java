@@ -1,27 +1,53 @@
 package com.raider.delpozoaudiovisuales.model.database.logic;
 
+import com.raider.delpozoaudiovisuales.model.database.HibernateUtil;
 import com.raider.delpozoaudiovisuales.model.objects.*;
-import com.raider.delpozoaudiovisuales.util.HibernateUtil;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Raider on 05/11/2016.
+ * Created by Raider on 06/11/2016.
+ * Esta clase es la encargada de realizar la interacción con la base de datos.
+ *
+ * @since 0.1 Base Alpha
  */
 public class DbMethods {
 
     public static HibernateUtil db = new HibernateUtil();
 
+    /**
+     * Constructor el cual inicia una sesión para poder acceder a la base de datos.
+     *
+     * Clases:
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public DbMethods() {
 
         db.buildSessionFactory();
         db.openSession();
     }
 
+    /**
+     * Metodo el cual guarda o actualiza, dependiendo si existe el objeto,
+     * en la base de datos o no.
+     *
+     * @param entity Objeto de la clase a guardar o updatear.
+     *
+     * @return Devuelve la clase a guardar
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public <T> Object save(T entity) {
 
         Session session = db.getCurrentSession();
@@ -35,20 +61,45 @@ public class DbMethods {
         return entity;
     }
 
-    public <T> Object update(T entitye) {
+    /**
+     * Metodo el cual actualiza, si existe el objeto,
+     * en la base de datos.
+     *
+     * @param entity Objeto de la clase a updatear.
+     *
+     * @return Devuelve la clase a modificar
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     * @deprecated
+     */
+    public <T> Object update(T entity) {
 
         Session session = db.getCurrentSession();
 
         session.beginTransaction();
 
-        session.merge(entitye);
+        session.merge(entity);
 
         session.getTransaction().commit();
 
-        return entitye;
+        return entity;
 
     }
 
+    /**
+     * Metodo el cual elimina el objeto de la base de datos,
+     * en caso de que exista.
+     *
+     * @param entity Objeto de la clase a borrar.
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public <T> void delete(T entity) {
 
         Session session = db.getCurrentSession();
@@ -60,6 +111,24 @@ public class DbMethods {
         session.getTransaction().commit();
     }
 
+    /**
+     *
+     * Método que lista un conjunto de resultados, dependiendo los parámetros.
+     *
+     * @param object String que determina la clase que se quiere consultar(el FROM de la consulta).
+     *
+     * @param camposString HashMap el cual sirve para determinar que se quiere consultar,
+     *                     solo válido para strings, y para hacer consultas tipo LIKE.
+     *                     Óptimo para búsquedas de strings.
+     *                     En caso de no querer consultar nada inicializar el HashMap vacio.
+     *
+     * @return Devuelve un objeto de la clase List, con el conjunto de valores recogidos. En caso de que el parametro objeto sea erroneo, devuelve null.
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public List list(String object, HashMap<String,String> camposString) {
 
         Session session = db.getCurrentSession();
@@ -168,6 +237,21 @@ public class DbMethods {
         }
     }
 
+    /**
+     *
+     * Método que te devuelve un Object sin castear de la clase que corresponda.
+     *
+     * @param type String que determina la clase que se quiere consultar(el FROM de la consulta).
+     *
+     * @param id id del objeto que quieres obtener.
+     *
+     * @return Object
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public Object getById(String type, int id) {
 
         String sql;
@@ -202,6 +286,21 @@ public class DbMethods {
         }
     }
 
+    /**
+     *
+     * Método que te devuelve la parte del where de una consulta, sirve para hacer búsquedas.
+     *
+     * @param tabla tabla de los campos a buscar
+     *
+     * @param camposString map con el campo de búsqueda, y el valor a cotejar.
+     *
+     * @return String con el where de la consulta, preparado para unirlo al FROM
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private String addLikeSearch(String tabla, HashMap<String,String> camposString) {
 
         StringBuffer sb = new StringBuffer();
@@ -226,6 +325,22 @@ public class DbMethods {
         return sb.toString();
     }
 
+    /**
+     *
+     * Método que busca si existe el usuario en la base de datos, en caso de existir lo devuelve,
+     * en el caso contrario, devuelve un null.
+     *
+     * @param user usuario a cotejar.
+     *
+     * @param pass contraseña a cotejar.
+     *
+     * @return devuelve el usuario o un null en caso de no existir.
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public Usuario login(String user, String pass) {
 
         Session session = db.getCurrentSession();
@@ -240,6 +355,19 @@ public class DbMethods {
         return usuario;
     }
 
+    /**
+     *
+     * Método que devuelve el ultimo id de cada tipo de documento, para asignarlo como no de documento.
+     *
+     * @param op cada opción, corresponde a un tipo de documento.
+     *
+     * @return int
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public int lastID(int op) {
 
         Session session = db.getCurrentSession();
@@ -279,5 +407,163 @@ public class DbMethods {
         }
 
         return id;
+    }
+
+    /**
+     *
+     * Método que devuelve la primera factura de la base de datos, en orden temporal.
+     *
+     * @return date
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
+    public Date getFirstFactura() {
+
+        Session session = db.getCurrentSession();
+        Query query;
+        query = session.createSQLQuery("SELECT getFirstFechaPago()");
+        Date result = (Date) query.setMaxResults(1).uniqueResult();
+
+        return result;
+    }
+
+    /**
+     *
+     * Método que devuelve la última factura de la base de datos, en orden temporal.
+     *
+     * @return date
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
+    public Date getLastFactura() {
+
+        Session session = db.getCurrentSession();
+        Query query;
+        query = session.createSQLQuery("SELECT getLastFechaPago()");
+        Date result = (Date) query.setMaxResults(1).uniqueResult();
+
+        return result;
+    }
+
+    /**
+     *
+     * Método que llama a la función almacenada gananciasTrimestreAno, la cual de vuelve,
+     * devuelve las ganancias de un trimestre y un año determinado, dependiendo si han sido pagadas,
+     * o no.
+     *
+     * @param trimestre del cual se quieren saber las ganancias.
+     * @param ano del cual se quieren saber las ganancias.
+     * @param ispagado si están pagadas las facturas, o no.
+     *
+     * @return float
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
+    public float getGananciasTrimestralesAno(int trimestre, int ano, boolean ispagado) {
+
+        Session session = db.getCurrentSession();
+        int pagado = 0;
+        float result = 0;
+        Query query;
+
+        if (ispagado) {
+            pagado = 1;
+        } else {
+            pagado = 0;
+        }
+
+        query = session.createSQLQuery("SELECT gananciasTrimestreAno(" + trimestre + ", " + ano + ", " + pagado + ")");
+
+        if (query.setMaxResults(1).uniqueResult() != null) {
+            result = (float) query.setMaxResults(1).uniqueResult();
+        }
+
+        return result;
+    }
+
+    /**
+     *
+     * Método que llama a la función almacenada gananciasAno, la cual de vuelve,
+     * devuelve las ganancias de un año determinado, dependiendo si han sido pagadas,
+     * o no.
+     *
+     * @param ano del cual se quieren saber las ganancias.
+     * @param ispagado si están pagadas las facturas, o no.
+     *
+     * @return float
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
+    public float getGananciasAno(int ano, boolean ispagado) {
+
+        Session session = db.getCurrentSession();
+        int pagado = 0;
+        float result = 0;
+        Query query;
+
+        if (ispagado) {
+            pagado = 1;
+        } else {
+            pagado = 0;
+        }
+
+        query = session.createSQLQuery("SELECT gananciasAno(" + ano + ", " + pagado + ")");
+
+        if (query.setMaxResults(1).uniqueResult() != null) {
+            result = (float) query.setMaxResults(1).uniqueResult();
+        }
+
+        return result;
+    }
+
+    /**
+     *
+     * Método que llama a la función almacenada gananciasMesAno, la cual de vuelve,
+     * devuelve las ganancias de un mes y un año determinado, dependiendo si han sido pagadas,
+     * o no.
+     *
+     * @param mes del cual se quieren saber las ganancias.
+     * @param ano del cual se quieren saber las ganancias.
+     * @param ispagado si están pagadas las facturas, o no.
+     *
+     * @return float
+     *
+     * @see HibernateUtil
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
+    public float getGananciasMesAno(int mes, int ano, boolean ispagado) {
+
+        Session session = db.getCurrentSession();
+        int pagado = 0;
+        float result = 0;
+        Query query;
+
+        if (ispagado) {
+            pagado = 1;
+        } else {
+            pagado = 0;
+        }
+
+        query = session.createSQLQuery("SELECT gananciasMesAno(" + mes + ", " + ano + ", " + pagado + ")");
+
+        if (query.setMaxResults(1).uniqueResult() != null) {
+            result = (float) query.setMaxResults(1).uniqueResult();
+        }
+
+        return result;
     }
 }

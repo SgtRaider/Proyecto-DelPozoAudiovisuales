@@ -27,11 +27,12 @@ public class GUIgraficos {
     private void buildFrame() {
 
         frame = new JFrame("Business Inteligence");
-        frame.setContentPane(GUIgraficos.this.panel1);
-        frame.setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
-        frame.setResizable(false);
-        frame.setMinimumSize(new Dimension(1100, 800));
+        frame.setContentPane(panel1);
+        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setMinimumSize(new Dimension(800, 600));
         frame.pack();
+        //frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+        frame.setResizable(false);
         frame.setVisible(true);
     }
 

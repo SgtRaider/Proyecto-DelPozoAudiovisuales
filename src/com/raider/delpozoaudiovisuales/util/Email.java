@@ -20,7 +20,11 @@ import java.util.Date;
 import java.util.Properties;
 
 /**
- * Created by raider on 11/11/2016.
+ * Created by Raider on 06/11/2016.
+ * Clase en la que se gestionan los envios de correos al cliente, asi como la interacción,
+ * con el servidor de mailing.
+ *
+ * @since 0.1 Base Alpha
  */
 public class Email {
 
@@ -31,6 +35,24 @@ public class Email {
     private static final FileSystemView fw = fr.getFileSystemView();
     private static final FileManager fm = new FileManager();
 
+    /**
+     * Metodo que construye el email por partes, asunto, cuerpo con estructura html, imagen del logo, documento...
+     * Y lo envia al cliente destino que corresponda, con el documento adjunto.
+     *
+     * @param to destinatario
+     * @param bodyText texto a enviar
+     * @param asunto asunto del correo
+     * @param docDate fecha del documento para poder localizarlo
+     * @param type tipo de documento para poder localizarlo
+     * @param empresaCliente empresa a la que se envia el correo para poder localizar el documento
+     * @param no no de documento
+     *
+     * @exception MessagingException Excepción en caso de problemas con el servidor de correo, o problemas al enviar el email.
+     * @exception IOException Excepción en caso de no poder acceder a la imagen o al pdf, por ruta erronea, o por que no esten en la ruta especificada.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public void enviarEmail(String to, String bodyText, String asunto, Date docDate, String type, String empresaCliente, int no) throws MessagingException, IOException {
 
         File rootFile = new File(fw.getDefaultDirectory() + File.separator + "DelPozo_Gestor");
@@ -93,6 +115,12 @@ public class Email {
         System.out.println("Sent message successfully....");
     }
 
+    /**
+     * Clase del autentificador del usuario y contraseña del correo.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private static class SMTPAuthenticator extends javax.mail.Authenticator {
         public PasswordAuthentication getPasswordAuthentication() {
             String username = SMTP_AUTH_USER;
@@ -101,16 +129,30 @@ public class Email {
         }
     }
 
+    /**
+     * Método el cual transforma el texto enviado en html,
+     * con separaciones de párrafo, para enviarlas.
+     *
+     * @param content Contenido del correo.
+     *
+     * @return String devuelve el texto tratado.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private static String transformContent(String content) {
 
         StringBuffer sb = new StringBuffer();
 
-        if (content.contains("\n")){
-            for (String part:content.split("\n")) {
-                if (!part.isEmpty()) sb.append("<p>" + part + "</p>");
+        if (!content.isEmpty()) {
+
+            if (content.contains("\n")){
+                for (String part:content.split("\n")) {
+                    if (!part.isEmpty()) sb.append("<p>" + part + "</p>");
+                }
+            } else {
+                sb.append("<p>" + content + "</p>");
             }
-        } else {
-            sb.append("<p>" + content + "</p>");
         }
 
         return sb.toString();

@@ -2,6 +2,7 @@ package com.raider.delpozoaudiovisuales.util;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.io.*;
@@ -11,7 +12,11 @@ import java.util.Properties;
 
 
 /**
- * Created by Raider on 05/11/2016.
+ * Created by Raider on 06/11/2016.
+ * Clase en la cual se controla la creación, y modificación de las preferencias.
+ * Así como su seguridad.
+ *
+ * @since 0.1 Base Alpha
  */
 public class Preferences {
 
@@ -22,6 +27,19 @@ public class Preferences {
     private static BASE64Encoder enc = new BASE64Encoder();
     private static BASE64Decoder dec = new BASE64Decoder();
 
+    /**
+     * Método que se encarga de encriptar las cadenas de texto de las preferencias.
+     *
+     * @param text texto sin encriptar
+     *
+     * @return String encriptado
+     *
+     * Clases:
+     * @see BASE64Encoder
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public static String base64encode(String text) {
         try {
             return enc.encode(text.getBytes(DEFAULT_ENCODING));
@@ -30,6 +48,19 @@ public class Preferences {
         }
     }
 
+    /**
+     * Método que se encarga de desencriptar las cadenas de texto de las preferencias.
+     *
+     * @param text texto encriptada
+     *
+     * @return String desencriptada
+     *
+     * Clases:
+     * @see BASE64Decoder
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public static String base64decode(String text) {
         try {
             return new String(dec.decodeBuffer(text), DEFAULT_ENCODING);
@@ -69,6 +100,12 @@ public class Preferences {
         return true;
     }
 
+    /**
+     * Método que crea e inicializa las propiedades, encriptadas.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public static void initializeProperties() {
 
         Properties prop = new Properties();
@@ -103,6 +140,18 @@ public class Preferences {
         }
     }
 
+    /**
+     * Método modifica las propiedades.
+     *
+     * @param host
+     * @param name
+     * @param user
+     * @param pass
+     * @param iva
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public static void setProperties(String host, String name, String user, String pass, String iva) {
 
         Properties prop = new Properties();
@@ -137,6 +186,14 @@ public class Preferences {
         }
     }
 
+    /**
+     * Método que devuelve las propiedades desencriptadas.
+     *
+     * @return HashMap con las propiedades desencriptadas
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public static HashMap<String, String> getPropertiesUnprotected() {
 
         Properties prop = new Properties();
@@ -176,6 +233,14 @@ public class Preferences {
         return null;
     }
 
+    /**
+     * Método que devuelve las propiedades encriptadas.
+     *
+     * @return HashMap con las propiedades encriptadas
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public static HashMap<String, String> getPropertiesProtected() {
 
         Properties prop = new Properties();
@@ -215,6 +280,16 @@ public class Preferences {
         return null;
     }
 
+    /**
+     * Método que un FileInputStream de las configuraciones, en caso de que existan,
+     * en caso contrario, crea la estructura de directorios del proyecto crea las propiedades
+     * y vuelve a enviarlas.
+     *
+     * @return HashMap con las propiedades encriptadas
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private static FileInputStream getInputStream(String path) throws FileNotFoundException {
 
         File file = new File(path);

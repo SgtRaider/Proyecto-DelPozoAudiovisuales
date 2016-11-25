@@ -30,6 +30,7 @@ public class BaseWindow {
     private JMenuItem micrearmaterial;
 
     private JMenuItem miconsultardocumentos;
+    private JMenuItem miconsultargraficas;
 
     public BaseWindow() {
 
@@ -70,6 +71,7 @@ public class BaseWindow {
         micrearmaterial = new JMenuItem("Material");
 
         miconsultardocumentos = new JMenuItem("Documentos");
+        miconsultargraficas = new JMenuItem("Gráficas");
 
         mbventana.add(mmenu);
         mbventana.add(mcrear);
@@ -84,6 +86,7 @@ public class BaseWindow {
         mcrear.add(micrearmaterial);
 
         mconsultar.add(miconsultardocumentos);
+        mconsultar.add(miconsultargraficas);
     }
 
     public static JMenuBar getMenuBar() {
@@ -196,5 +199,13 @@ public class BaseWindow {
 
     public static JFrame getFrame() {
         return frame;
+    }
+
+    public JMenuItem getMiconsultargraficas() {
+        return miconsultargraficas;
+    }
+
+    public void setMiconsultargraficas(JMenuItem miconsultargraficas) {
+        this.miconsultargraficas = miconsultargraficas;
     }
 }

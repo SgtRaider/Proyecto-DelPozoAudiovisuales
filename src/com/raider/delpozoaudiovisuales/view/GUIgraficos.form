@@ -23,9 +23,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="8d603" binding="graficoP" layout-manager="FormLayout">
-        <rowspec value="center:d:grow"/>
-        <colspec value="fill:d:grow"/>
+      <grid id="8d603" binding="graficoP" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <forms defaultalign-vert="false"/>
@@ -40,7 +38,7 @@
           <forms defaultalign-horz="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Cerrar"/>
         </properties>
       </component>
       <hspacer id="7b6f6">

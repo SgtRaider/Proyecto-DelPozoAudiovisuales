@@ -8,7 +8,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * Created by pmata_ext on 17/11/2016.
+ * Created by Raider on 06/11/2016.
+ * Clase en la que se gestiona la creación de archivos,
+ * sobre todo las rutas de las carpetas de pdfs así,
+ * como la estructura, ../"Año"/"Mes"/.. dependiendo,
+ * la fecha de creación.
+ *
+ * @since 0.1 Base Alpha
  */
 public class FileManager {
 
@@ -50,6 +56,18 @@ public class FileManager {
         }
     }
 
+    /**
+     * Crea la estructura de directorios año/mes, en caso de existir,
+     * devuelve un File con la localización de del directorio mes.
+     *
+     * @param ano año del documento
+     * @param mes mes del documento
+     *
+     * @return File
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public File createMonthYearhDir(String ano, String mes) {
 
         JFileChooser fr = new JFileChooser();

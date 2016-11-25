@@ -11,6 +11,12 @@ import java.awt.event.ActionListener;
 
 /**
  * Created by Raider on 06/11/2016.
+ * Controlador Principal
+ *  @see BaseWindow
+ * En esta clase se controlan y gestionan todos los eventos de la clase BaseWindow,
+ * para posteriormente mostrar la ventana correspondiente.
+ *
+ * @since 0.1 Base Alpha
  */
 public class ProjectController implements ActionListener{
 
@@ -19,6 +25,17 @@ public class ProjectController implements ActionListener{
     private GUIlogin login;
     private Usuario user;
 
+    /**
+     * Constructor del frame principal, es el que gestiona la mayotia de eventos de apertura de guis.
+     *
+     * @param mainWindow frame principal, el cual contiene todos los botones de acceso a la mayoría de guis.
+     *
+     * Clases:
+     * @see com.raider.delpozoaudiovisuales.view.BaseWindow
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     public ProjectController(BaseWindow mainWindow) {
 
         this.mw = mainWindow;
@@ -43,6 +60,12 @@ public class ProjectController implements ActionListener{
         addListeners();
     }
 
+    /**
+     * Método el cual añade los listeners a la view.
+     *
+     * @since 0.1 Base Alpha
+     *
+     */
     private void addListeners() {
 
         mw.getMiconsultardocumentos().addActionListener(this);
@@ -53,9 +76,16 @@ public class ProjectController implements ActionListener{
         mw.getMicrearpresupuesto().addActionListener(this);
         mw.getMicrearfactura().addActionListener(this);
 
+        mw.getMiconsultargraficas().addActionListener(this);
         mw.getMipreferencias().addActionListener(this);
     }
 
+    /**
+     * Método que gestiona los eventos click,
+     * sobre los botones de la view.
+     *
+     * @since 0.1 Base Alpha
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -121,6 +151,15 @@ public class ProjectController implements ActionListener{
                     if(source == mw.getMiconsultardocumentos()) {
 
                         new GUIlistadodocumentos(dbm, mw);
+                    }
+
+                    break;
+
+                case "Gráficas":
+
+                    if(source == mw.getMiconsultargraficas()) {
+
+                        new GUIgraficos(dbm);
                     }
 
                     break;
